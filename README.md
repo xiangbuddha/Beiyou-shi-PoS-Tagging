@@ -31,7 +31,6 @@ To ensure statistical stability, fine-grained labels were collapsed into the fol
 
 ## Repository Content
 * **`Beiyou_shi_Annotations.xml`**: The primary dataset in XML format, utilizing an inline slash tagging structure (`word/tag`). It preserves poem-level metadata and line-level structures derived from the TEI source.
-* **`Beiyou_shi_PoS_Dataset.csv`**: A token-level dataset providing the complete sequence of original model outputs and the final adjudicated tags for each poem.
 * **`Beiyou_shi_Visualization.html`**: An interactive visualization showing the tagging results for all 322 poems.
 
 ## Analytical Framework
