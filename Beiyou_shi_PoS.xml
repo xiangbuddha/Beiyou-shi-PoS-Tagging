@@ -1,0 +1,3143 @@
+<?xml version="1.0" ?>
+<research_data>
+  <front>
+    <title>Appendix A. Complete PoS Annotations of the Beiyou shi</title>
+  </front>
+  <body>
+    <section title="Tag-processing Rules">
+      <p>Appendix A. Complete PoS Annotations of the Beiyou shi</p>
+      <p>This appendix provides the complete line-level PoS annotations used in the study. The annotations preserve token segmentation and final adjudicated PoS categories for each poem.</p>
+      <p>A.1 Tag-processing and Mapping Rules</p>
+      <p>The annotations below are final analytical tags rather than raw HanLP outputs. The final tags were generated through a post-processing procedure that combines HanLP UPOS output, HanLP PKU-style output, lexicon-based correction, and dynamic adjudication.</p>
+      <p>Raw PKU-style tag normalization. PKU-style labels were first normalized before comparison with UPOS output. Morpheme-level PKU labels were mapped to their corresponding lexical categories: Ag → a, Bg → b, Dg → d, Mg → m, Ng → n, Rg → r, Tg → t, Vg → v, and Yg → y. Other PKU-style labels were preserved at this stage when available, including ad, an, vd, vn, nr, ns, nt, nx, and nz.</p>
+      <p>UPOS-to-analysis mapping. UPOS labels were mapped onto the same analytical tag system used for the final dataset: NOUN and PROPN → n; VERB → v; ADJ → a; ADV → d; PRON and DET → r; NUM → m; ADP → p; AUX and PART → u; CCONJ and SCONJ → c; INTJ → e; PUNCT → w; and SYM or X → x.</p>
+      <p>Coarse analytical categories. For coarse statistical comparison, related fine-grained tags were collapsed into broader analytical categories. Nominal subtypes, including n, nr, ns, nt, nx, and nz, were collapsed into n; verbal subtypes, including v, vd, and vn, were collapsed into v; and adjectival subtypes, including a, ad, and an, were collapsed into a. Fine-grained distinctions were retained in the token-level output only when they were compatible with the final coarse category. This design reduces sparsity and avoids overinterpreting unstable low-frequency distinctions in a relatively small Classical Chinese poetic corpus.</p>
+      <p>Lexicon-based correction. Before adjudication, lexicon-based correction was applied to recurrent multi-character expressions and identifiable tagging errors. The correction procedure could either merge a sequence of tokens and assign a corrected tag, or override the tag of an already segmented token. These corrections were applied as post-processing rules and did not retrain or fine-tune the HanLP model.</p>
+      <p>Dynamic adjudication. UPOS and PKU-style tags were not treated as competing final standards. Instead, they served as complementary inputs. When the two outputs agreed at the coarse analytical level, the shared category was retained. When they diverged, the script applied pre-specified adjudication rules. Recurrent conflict types identified during manual review were handled by fixed priority rules, such as preferring PKU-style adjectival classification when UPOS classified the same token as verbal, or preserving PKU-style temporal, locative, and numerical distinctions when UPOS assigned a broader category. Other conflicts were resolved with the aid of dependency-relation cues and local contextual evidence derived from surrounding tokens on which UPOS and PKU-style tags agreed.</p>
+      <p>Diagnostic information. Each token was assigned a final tag, a coarse category, a fine category when applicable, an adjudication source, and a heuristic confidence score. These confidence scores were used only for diagnostic review and were not used as probabilistic measurements or as variables in the statistical analysis.</p>
+    </section>
+    <section title="Line-Level Annotations">
+      <poem id="by001" title="曉過西湖">
+        <l>船/n 上/f 見/v 月/n 如/v 可/v 呼/v</l>
+        <l>愛/v 之/r 且/d 復/d 留/v 斯/n 湏/t</l>
+        <l>青/n 山/n 倒/v 影/n 水/n 連/v 郭/n</l>
+        <l>白/n 藕/n 作/v 花/n 香/n 滿/v 湖/n</l>
+        <l>仙林寺/ns 遠/a 鐘/n 已/d 動/v</l>
+        <l>靈隱/n 塔/n 高/a 燈/n 欲/d 無/v</l>
+        <l>西/f 風/n 吹/v 人/n 不/d 得/v 寐/n</l>
+        <l>坐/d 聼/v 魚/n 蠏/n 翻/v 菰/n 蒲/n</l>
+      </poem>
+      <poem id="by002" title="西津">
+        <l>月/n 滿/v 潮/n 來/v 盛/a</l>
+        <l>天/n 空/v 野/n 望/v 低/a</l>
+        <l>樹/n 侵/v 吳甸/ns 北/f</l>
+        <l>帆/n 入/v 楚江/ns 西/f</l>
+        <l>俊/n 鶻/n 秋/n 方/d 下/v</l>
+        <l>悲/a 烏/n 曉/n 更/d 啼/v</l>
+        <l>即/d 看/v 霜/n 露/n 及/v</l>
+        <l>風/n 景/n 色/n 凄/v 凄/v</l>
+      </poem>
+      <poem id="by003" title="曉過蘇臺驛">
+        <l>初/n 瞻/v 五/m 色/n 日/n</l>
+        <l>正/d 照/v 百/m 花/ns 洲/n</l>
+        <l>綵/n 纜/n 拂/v 江/n 水/n</l>
+        <l>黃/n 旗/n 飄/v 柂/n 樓/n</l>
+        <l>風/n 傳/v 疊/a 鼓/n 急/a</l>
+        <l>月/n 出/v 征/v 帆/n 收/v</l>
+        <l>直/d 指/v 西/f 北/f 去/v</l>
+        <l>含/v 香/n 天/n 上/f 頭/n</l>
+      </poem>
+      <poem id="by004" title="揚州">
+        <l>已/d 無/v 紅/n 藥/n 過/v 瓊/n 花/n</l>
+        <l>唯/d 見/v 高/a 樓/n 酒/n 幔/n 斜/v</l>
+        <l>二十四/m 橋/n 今/t 夜/n 月/n</l>
+        <l>盡/v 情/n 分/v 付/v 與/v 琵琶/n</l>
+      </poem>
+      <poem id="by005" title="泊清口">
+        <l>野/n 外/f 三/m 家/n 市/v</l>
+        <l>天/n 涯/f 萬/m 里/n 舟/n</l>
+        <l>河/n 流/v 歸/v 故/n 道/n</l>
+        <l>雲/n 物/n 動/v 新/a 秋/n</l>
+        <l>曠/a 海/n 連/v 魚/n 鱉/n</l>
+        <l>華/ns 星/n 近/v 斗牛/n</l>
+        <l>吾/r 鄉/n 去/v 未/d 遠/a</l>
+        <l>行/n 李/n 勿/d 深/a 憂/v</l>
+      </poem>
+      <poem id="by006" title="圯橋">
+        <l>子房/nr 三/m 世/n 相/v 韓/ns 家/n</l>
+        <l>辛/nr 苦/nr 椎/v 秦/ns 博浪/ns 沙/n</l>
+        <l>不/d 上/v 青/n 天/n 扶/v 日/n 月/n</l>
+        <l>便/d 歸/v 丹/n 壑/n 老/v 烟/n 霞/n</l>
+        <l>圯橋/ns 進/v 履/n 心/n 常/d 在/v</l>
+        <l>漢/ns 室/nr 封/v 侯/n 鬢/n 已/d 華/v</l>
+        <l>唯/d 有/v 當/v 時/n 書/n 一/m 卷/n</l>
+        <l>奈/v 何/r 人/n 世/n 事/n 如/v 麻/n</l>
+      </poem>
+      <poem id="by007" title="沛縣">
+        <l>大風臺/ns 上/f 客/n 登/v 臨/v</l>
+        <l>誰/r 識/v 高/a 歌/v 壯/a 士/n 心/n</l>
+        <l>韓信/nr 去/v 時/n 曾/d 有/v 語/n</l>
+        <l>陳/nr 平/nr 行/v 處/n 可/d 無/v 金/n</l>
+        <l>自/r 從/p 西/f 北/f 開/v 圍/n 出/v</l>
+        <l>獨/d 向/v 東/f 南/f 注/v 意/n 深/a</l>
+        <l>四百/m 年/n 間/n 一/m 回/v 首/n</l>
+        <l>綠/n 槐/n 滿/v 地/n 暮/n 蟬/n 吟/v</l>
+      </poem>
+      <poem id="by008" title="宿魯橋">
+        <l>近/v 岸/n 離/a 離/v 蒼/a 耳/n 叢/n</l>
+        <l>吳/ns 船/n 夜/n 泊/v 魯橋/ns 東/f</l>
+        <l>未/d 能/v 傍/v 史/n 修/v 王/n 法/n</l>
+        <l>聊/d 復/d 題/v 詩/n 繼/v 國/n 風/n</l>
+        <l>一/m 老/n 尚/d 憐/v 顔/nr 氏/n 子/n</l>
+        <l>兩/m 生/n 猶/d 笑/v 叔孫通/nr</l>
+        <l>勸/v 君/n 無/v 事/n 且/d 高/v 枕/n</l>
+        <l>黃帝/nr 孔丘/nr 俱/d 夢/n 中/f</l>
+      </poem>
+      <poem id="by009" title="任城李太白酒樓二絕 一">
+        <l>洛陽城/ns 裡/f 董糟丘/nr</l>
+        <l>不/d 惜/v 黃/n 金/n 起/v 酒/n 樓/n</l>
+        <l>後/f 五百/m 年/n 尋/v 太白/nr</l>
+        <l>誰/r 知/v 爛/d 醉/v 在/v 新州/ns</l>
+      </poem>
+      <poem id="by010" title="任城李太白酒樓二絕 二">
+        <l>翰/n 林/ns 習/a 氣/n 未/d 能/v 忘/v</l>
+        <l>來/d 飲/v 新州/ns 滿/a 殿/n 香/n</l>
+        <l>醉/d 倒/v 不/d 歸/v 天/n 闕/ns 去/v</l>
+        <l>文/n 星/n 長/a 枕/v 酒/n 星/n 旁/n</l>
+      </poem>
+      <poem id="by011" title="荊門">
+        <l>梁山/ns 蓮/n 蓬/n 浩/a 如/v 海/n</l>
+        <l>荊/ns 門/ns 杏子/n 大/n 如/v 瓜/n</l>
+        <l>百/m 錢/n 一/m 斗/n 俱/d 無/v 數/n</l>
+        <l>敗/a 核/n 蕉/n 房/n 易/d 滿/v 車/n</l>
+      </poem>
+      <poem id="by012" title="行近臨清客懷渺然有江南之思三首 一">
+        <l>蘭/n 苕/n 翡/n 翠/n 簇/m 臨清/ns</l>
+        <l>頗/d 似/v 江南/ns 岸/n 下/f 行/v</l>
+        <l>拂/v 水/n 蒹/n 葭/n 霜/n 未/d 降/v</l>
+        <l>含/v 烟/n 楊/n 柳/n 兩/m 初/n 晴/v</l>
+        <l>前/f 村/n 閃/v 閃/v 群/m 鴉/n 去/v</l>
+        <l>落/v 日/n 瀟/a 瀟/a 匹/v 馬/n 鳴/v</l>
+        <l>從/p 此/r 開/v 帆/n 八百/m 里/n</l>
+        <l>溯/v 流/n 直/d 上/v 是/r 瑤京/ns</l>
+      </poem>
+      <poem id="by013" title="行近臨清客懷渺然有江南之思三首 二">
+        <l>北/f 來/v 風/n 物/n 未/d 蕭/a 疏/v</l>
+        <l>佳/a 處/n 王維/nr 畫/v 不/d 如/v</l>
+        <l>青/n 草/ns 岸/n 邊/n 三/m 寸/n 雨/n</l>
+        <l>白/n 蘋/ns 花/n 下/f 一/m 雙/m 魚/n</l>
+        <l>茅/n 亭/n 隔/v 水/n 無/v 人/n 到/v</l>
+        <l>酒/n 館/n 當/v 門/n 大/a 字/n 書/v</l>
+        <l>抛/v 卻/v 雲/n 山/n 未/d 歸/v 去/v</l>
+        <l>但/d 吟/v 吾/r 亦/d 愛/v 吾/r 庐/n</l>
+      </poem>
+      <poem id="by014" title="行近臨清客懷渺然有江南之思三首 三">
+        <l>吾/r 盧/n 正/d 在/v 白/n 雲/n 邊/n</l>
+        <l>古/n 木/n 修/a 篁/n 相/d 接/v 連/v</l>
+        <l>橋/n 下/f 白/n 魚/n 長/a 比/v 劍/n</l>
+        <l>石/n 間/f 青/n 蟹/n 大/a 於/p 錢/n</l>
+        <l>秋/n 風/n 著/v 意/n 吹/v 香/n 稻/n</l>
+        <l>野/n 水/n 無/v 情/n 管/v 釣/v 船/n</l>
+        <l>涼/a 夜/n 月/n 明/v 洲/n 渚/n 靜/a</l>
+        <l>藕/n 花/n 深/a 處/n 不/d 妨/v 禪/n</l>
+      </poem>
+      <poem id="by015" title="通州之南，彌望北沙壟丘墟，與中原異矣。因僧還吳，於此送之。">
+        <l>白龍堆/ns 上/f 望/v 齊州/ns</l>
+        <l>但/d 見/v 疏/a 烟/n 九/m 點/n 浮/v</l>
+        <l>黯/a 黯/a 天/n 低/a 鶻/n 沒/v 處/n</l>
+        <l>紛/d 紛/a 葉/n 落/v 雁/n 橫/a 秋/n</l>
+        <l>開/v 帆/n 更/d 在/v 青/n 山/n 外/f</l>
+        <l>去/v 路/n 無/v 窮/n 碧/n 海/ns 頭/n</l>
+        <l>今/t 日/n 南/f 歸/v 吾/r 賀/v 汝/r</l>
+        <l>道/n 人/n 不/d 作/v 賈/n 胡/n 留/v</l>
+      </poem>
+      <poem id="by016" title="初入經筵呈諸友三首 一">
+        <l>妙/a 篆/n 曾/d 聞/v 薤/n 葉/n 披/v</l>
+        <l>懸/v 針/n 欲/v 作/v 露/n 珠/n 垂/v</l>
+        <l>鵝/n 群/m 但/d 換/v 黃/ns 庭/n 字/n</l>
+        <l>贋/v 本/n 終/d 慚/v 碧/n 落/v 碑/n</l>
+        <l>經/d 到/v 錢/nr 鏐/nr 傾/v 國/n 寫/v</l>
+        <l>佛/n 從/v 李煜/nr 鑄/v 金/n 為/v</l>
+        <l>皇/n 朝/nr 盛/a 典/n 尊/v 千/m 古/n</l>
+        <l>趙/ns 鄧/ns 由/d 來/v 此/r 選/v 推/v</l>
+      </poem>
+      <poem id="by017" title="初入經筵呈諸友三首 二">
+        <l>秋/n 兔/nr 輸/v 毫/n 已/d 得/v 霜/n</l>
+        <l>春/n 蠶/n 食/v 葉/n 正/d 盈/v 筐/n</l>
+        <l>謾/d 誇/v 大/a 字/n 工/n 飛/v 白/n</l>
+        <l>爭/d 看/v 真/a 書/n 寫/v 硬/a 黃/n</l>
+        <l>中/f 使/n 與/d 傾/v 銀/n 甕/n 酒/n</l>
+        <l>上/f 師/n 來/v 報/v 玉/n 爐/ns 香/n</l>
+        <l>天宮/ns 偈/n 讚/v 應/d 無/v 數/n</l>
+        <l>側/v 耳/n 唯/d 聞/v 最/d 吉/a 祥/v</l>
+      </poem>
+      <poem id="by018" title="初入經筵呈諸友三首 三">
+        <l>何/d 期/v 萬/m 里/n 對/v 龍庭/ns</l>
+        <l>便/d 與/p 群/m 仙/n 躡/v 鳳/n 翎/n</l>
+        <l>白/n 玉/n 為/v 堂/n 深/a 著/v 我/r</l>
+        <l>黃/n 金/n 作/v 字/n 細/d 書/v 經/n</l>
+        <l>天/n 池/nr 側/f 畔/n 多/a 餘/n 潤/v</l>
+        <l>帝/n 座/n 前/f 頭/n 一/m 小/a 星/n</l>
+        <l>嘗/d 憶/v 太宗/nr 容/n 老奘/nr</l>
+        <l>也/d 曾/d 商/v 略/v 到/v 玄齡/nr</l>
+      </poem>
+      <poem id="by019" title="南城郭冀州，在南方時，予尚小，撫若己子，常受其家供養。今天八十餘矣，強建如五六十人。至京往見以詩贄云。">
+        <l>公/n 在/v 南/f 方/n 佐/v 郡/n 時/n</l>
+        <l>憶/v 年/t 十五/m 尚/d 見/v 癡/a</l>
+        <l>隱/v 身/n 未/d 解/v 瓶/n 中/f 浴/v</l>
+        <l>叉/v 手/n 先/n 成/v 座/n 上/f 詩/n</l>
+        <l>苦/a 李/n 實/n 多/a 人/n 競/d 採/v</l>
+        <l>甘棠/ns 樹/n 好/v 我/r 頻/d 思/v</l>
+        <l>浙/ns 河/n 一/m 望/v 三千/m 里/n</l>
+        <l>難/d 得/v 升/v 堂/n 奉/v 酒/n 卮/n</l>
+      </poem>
+      <poem id="by020" title="八月四日公車晏駕二首 一">
+        <l>駐/v 輦/n 開平/ns 實/d 帝畿/ns</l>
+        <l>秋/n 來/v 日/n 月/n 損/v 光/n 輝/v</l>
+        <l>空/d 令/v 扈/v 從/v 千/m 官/n 泣/v</l>
+        <l>不/d 見/v 宸/d 遊/v 八/m 駿/n 歸/v</l>
+        <l>白/n 露/n 節/n 前/f 霜/n 已/d 降/v</l>
+        <l>黃花/ns 川/n 畔/f 葉/n 爭/v 飛/v</l>
+        <l>橫/a 經/n 未/d 入/v 重雲殿/ns</l>
+        <l>但/d 有/v 香/n 烟/n 染/v 御/v 衣/n</l>
+      </poem>
+      <poem id="by021" title="八月四日公車晏駕二首 二">
+        <l>此/r 日/n 俄/d 聞/v 帝/n 上/f 升/v</l>
+        <l>編/v 年/n 忍/v 見/v 史/n 書/n 崩/v</l>
+        <l>向/d 來/v 玉/n 座/n 瞻/v 龍/n 袞/n</l>
+        <l>愁/d 殺/v 雲/n 車/n 載/v 紙/n 繒/n</l>
+        <l>出/v 入/v 幾/d 時/n 陪/v 警/v 蹕/n</l>
+        <l>朝/n 昏/t 何/r 處/n 望/v 山/n 陵/n</l>
+        <l>三千/m 里/n 外/f 攀/v 髯/n 墮/v</l>
+        <l>只/d 有/v 孤/n 臣/n 淚/n 滿/v 膺/n</l>
+      </poem>
+      <poem id="by022" title="訪虞伯生待製">
+        <l>蓬萊坊/ns 裡/f 是/r 仙/n 居/n</l>
+        <l>松/n 桂/n 林/n 中/f 讀/v 佛/n 書/n</l>
+        <l>大/a 本/n 華經/n 全/d 在/v 我/r</l>
+        <l>小/a 根/n 魔/n 子/n 豈/d 關/v 渠/n</l>
+        <l>莊/nr 周/nr 未/d 免/v 為/v 蝴/n 蝶/n</l>
+        <l>韓愈/nr 何/d 嘗/d 絕/v 蠹/n 魚/n</l>
+        <l>昨/t 夜/n 涼/a 風/n 動/v 關/n 塞/v</l>
+        <l>朝/n 來/v 落/v 葉/n 徧/v 階/n 除/ns</l>
+      </poem>
+      <poem id="by023" title="應聘">
+        <l>野/n 人/n 應/v 聘/v 愧/v 非/d 材/n</l>
+        <l>何/d 幸/d 初/n 逢/v 寳/n 運/n 開/v</l>
+        <l>白/n 雪/n 陽/n 春/n 難/d 和/v 曲/n</l>
+        <l>黃/n 金/n 舊/a 日/t 最/d 高/a 臺/n</l>
+        <l>萬/m 年/t 枝/n 上/f 山/n 鶯/n 語/v</l>
+        <l>千/m 柱/n 宮/n 中/f 海/n 燕/n 來/v</l>
+        <l>且/d 伴/v 群/m 仙/n 遊/v 上/n 界/n</l>
+        <l>從/d 教/v 地/n 位/n 隔/v 塵/n 埃/n</l>
+      </poem>
+      <poem id="by024" title="寄洪司徒">
+        <l>親/d 扶/v 佛/n 日/n 上/v 高/a 冥/v</l>
+        <l>著/v 絳/n 袈/n 裟/n 眼/n 獨/d 青/a</l>
+        <l>時/n 愛/v 眉/n 長/a 堪/v 入/v 畫/v</l>
+        <l>舊/a 吟/v 詩/n 好/a 合/d 為/v 經/n</l>
+        <l>雨/v 龍/n 聽/v 講/v 天/n 花/n 濕/v</l>
+        <l>海/n 鶴/n 隨/v 行/n 徑/n 草/n 腥/v</l>
+        <l>遙/d 想/v 曉/n 來/v 持/v 咒/n 罷/v</l>
+        <l>柳/n 枝/n 和/v 露/n 插/v 金/n 瓶/n</l>
+      </poem>
+      <poem id="by025" title="罷經筵贈呂日新家安道">
+        <l>南/f 國/n 書/n 生/n 感/v 慨/v 多/a</l>
+        <l>五/m 華/ns 重/a 閣/n 謾/d 巍/a 峨/v</l>
+        <l>曾/d 觀/v 劍/n 器/n 孫/nr 娘/nr 舞/v</l>
+        <l>再/d 聼/v 宮/n 人/n 穆氏/nr 歌/v</l>
+        <l>草/n 裡/f 豈/d 無/v 傍/n 不/d 肯/v</l>
+        <l>君/n 前/f 猶/d 有/v 鏡/n 新/d 磨/v</l>
+        <l>自/p 今/t 對/v 酒/n 抒/v 懷/n 抱/v</l>
+        <l>休/v 問/v 桑/ns 田/n 變/v 海/n 波/n</l>
+      </poem>
+      <poem id="by026" title="吳宗師吳真人">
+        <l>小/d 駐/v 金/n 尊/n 且/d 莫/d 傾/v</l>
+        <l>黃/n 河/n 合/v 是/r 幾/d 時/n 清/v</l>
+        <l>教/v 花/n 解/v 語/n 人/n 須/d 妒/v</l>
+        <l>使/v 月/n 長/a 圓/a 歲/n 不/d 成/v</l>
+        <l>鏡/n 裡/f 亦/d 知/v 潘/n 鬢/n 改/v</l>
+        <l>掌/n 中/f 休/v 問/v 楚/ns 腰/n 輕/a</l>
+        <l>伐/v 毛/n 清/v 髓/n 非/d 無/v 術/n</l>
+        <l>它/r 日/n 相/d 將/d 上/v 玉/ns 京/ns</l>
+      </poem>
+      <poem id="by027" title="駕幸白塔二首 一">
+        <l>亭/n 亭/a 黃/n 傘/n 綵/n 雲/n 端/f</l>
+        <l>只/d 許/v 垂/v 簾/n 夾/n 道/n 觀/v</l>
+        <l>千/m 步/v 廊/n 深/a 羅/v 寳/n 馬/n</l>
+        <l>九/m 重/v 樂/n 奏/v 擁/v 儀/n 鸞/n</l>
+        <l>直/d 將/v 白塔/ns 為/v 天/n 樹/n</l>
+        <l>何/d 待/v 金/n 人/n 捧/v 露/n 盤/n</l>
+        <l>殿/n 戶/n 盡/v 開/v 鈴/n 鐸/n 響/v</l>
+        <l>高/d 燒/v 熏/ns 陸/n 報/v 旃/n 檀/n</l>
+      </poem>
+      <poem id="by028" title="駕幸白塔二首 二">
+        <l>臥/d 聼/v 簷/n 鳴/v 宿/a 雨/n 垂/v</l>
+        <l>行/d 看/v 駕/n 動/v 曉/n 雲/n 披/v</l>
+        <l>堂/n 中/f 盛/d 設/v 千/m 僧/n 飯/n</l>
+        <l>殿/n 下/f 寬/v 容/v 五/m 丈/n 旗/n</l>
+        <l>日/n 角/n 分/v 明/v 何/d 敢/v 視/v</l>
+        <l>天/n 華/nr 新/d 好/v 不/d 教/v 萎/n</l>
+        <l>須臾/t 喚/v 杖/n 還/v 金/ns 闕/ns</l>
+        <l>更/d 奏/v 簫/n 韶/n 待/v 鳳/n 儀/n</l>
+      </poem>
+      <poem id="by029" title="贈西番元帥">
+        <l>劍南/ns 西/f 路/n 與/p 天/n 連/v</l>
+        <l>吐谷渾/n 遮/v 莫賀延/nr</l>
+        <l>使/v 者/r 出/v 關/n 頻/d 捧/v 詔/n</l>
+        <l>將/n 軍/n 持/v 節/n 尚/d 臨/v 邊/n</l>
+        <l>黃/n 羊/n 野/n 馬/n 充/v 庖/n 美/a</l>
+        <l>金/n 鳳/n 銀/n 鵝/n 照/v 骨/n 鮮/a</l>
+        <l>投/v 筆/n 每/d 懷/v 班定遠/nr</l>
+        <l>至/v 今/n 功/n 業/n 在/v 陳/n 編/n</l>
+      </poem>
+      <poem id="by030" title="送天使往西域">
+        <l>流/a 沙/n 往/d 往/a 陷/v 成/v 河/n</l>
+        <l>枯/a 骨/n 縱/v 橫/a 魑/n 魅/n 多/a</l>
+        <l>天/n 女/n 散/v 花/n 休/v 駐/v 想/n</l>
+        <l>梵/n 音/n 彈/v 舌/n 好/a 降/v 魔/n</l>
+        <l>狼頭/ns 左/f 右/f 千/m 兵/n 聚/v</l>
+        <l>魚/ns 脊/ns 中/f 間/n 萬/m 馬/n 過/v</l>
+        <l>行/d 見/v 浮屠/n 近/v 天竺/n</l>
+        <l>洗/v 心/n 瞻/v 禮/n 勿/d 蹉/v 跎/v</l>
+      </poem>
+      <poem id="by031" title="贈聖長安長老從雲山">
+        <l>棕/ns 毛/nr 小/a 殿/n 屢/d 傳/v 宣/v</l>
+        <l>請/d 說/v 雲/n 門/nr 派/v 下/f 禪/v</l>
+        <l>即/d 日/n 賜/v 金/n 三萬/m 兩/n</l>
+        <l>連/v 朝/n 開/v 法/n 九/m 重/ns 天/n</l>
+        <l>宰/n 臣/n 擁/v 蓋/n 盈/v 閭/n 卷/v</l>
+        <l>宮/n 女/n 縫/v 衣/n 學/v 水/n 田/n</l>
+        <l>且/d 欲/v 依/v 君/n 方/n 丈/n 住/v</l>
+        <l>閒/d 尋/v 舊/a 籍/n 寫/v 新/a 編/n</l>
+      </poem>
+      <poem id="by032" title="朱虛">
+        <l>朱虛/ns 新/n 滅/v 呂/ns</l>
+        <l>易水/ns 不/d 離/v 燕/ns</l>
+        <l>出/d 攬/v 飛/v 龍/n 轡/n</l>
+        <l>行/d 鳴/v 落/v 雁/n 弦/n</l>
+        <l>御溝/ns 紅/n 葉/n 下/v</l>
+        <l>方/n 丈/n 白/n 雲/n 邊/n</l>
+        <l>共/d 賀/v 更/v 新/a 主/n</l>
+        <l>重興/t 甲子/t 年/t</l>
+      </poem>
+      <poem id="by033" title="萬寳坊偶成三首 一">
+        <l>短/a 衣/n 隨/v 北/f 客/n</l>
+        <l>歸/v 路/n 近/v 東華/ns</l>
+        <l>宮/n 帽/n 鳧/n 分/v 尾/n</l>
+        <l>軍/n 裝/n 豹/n 與/p 花/n</l>
+        <l>燕王/nr 收/v 骏/n 骨/n</l>
+        <l>漢/n 使/n 待/v 靈/a 槎/n</l>
+        <l>挾/v 彈/v 千/m 金/n 子/n</l>
+        <l>呼/v 鷹/n 萬/m 里/n 沙/n</l>
+      </poem>
+      <poem id="by034" title="萬寳坊偶成三首 二">
+        <l>入/d 擁/v 君/n 王/n 駕/n</l>
+        <l>還/d 陪/v 宰/n 相/n 車/n</l>
+        <l>旄/n 頭/n 元/nr 執/v 罕/n</l>
+        <l>龍/n 尾/n 舊/a 名/v 豝/n</l>
+        <l>荅/v 布/n 應/v 千/m 疋/n</l>
+        <l>穹廬/n 且/d 萬/m 家/n</l>
+        <l>誰/r 能/v 捐/v 祿/n 米/n</l>
+        <l>我/r 欲/v 駐/v 京華/ns</l>
+      </poem>
+      <poem id="by035" title="萬寳坊偶成三首 三">
+        <l>夜/n 色/n 連/v 沙/n 塞/v</l>
+        <l>秋/n 聲/n 動/v 禁/n 林/ns</l>
+        <l>西山/ns 當/v 闕/n 角/n</l>
+        <l>北/f 斗/n 挂/v 天/n 心/n</l>
+        <l>匣/n 束/v 雙/m 紋/n 簟/n</l>
+        <l>霜/n 催/v 九/m 月/t 砧/n</l>
+        <l>能/v 鳴/v 無/v 數/m 雁/n</l>
+        <l>可/v 念/v 獨/d 棲/v 禽/n</l>
+      </poem>
+      <poem id="by036" title="贈雲山長老">
+        <l>遠/a 客/n 同/v 秋/n 雁/n</l>
+        <l>無/v 眠/n 聼/v 曉/n 鷄/n</l>
+        <l>宮/n 墻/n 千/m 雉/n 匝/v</l>
+        <l>御/v 柳/n 萬/m 條/n 齊/v</l>
+        <l>暗/a 水/n 金/ns 溝/ns 底/f</l>
+        <l>明/v 河/n 紫殿/ns 西/f</l>
+        <l>山/n 中/f 真/a 宰/n 相/n</l>
+        <l>不/d 待/v 築/v 沙/n 堤/n</l>
+      </poem>
+      <poem id="by037" title="遊輦下諸刹">
+        <l>帝/n 作/v 黃/n 金/n 寺/n</l>
+        <l>我/r 留/v 白玉京/ns</l>
+        <l>無/v 人/n 嫌/v 狗/n 曲/n</l>
+        <l>有/v 客/n 愛/v 驢/n 鳴/v</l>
+        <l>水/n 餅/n 時/n 時/n 設/v</l>
+        <l>天/n 花/n 頓/d 頓/d 烹/v</l>
+        <l>盤/n 盂/n 恣/v 流/v 溢/v</l>
+        <l>酥/n 酪/n 浩/a 縱/v 橫/a</l>
+      </poem>
+      <poem id="by038" title="皇帝幸永安寺設齋">
+        <l>紺/n 馬/n 朱/n 牦/n 不/d 動/v 身/n</l>
+        <l>紅/n 韡/n 玉/n 帶/n 自/r 生/v 春/n</l>
+        <l>衆/a 流/n 浩/a 浩/a 東/f 歸/v 海/n</l>
+        <l>群/m 象/n 煌/a 煌/a 北/f 拱/v 辰/n</l>
+        <l>雨/n 粟/n 有/v 時/n 飄/v 殿/n 閣/n</l>
+        <l>天/n 花/n 無/v 數/n 落/v 金/n 銀/n</l>
+        <l>吾/r 皇/n 八萬四千/m 嵗/n</l>
+        <l>歲/t 歲/n 長/a 齋/v 貧/a 道/n 人/n</l>
+      </poem>
+      <poem id="by039" title="覽麻座上聼衆國師持論">
+        <l>國/n 師/n 持/v 論/n 意/n 何/r 如/v</l>
+        <l>彈/v 指/v 聲/n 前/f 併/d 掃/v 除/v</l>
+        <l>無著/nr 天親/nr 聞/v 得/v 妙/a</l>
+        <l>許詢/nr 支遁/nr 敢/v 崇/v 虛/v</l>
+        <l>三/m 乘/n 直/d 截/v 僧/n 蕃/n 語/n</l>
+        <l>四/m 種/n 空/d 留/v 梵/n 志/n 書/n</l>
+        <l>問/v 答/v 縱/v 橫/a 君/n 未/d 解/v</l>
+        <l>能/v 知/v 冷/a 暖/a 水/n 中/f 魚/n</l>
+      </poem>
+      <poem id="by040" title="五花山寺">
+        <l>五花山寺/ns 雪/n 雲/n 中/f</l>
+        <l>天/n 匠/n 新/d 來/v 睹/v 史/n 宮/n</l>
+        <l>佛/n 蓋/n 半/d 垂/v 金/n 駊/v 騀/v</l>
+        <l>僧/n 窗/n 全/d 占/v 碧/n 玲/v 瓏/v</l>
+        <l>長/a 虬/n 影/n 蟄/v 寒/a 沙/n 水/n</l>
+        <l>猛/a 虎/n 聲/n 啼/v 夜/n 壑/n 風/n</l>
+        <l>先/n 帝/n 宸/d 遊/v 如/v 未/d 舉/v</l>
+        <l>寳/n 書/n 亦/d 復/d 見/v 全/a 功/n</l>
+      </poem>
+      <poem id="by041" title="送家安道還餘杭">
+        <l>萬寶坊/ns 中/f 把/v 一/m 卮/n</l>
+        <l>每/d 因/d 相/d 別/v 重/d 相/d 思/v</l>
+        <l>北/f 來/v 枉/d 作/v 朝/v 天/n 客/n</l>
+        <l>南/f 去/v 渾/d 如/v 不/d 第/v 時/n</l>
+        <l>青/n 嶂/n 白/n 雲/n 親/n 舍/n 近/v</l>
+        <l>碧/n 桃/n 紅/n 杏/n 子/n 來/v 遲/a</l>
+        <l>幸/d 然/v 錦/n 繡/n 山/n 川/n 在/v</l>
+        <l>何/d 必/d 功/n 曹/n 負/v 好/a 詩/n</l>
+      </poem>
+      <poem id="by042" title="余寓萬寶坊凡三閱月，郝冀州延入南城彌陀寺，禪誦焉，寄呂改之二首 一">
+        <l>乞/v 得/v 黃/n 粱/n 手/n 自/r 春/n</l>
+        <l>染/v 成/v 赤/n 布/n 倩/v 誰/r 縫/v</l>
+        <l>氍/n 毹/n 半/d 展/v 深/a 扃/v 戶/n</l>
+        <l>榾/n 柮/nr 高/d 燒/v 穩/d 過/v 冬/n</l>
+        <l>水/n 有/v 行/v 車/n 冰/n 四/m 合/v</l>
+        <l>山/n 無/v 度/v 鳥/n 雪/n 全/d 封/v</l>
+        <l>此/r 時/n 俗/n 駕/n 來/v 應/d 斷/v</l>
+        <l>一/m 縷/n 旃/n 檀/n 且/d 細/d 供/v</l>
+      </poem>
+      <poem id="by043" title="余寓萬寶坊凡三閱月，郝冀州延入南城彌陀寺，禪誦焉，寄呂改之二首 二">
+        <l>兀/d 兀/a 清/a 齋/a 坐/v 虎/ns 皮/n</l>
+        <l>流/a 年/n 不/d 道/v 暗/a 中/f 移/v</l>
+        <l>郭/nr 生/nr 墮/v 甑/n 休/d 回/v 首/n</l>
+        <l>陶令/nr 聞/v 鐘/n 只/d 皺/v 眉/n</l>
+        <l>新/d 得/v 盧/ns 茶/n 敲/v 石/n 煮/v</l>
+        <l>每/d 聞/v 羌/n 笛/n 隔/v 鄰/n 吹/v</l>
+        <l>曳/v 裾/n 懶/v 向/v 王/n 門/n 去/v</l>
+        <l>須/d 信/v 名/n 場/n 有/v 蒺/n 藜/ns</l>
+      </poem>
+      <poem id="by044" title="寄光雪窗書記二首 一">
+        <l>天街/ns 騎/v 驢/n 何/r 處/n 僧/n</l>
+        <l>自/r 笑/v 踏/v 雪/n 行/v 凌/v 兢/v</l>
+        <l>昨/n 來/v 深/a 殿/n 謁/v 明/v 主/n</l>
+        <l>今/t 畏/v 猛/a 風/n 吹/v 厚/a 繒/n</l>
+        <l>繡/n 佛/n 長/a 齋/n 有/v 蘇晉/nr</l>
+        <l>園/n 蔥/n 變/v 茝/n 無/v 姚/nr 興/v</l>
+        <l>代/ns 州/n 食/n 雁/n 定/d 肥/a 否/v</l>
+        <l>滿/a 座/n 醉/v 人/n 呼/v 不/d 應/v</l>
+      </poem>
+      <poem id="by045" title="寄光雪窗書記 二">
+        <l>鬢/n 毛/n 未/d 有/v 一/m 莖/n 斑/a</l>
+        <l>長/a 謂/v 龍/n 鱗/n 坐/d 可/v 攀/v</l>
+        <l>古/n 劍/n 精/a 神/n 霄/n 漢/n 表/f</l>
+        <l>飛/a 鴻/n 指/v 爪/n 雪/n 泥/n 間/f</l>
+        <l>貪/d 將/v 釣/a 手/n 遮/v 西/f 日/n</l>
+        <l>不/d 覺/v 移/v 文/n 到/v 北/f 山/n</l>
+        <l>稍/d 待/v 御河/ns 春/n 水/n 滿/v</l>
+        <l>船/n 頭/n 持/v 酒/n 酹/v 銅/n 環/n</l>
+      </poem>
+      <poem id="by046" title="冬暖">
+        <l>冬/n 暖/a 臨/v 軒/n 罷/v 燎/v 爐/n</l>
+        <l>坐/d 來/v 春/n 自/d 透/v 肌/n 膚/n</l>
+        <l>野/n 人/n 豈/d 識/v 純/a 綿/nr 好/a</l>
+        <l>天子/nr 應/d 嫌/v 炙/v 背/n 粗/a</l>
+        <l>畫/a 閣/n 銀/n 床/n 空/a 繡/n 被/n</l>
+        <l>金/n 盤/n 石/n 蜜/n 更/d 牛/n 酥/n</l>
+        <l>此/r 中/n 未/d 是/r 安/v 閒/a 國/n</l>
+        <l>且/d 進/v 茅/n 檐/n 飯/n 一/m 盂/n</l>
+      </poem>
+      <poem id="by047" title="贈聰提點">
+        <l>此/r 日/n 誰/r 餐/v 兩/m 顆/n 梨/n</l>
+        <l>金/n 盤/n 頓/v 頓/a 設/v 糕/n 糜/n</l>
+        <l>人/n 生/n 淡/a 泊/a 從/v 我/r 好/a</l>
+        <l>佛/n 國/n 清/a 涼/v 與/v 爾/r 期/n</l>
+        <l>日/n 晚/v 且/d 停/v 紅/n 吒/v 撥/n</l>
+        <l>雪/n 寒/a 須/d 著/v 紫/n 駝/n 尼/n</l>
+        <l>羊/n 酥/n 馬/n 酪/n 饒/a 風/n 味/n</l>
+        <l>更/d 憶/v 吳/ns 鹽/n 壓/v 楚/ns 葵/n</l>
+      </poem>
+      <poem id="by048" title="諸王">
+        <l>近/v 日/t 長安/ns 酒/n 價/n 多/a</l>
+        <l>諸/m 王/n 劍/n 佩/n 互/d 相/d 磨/v</l>
+        <l>袍/n 裁/v 白/n 地/n 明/v 光/n 錦/n</l>
+        <l>詔/v 賜/v 紅/n 雲/n 五/m 色/n 羅/n</l>
+        <l>沙/n 凍/a 草/n 根/n 春/n 淅/v 瀝/v</l>
+        <l>雪/n 晴/v 山/n 脊/n 晚/d 嵯/v 峨/n</l>
+        <l>無/v 人/n 識/v 得/v 河/ns 間/ns 意/n</l>
+        <l>卻/d 笑/v 投/v 壺/n 與/p 雅/n 歌/n</l>
+      </poem>
+      <poem id="by049" title="呈諸學士二首 一">
+        <l>太/a 平/a 天子/nr 駕/v 飛/v 龍/n</l>
+        <l>五百/m 年/n 來/v 始/d 一/m 逢/v</l>
+        <l>歌/n 舞/n 未/d 宜/v 煩/v 學/v 士/n</l>
+        <l>文/n 章/n 何/d 必/d 羡/v 昭容/nr</l>
+        <l>瓊林/ns 聳/v 日/n 花/n 枝/n 盛/a</l>
+        <l>輦/n 道/n 含/v 煙/n 柳/n 色/n 濃/a</l>
+        <l>聽/v 罷/v 秦王/nr 卷/v 衣/n 曲/n</l>
+        <l>還/d 聞/v 長樂/ns 動/v 疏/a 鐘/n</l>
+      </poem>
+      <poem id="by050" title="呈諸學士二首  二">
+        <l>聞/v 道/v 君/n 王/n 愛/v 古/n 詞/n</l>
+        <l>内/f 庭/n 行/v 樂/n 少/a 人/n 知/v</l>
+        <l>初/n 傳/v 皇/n 后/nr 千/m 金/n 賦/n</l>
+        <l>更/d 代/v 宮/n 娥/nr 一/m 首/n 詩/n</l>
+        <l>夾/v 輦/n 每/d 看/v 朱/n 鳳/n 下/f</l>
+        <l>登/v 天/n 兼/d 賜/v 白/n 龍/n 騎/n</l>
+        <l>區/d 區/a 拙/a 速/a 真/v 菅/n 蒯/n</l>
+        <l>敢/v 比/v 群/m 公/n 織/v 錦/n 遲/a</l>
+      </poem>
+      <poem id="by051" title="皇都春日 一">
+        <l>三/m 三/m 五/m 五/m 殿/n 相/d 當/v</l>
+        <l>玉/n 几/n 中/f 間/n 是/r 御/v 床/n</l>
+        <l>宗/n 廟/n 盡/v 存/v 周/ns 禮/n 樂/n</l>
+        <l>翰/n 林/n 多/d 取/v 漢/ns 文/n 章/n</l>
+        <l>東/f 風/n 入/v 律/n 蠻/n 夷/n 語/v</l>
+        <l>北/f 斗/n 回/v 城/n 刻/n 漏/n 長/a</l>
+        <l>不/d 但/n 有/v 詩/n 歌/v 后稷/nr</l>
+        <l>更/d 將/v 無/v 逸/n 奉/v 君/n 王/n</l>
+      </poem>
+      <poem id="by052" title="皇都春日 二">
+        <l>麗/nr 正/n 門/n 前/f 春/n 雪/n 消/v</l>
+        <l>百/m 官/n 無/v 事/n 早/d 回/v 朝/n</l>
+        <l>閒/d 追/v 步/v 輦/n 尋/v 花/n 徑/n</l>
+        <l>已/d 覺/v 光/n 風/n 轉/v 柳/n 條/t</l>
+        <l>幽/a 鳥/n 忽/d 來/v 啼/v 紫/n 翠/n</l>
+        <l>故/n 人/n 相/d 見/v 解/v 金/n 貂/ns</l>
+        <l>輕/a 車/n 細/a 馬/n 香山路/ns</l>
+        <l>更/d 聼/v 泉/n 聲/n 落/v 澗/n 遙/a</l>
+      </poem>
+      <poem id="by053" title="皇都春日 三">
+        <l>城/n 上/f 重/a 雲/n 雜/a 晚/a 霞/n</l>
+        <l>門/n 前/f 流/a 水/n 帶/v 春/n 沙/n</l>
+        <l>雨/n 隨/v 天子/nr 行/v 朝/n 輦/n</l>
+        <l>香/n 趁/v 宮/n 人/n 入/v 道/n 車/n</l>
+        <l>不/d 分/v 烏/n 啼/v 金/ns 井/ns 樹/n</l>
+        <l>從/d 教/v 蝶/n 醉/v 玉/n 闌/ns 花/n</l>
+        <l>笙/n 歌/n 散/v 後/f 公/n 應/d 識/v</l>
+        <l>富/n 貴/n 來/v 時/n 手/n 可/v 遮/v</l>
+      </poem>
+      <poem id="by054" title="群公子">
+        <l>少/a 年/t 意/v 氣/n 爲/p 誰/r 傾/v</l>
+        <l>閒/d 把/v 琵/n 琶/n 出/v 鳳/ns 城/n</l>
+        <l>染/v 草/n 未/d 匀/v 春/n 色/n 嫩/a</l>
+        <l>勒/v 花/n 不/d 住/v 曉/n 寒/a 輕/a</l>
+        <l>風/n 飄/v 十/m 里/n 香/n 塵/n 滿/v</l>
+        <l>日/n 照/v 三/m 條/ns 廣/a 路/n 明/v</l>
+        <l>灑/v 掃/v 東/f 堂/n 遊/v 射/v 處/n</l>
+        <l>分/v 鵝/n 亦/d 足/d 慰/v 人/n 情/n</l>
+      </poem>
+      <poem id="by055" title="贈怯薛">
+        <l>龍/n 鳳/n 團/n 茶/n 喚/v 客/n 烹/v</l>
+        <l>愛/v 君/n 年/n 少/a 氣/n 崢/v 嶸/v</l>
+        <l>蓬萊殿/ns 近/v 聞/v 天/n 語/n</l>
+        <l>閶闔/ns 門/n 高/a 侍/v 輦/n 行/v</l>
+        <l>春/n 暖/a 摘/v 花/n 供/v 進/v 酒/n</l>
+        <l>月/n 明/v 吹/v 竹/n 和/v 彈/v 箏/n</l>
+        <l>焉/d 知/v 寂/a 寞/a 山/n 林/ns 士/n</l>
+        <l>糲/n 飯/n 寒/a 𧅱/n 度/v 一/m 生/n</l>
+      </poem>
+      <poem id="by056" title="過張尚書">
+        <l>今/t 日/n 雪/n 晴/v 天/n 氣/n 和/v</l>
+        <l>太/d 平/a 隨/v 處/n 有/v 笙/n 歌/n</l>
+        <l>花/n 開/v 上/f 國/n 宜/v 春/n 苑/n</l>
+        <l>詩/n 滿/v 南宮/ns 瑞/a 錦/n 窠/n</l>
+        <l>黃/n 鳥/n 語/n 來/v 深/a 巷/n 靜/a</l>
+        <l>白/n 雲/n 飛/v 去/v 好/a 山/n 多/a</l>
+        <l>人/n 生/n 得/v 意/v 須/d 行/v 樂/n</l>
+        <l>且/d 洗/v 君/n 家/n 鸚鵡/n 螺/n</l>
+      </poem>
+      <poem id="by057" title="送僧遊高丽">
+        <l>前/t 年/t 同/d 居/v 密/a 的支/ns</l>
+        <l>今/t 年/t 獨/d 走/v 高/a 句麗/n</l>
+        <l>度/v 遼/ns 向/v 晚/a 泊/v 何/r 處/n</l>
+        <l>入/v 海/n 談/v 經/n 來/v 幾/m 時/n</l>
+        <l>夜/n 火/n 初/n 紅/a 雪/n 色/n 石/n</l>
+        <l>春/n 山/n 正/d 綠/n 人/n 形/n 芝/n</l>
+        <l>誰/r 家/n 女/n 子/n 化/v 龍/n 去/v</l>
+        <l>出/v 沒/v 波/n 間/f 常/d 護/v 持/v</l>
+      </poem>
+      <poem id="by058" title="贈王使君">
+        <l>君/n 持/v 使/n 節/n 過/v 繩/n 橋/n</l>
+        <l>已/d 遣/v 蠻/n 夷/nr 感/v 聖/n 朝/n</l>
+        <l>良/a 將/n 未/d 誇/v 班定遠/nr</l>
+        <l>大/a 臣/n 猶/d 數/v 蓋寬饒/nr</l>
+        <l>川/n 香/v 野/n 馬/n 銜/v 青/n 草/n</l>
+        <l>雪/n 晴/v 天/n 鵝/n 避/v 皂/n 雕/n</l>
+        <l>西/f 出/v 陽關/ns 九千/m 里/n</l>
+        <l>歸/d 來/v 莫/d 惜/v 鬢/n 蕭蕭/a</l>
+      </poem>
+      <poem id="by059" title="正月二十日贈東平進士丘公佐殿試在迩作此先之">
+        <l>京師/ns 花/n 柳/n 鬥/v 春/n 妍/a</l>
+        <l>試/v 手/n 東/f 風/n 第/f 一/m 篇/n</l>
+        <l>方/d 取/v 餘/n 糟/n 醉/v 司/nr 命/n</l>
+        <l>又/d 携/v 薄/a 餅/n 補/v 天/n 穿/v</l>
+        <l>文/n 如/v 鳳/n 閣/t 舍/a 人/n 樣/n</l>
+        <l>名/n 在/v 玉/n 皇/n 香/n 案/n 前/f</l>
+        <l>何/d 況/v 陰/a 功/n 曾/d 救/v 蟻/n</l>
+        <l>錦/n 標/n 得/v 雋/n 合/d 推/v 先/n</l>
+      </poem>
+      <poem id="by060" title="贈錢塘張克正">
+        <l>酒/n 酣/v 合/d 奏/v 琵琶/n 箏/n</l>
+        <l>無/v 限/v 春/n 光/n 付/v 後/n 生/n</l>
+        <l>織/v 翠/n 新/a 裾/n 驕/v 野/n 服/n</l>
+        <l>函/v 牛/n 鼎/n 大/a 饜/v 珍/d 烹/v</l>
+        <l>澗/n 松/nr 錯/v 落/v 千/m 尋/v 幹/n</l>
+        <l>山/n 草/n 扶/v 疏/v 四/m 寸/n 莖/n</l>
+        <l>頗/d 憶/v 江南/ns 風/n 物/n 否/d</l>
+        <l>綠/n 楊/nr 影/n 裡/f 畫/v 船/n 橫/a</l>
+      </poem>
+      <poem id="by061" title="過千步廊街">
+        <l>古/n 今/n 異/v 代/n 不/d 同/v 時/n</l>
+        <l>閒/d 詠/v 龍/n 蛇/n 燕/n 雀/n 詩/n</l>
+        <l>春/n 霧/n 未/d 消/v 藏/v 殿/n 閣/n</l>
+        <l>暖/a 風/n 無/v 力/n 動/v 旌/n 旗/n</l>
+        <l>黃/n 鶯/n 囀/v 罷/v 還/d 飛/v 去/v</l>
+        <l>翠/n 柳/nr 生/v 來/v 盡/v 倒/d 垂/v</l>
+        <l>寒/a 食/n 清/a 明/v 看/v 又/d 過/v</l>
+        <l>内/f 園/n 次第/n 賞/v 荼/n 蘼/n</l>
+      </poem>
+      <poem id="by062" title="和人鞦韆">
+        <l>九/m 衢/ns 春/n 暖/a 雜/a 花/n 開/v</l>
+        <l>高/d 架/v 鞦/n 韆/n 試/v 女/n 孩/n</l>
+        <l>綵/n 索/n 頓/d 能/v 抛/v 勢/n 力/n</l>
+        <l>羅/n 衣/n 全/d 不/d 染/v 塵/n 埃/n</l>
+        <l>將/d 隨/v 舞/n 蝶/n 輕/d 飄/v 去/v</l>
+        <l>又/d 學/v 遊/v 絲/nr 穩/d 下/v 來/v</l>
+        <l>直/d 到/v 廣/n 寒/a 爭/v 幾/m 許/n</l>
+        <l>何/d 勞/v 重/d 築/v 眺/v 蟾/n 臺/n</l>
+      </poem>
+      <poem id="by063" title="相府 一">
+        <l>春/n 遊/v 有/v 限/n 興/n 無/v 涯/f</l>
+        <l>屢/d 到/v 能/v 詩/n 宰/n 相/n 家/n</l>
+        <l>未/d 綠/v 先/n 黃/v 臨/v 砌/n 柳/n</l>
+        <l>才/n 紅/a 又/d 白/a 滿/v 闌/n 花/n</l>
+        <l>座/n 傾/v 珠/n 履/n 三千/m 客/n</l>
+        <l>月/n 剩/v 珍/a 馐/n 十萬/m 車/n</l>
+        <l>入/d 覲/v 歸/v 來/v 焚/v 奏/v 稿/n</l>
+        <l>陰/a 功/n 不/d 許/v 後/a 人/n 誇/v</l>
+      </poem>
+      <poem id="by064" title="相府 二">
+        <l>八/m 表/n 咸/d 知/v 天子/nr 尊/v</l>
+        <l>古/n 無/v 封/v 域/n 盛/v 王元/nr</l>
+        <l>相/n 分/v 左/f 右/f 參/v 機/n 務/v</l>
+        <l>臺/n 可/v 東/f 西/f 拱/v 禁/v 垣/n</l>
+        <l>端/v 委/v 廟/n 堂/n 須/v 庾/nr 亮/nr</l>
+        <l>懶/d 迎/v 賓/n 客/n 笑/v 陳/nr 蕃/nr</l>
+        <l>年/n 來/v 豈/d 可/v 不/d 為/v 學/n</l>
+        <l>禾/n 黍/n 豐/a 登/v 梨/n 棗/n 繁/v</l>
+      </poem>
+      <poem id="by065" title="奉答諸學士">
+        <l>聖/n 戒/v 盤/n 銘/n 亦/d 在/v 初/n</l>
+        <l>朝/n 回/v 便/a 殿/n 坐/d 看/v 書/n</l>
+        <l>五/m 風/n 十/m 雨/n 春/n 長/a 好/a</l>
+        <l>萬/m 戶/n 千/m 門/n 樂/n 有/v 餘/n</l>
+        <l>深/a 巷/n 隔/v 花/n 聞/v 按/v 曲/n</l>
+        <l>小/a 亭/n 臨/v 水/n 見/v 行/v 車/n</l>
+        <l>滄州/ns 日/n 暖/a 多/a 鵷/n 鷺/n</l>
+        <l>盡/v 泛/v 恩/n 波/n 到/v 石渠/ns</l>
+      </poem>
+      <poem id="by066" title="公主園">
+        <l>一/m 從/v 明/v 律/n 變/v 春/n 溫/a</l>
+        <l>無/v 數/m 流/a 鶯/n 滿/v 沁園/ns</l>
+        <l>翠/n 輦/n 穿/v 花/n 長公主/nr</l>
+        <l>緋/n 衣/n 束/v 帶/n 小/a 黃/n 門/n</l>
+        <l>佳/a 人/n 不/d 屬/v 沙吒利/n</l>
+        <l>快/a 馬/n 仍/d 逢/v 勃突渾/nr</l>
+        <l>海/n 内/f 承/v 平/a 無/v 戰/n 伐/v</l>
+        <l>彈/v 絲/n 吹/v 竹/n 到/v 芳/a 樽/n</l>
+      </poem>
+      <poem id="by067" title="有感 一">
+        <l>富/a 貴/a 抛/v 人/n 似/v 擲/v 梭/n</l>
+        <l>不/d 禁/v 騎/v 馬/n 再/d 經/v 過/v</l>
+        <l>太/nr 師/n 宅/n 廢/v 無/v 弦/n 管/n</l>
+        <l>丞/n 相/n 堂/n 新/d 有/v 綺羅/n</l>
+        <l>苦/a 李/n 開/v 花/n 春/n 不/d 少/a</l>
+        <l>甜/a 桃/nr 結/v 子/n 夏/n 還/d 多/a</l>
+        <l>炎/n 涼/n 換/v 盡/v 嬋/a 娟/a 貌/n</l>
+        <l>聼/v 取/v 黃/n 鷄/n 白/n 日/n 歌/n</l>
+      </poem>
+      <poem id="by068" title="有感 二">
+        <l>潮州司馬/nr 萬/m 羊/n 群/v</l>
+        <l>割/v 肉/n 充/v 庖/n 不/d 忍/v 聞/v</l>
+        <l>飲/v 酒/n 固/d 宜/v 澆/v 磊/n 塊/n</l>
+        <l>煮/v 茶/n 那/d 復/d 接/v 殷/a 勤/v</l>
+        <l>陳/ns 侯/nr 弊/a 席/n 門/n 前/f 設/v</l>
+        <l>丁/nr 氏/nr 香/n 爐/n 被/v 底/f 熏/v</l>
+        <l>總/d 道/v 夜/n 眠/v 忘/v 寵/n 辱/n</l>
+        <l>役/n 夫/n 何/r 事/n 夢/v 何/r 君/n</l>
+      </poem>
+      <poem id="by069" title="天曆三年 至治三年 甲子春，鄧公善之任國子祭酒，試禮部進士，甚公。善之謂予曰： 「袁伯長學士在京師累歲，不肯取鄉士。今年得程端禮兄弟，人亦不以我為私。」 余聞之喜，因謝。">
+        <l>桃/n 李/n 漫/a 山/n 不/d 肯/v 栽/v</l>
+        <l>先/n 生/n 新/a 手/n 斸/v 蒼/a 苔/n</l>
+        <l>舊/a 時/n 燕子/n 無/v 巢/n 宿/v</l>
+        <l>今/t 日/t 藤/n 花/n 借/v 樹/n 開/v</l>
+        <l>富/nr 弼/nr 推/v 恩/n 寧/d 為/v 友/n</l>
+        <l>祁/nr 奚/nr 舉/v 子/n 實/d 論/v 才/n</l>
+        <l>山/n 僧/n 亦/d 有/v 鄉/n 閭/n 念/v</l>
+        <l>建福/ns 門/n 前/f 幾/m 度/n 來/v</l>
+      </poem>
+      <poem id="by070" title="呈鄉士">
+        <l>肉/n 如/v 泰華/ns 酒/n 如/v 泉/n</l>
+        <l>應/d 笑/v 烹/v 茶/n 廬/v 玉川/ns</l>
+        <l>鑄/v 錯/n 不/d 成/v 休/d 費/v 鉄/n</l>
+        <l>通/v 神/n 何/r 物/n 似/v 堆/v 錢/n</l>
+        <l>步/d 趨/v 絳/ns 闕/n 蒼/n 龍/n 下/f</l>
+        <l>心/n 在/v 清溪/ns 白/n 鳥/n 邊/n</l>
+        <l>未/d 得/v 同/v 舟/n 往/v 吳越/ns</l>
+        <l>凌/v 雲/n 詩/n 思/v 已/d 飄/a 然/u</l>
+      </poem>
+      <poem id="by071" title="重過京尹宅">
+        <l>陸/n 海/n 庖/n 厨/n 厭/v 割/v 烹/v</l>
+        <l>公/n 侯/n 車/n 馬/n 亂/v 縱/v 橫/a</l>
+        <l>北/f 收/v 代郡/ns 雁/n 為/v 炙/n</l>
+        <l>南/f 取/v 楚江/ns 鼋/n 作/v 羹/n</l>
+        <l>紅/n 紫/n 二/m 綃/n 樓/n 上/f 女/n</l>
+        <l>宮/n 商/nr 一/m 束/n 帳/n 前/f 笙/n</l>
+        <l>奈/v 何/r 骨/n 化/v 邙山/ns 土/n</l>
+        <l>不/d 得/v 重/d 來/v 捧/v 玉/n 觥/n</l>
+      </poem>
+      <poem id="by072" title="遊道院">
+        <l>雪/n 白/a 花/n 枝/n 滿/a 院/n 開/v</l>
+        <l>沉/a 沉/v 古/n 殿/n 鎖/v 蒼/a 苔/n</l>
+        <l>且/d 看/v 松/n 影/n 不/d 知/v 晚/a</l>
+        <l>聞/v 有/v 棋/n 聲/n 何/r 處/f 來/v</l>
+        <l>地/n 上/f 玉/n 壺/n 收/v 日/n 月/n</l>
+        <l>山/n 中/f 珠/n 樹/n 隔/v 樓/n 臺/n</l>
+        <l>五/m 芝/n 本/v 是/r 長/a 生/v 草/n</l>
+        <l>除/v 卻/v 仙/n 人/n 誰/r 解/v 栽/v</l>
+      </poem>
+      <poem id="by073" title="出城訪智詮師">
+        <l>九/m 子/n 母/n 祠/v 天/n 闕/ns 西/f</l>
+        <l>森/a 森/a 夏/n 木/n 與/p 雲/n 齊/v</l>
+        <l>詩/n 成/v 初/n 見/v 野/ns 花/n 落/v</l>
+        <l>睡/d 起/v 忽/d 聞/v 山/n 鳥/n 啼/v</l>
+        <l>傍/v 眼/n 清/a 泉/n 開/v 錦/n 鏡/n</l>
+        <l>臨/v 窗/n 小/a 字/n 寫/v 銀/n 泥/n</l>
+        <l>野/n 人/n 不/d 用/v 紗/n 籠/v 壁/n</l>
+        <l>他/r 日/n 重/d 來/v 看/v 舊/a 題/n</l>
+      </poem>
+      <poem id="by074" title="贈韓執中">
+        <l>未/d 可/v 匆/d 匆/v 話/v 別/v 離/v</l>
+        <l>北/f 來/v 需/v 作/n 數/m 年/n 期/n</l>
+        <l>蝸/n 牛/nr 角/n 上/f 看/v 蠻/n 觸/n</l>
+        <l>人/n 馬/n 宮/n 中/f 識/v 尾/n 箕/n</l>
+        <l>畢/nr 卓/nr 但/d 能/v 尋/v 酒/n 甕/n</l>
+        <l>班超/nr 何/d 必/d 棄/v 毛/n 錐/n</l>
+        <l>尚/v 方/n 鑄/v 就/v 黃/n 金/ns 印/n</l>
+        <l>他/r 日/n 封/v 侯/n 定/d 屬/v 誰/r</l>
+      </poem>
+      <poem id="by075" title="西山">
+        <l>西山/ns 如/v 龍/n 枕/v 皇州/ns</l>
+        <l>上/f 有/v 仙/n 子/n 不/d 可/v 求/v</l>
+        <l>白/n 石/n 在/v 水/n 常/d 鑿/v 鑿/v</l>
+        <l>青/n 松/n 無/v 風/n 自/r 颼/v 颼/v</l>
+        <l>大/d 書/v 金/n 榜/n 著/v 僧/n 字/n</l>
+        <l>直/d 送/v 玉泉/ns 來/v 御溝/ns</l>
+        <l>相/d 約/v 功/n 成/v 身/n 退/v 日/n</l>
+        <l>一/m 庵/n 高/d 臥/v 萬/m 峰/n 頭/n</l>
+      </poem>
+      <poem id="by076" title="聞樂">
+        <l>牛/n 皮/n 竹/n 管/n 是/r 何/r 音/n</l>
+        <l>奏/v 我/r 琉璃/n 一/m 面/n 琴/n</l>
+        <l>石/n 室/n 定/d 回/v 知/v 佛/n 意/n</l>
+        <l>虛/v 空/n 花/n 落/v 見/v 天/n 心/n</l>
+        <l>王昭君/nr 去/v 徒/d 留/v 冢/n</l>
+        <l>鐘/nr 子期/nr 亡/v 謾/d 鑄/v 金/n</l>
+        <l>只/d 有/v 此/r 聲/n 傳/v 不/d 得/v</l>
+        <l>夜/n 來/v 風/n 雨/n 撼/v 山/n 林/n</l>
+      </poem>
+      <poem id="by077" title="宮使出家">
+        <l>昭陽宮/ns 裡/f 剩/a 春/n 花/n</l>
+        <l>不/d 與/v 元/n 悲/v 解/v 嘆/v 嗟/v</l>
+        <l>舊/a 賜/v 儘/d 抛/v 金/n 騕褭/n</l>
+        <l>新/a 恩/n 初/n 降/v 紫/n 袈/n 裟/n</l>
+        <l>都/d 將/v 鳳/ns 閣/n 千/m 鐘/n 酒/n</l>
+        <l>并/d 換/v 龍/n 團/n 一/m 品/n 茶/n</l>
+        <l>京洛/ns 風/n 塵/n 頓/d 蕭/a 爽/a</l>
+        <l>山/n 青/a 白/n 雲/n 是/r 吾/r 家/n</l>
+      </poem>
+      <poem id="by078" title="送鍇師之上都">
+        <l>又/d 向/v 神都/ns 避/v 鬱/a 蒸/v</l>
+        <l>朝/t 朝/t 駕/n 動/v 鼓/n 登/v 登/v</l>
+        <l>不/d 騎/v 一/m 匹/n 大/d 宛/nr 罵/v</l>
+        <l>自/r 拄/v 千/m 霜/n 王屋/ns 籐/n</l>
+        <l>陌/n 上/f 花/n 開/v 金/n 作/v 朵/n</l>
+        <l>山/n 間/f 雲/n 畫/n 翠/n 為/v 層/m</l>
+        <l>長/a 松/n 怪/a 石/n 華嚴寺/ns</l>
+        <l>想/d 見/v 臯/ns 爐/n 煮/v 澗/n 冰/n</l>
+      </poem>
+      <poem id="by079" title="上都避暑呈虞伯生待製 一">
+        <l>扈/v 從/v 君/n 王/n 下/v 輦/n 初/n</l>
+        <l>三千/m 宮/n 女/n 麗/v 芙蕖/nr</l>
+        <l>龍/n 顔/n 映/v 日/n 朝/n 臨/v 座/n</l>
+        <l>鶴/n 禁/n 張/v 燈/n 夜/n 講/v 書/n</l>
+        <l>火/n 浣/v 布/n 新/a 衣/n 整/a 肅/a</l>
+        <l>水/n 精/t 杯/n 冷/a 酒/n 空/a 虛/v</l>
+        <l>大/a 官/n 復/d 取/v 麆/n 沆/n 進/v</l>
+        <l>天/n 上/f 駝/v 酥/n 恐/v 不/d 如/v</l>
+      </poem>
+      <poem id="by080" title="上都避暑呈虞伯生待製 二">
+        <l>神都/ns 避/v 暑/n 可/v 為/v 歡/n</l>
+        <l>滿/a 地/n 風/n 霜/n 六/m 月/t 寒/a</l>
+        <l>座/n 有/v 陳/nr 遵/nr 復/d 投/v 轄/n</l>
+        <l>朝/n 無/v 汲/nr 黯/nr 亦/d 常/d 冠/v</l>
+        <l>千/m 鐘/n 美/a 酒/n 鸕鷀/n 杓/n</l>
+        <l>五/m 色/n 甘/a 瓜/n 翡/m 翠/n 盤/n</l>
+        <l>誰/r 採/v 歌/n 詩/n 獻/v 天子/nr</l>
+        <l>飯/v 牛/n 車/n 下/f 夜/n 漫/v 漫/v</l>
+      </poem>
+      <poem id="by081" title="呈諸國師 一">
+        <l>從/p 此/r 開平/ns 是/r 帝鄉/ns</l>
+        <l>錦/n 雲/n 外/f 繞/v 殿/n 中/f 央/n</l>
+        <l>猶/d 來/v 盛/a 夏/n 不/d 知/v 暑/n</l>
+        <l>未/d 及/v 新/a 秋/n 先/n 雨/v 霜/n</l>
+        <l>翠/n 壑/n 丹/n 泉/n 真/d 富/a 貴/v</l>
+        <l>冰/n 肌/n 玉/n 骨/n 自/r 清/a 涼/a</l>
+        <l>四/m 依/v 大/a 士/n 具/d 無著/nr</l>
+        <l>盡/v 放/v 眠/v 沙/n 細/a 肋/n 羊/n</l>
+      </poem>
+      <poem id="by082" title="呈諸國師 二">
+        <l>我/r 獨/d 何/r 爲/v 塵/n 土/n 中/f</l>
+        <l>校/v 讎/v 文/n 字/n 久/d 無/v 功/n</l>
+        <l>斜/a 陽/n 穿/v 樹/n 正/d 金/n 碧/n</l>
+        <l>小/a 草/n 著/v 花/n 能/v 白/a 紅/a</l>
+        <l>不/d 在/v 南/f 方/n 猶/d 畏/v 暑/n</l>
+        <l>旋/d 開/v 北/f 戶/n 正/d 生/v 風/n</l>
+        <l>知/v 師/n 入/v 夜/n 談/v 禪/n 罷/v</l>
+        <l>高/d 臥/v 寬/v 閒/n 五百/m 弓/n</l>
+      </poem>
+      <poem id="by083" title="畏吾御史落髮">
+        <l>南越/ns 大/a 珠/n 堪/v 作/v 旒/n</l>
+        <l>西涼/ns 美/a 錦/n 可/v 為/v 裘/n</l>
+        <l>時/n 苗/n 留/v 犢/n 世/n 不/d 見/v</l>
+        <l>房/nr 琯/nr 得/v 羊/n 心/n 未/d 休/v</l>
+        <l>六/m 國/n 幾/d 人/n 捐/v 相/n 印/n</l>
+        <l>五湖/ns 何/r 日/n 伴/v 漁/v 舟/n</l>
+        <l>喜/v 君/n 獨/d 鏟/v 青/n 青/n 草/n</l>
+        <l>無/d 復/d 還/v 家/n 與/p 婦/n 謀/v</l>
+      </poem>
+      <poem id="by084" title="亡金故内">
+        <l>極/v 目/n 離/a 離/v 禾/n 黍/n 苗/n</l>
+        <l>愁/d 聞/v 野/n 老/n 說/v 金/ns 朝/n</l>
+        <l>百/m 花/n 總/d 為/v 蜂/n 添/v 蜜/n</l>
+        <l>千/m 古/n 真/d 成/v 鹿/n 覆/v 蕉/n</l>
+        <l>廢/v 主/n 無/v 才/n 謀/v 伐/v 宋/n</l>
+        <l>元/n 戎/n 有/v 志/n 在/v 降/v 遼/ns</l>
+        <l>片/a 雲/n 忽/d 作/v 西山/ns 雨/n</l>
+        <l>疑/v 是/r 英/n 雄/n 恨/v 未/d 消/v</l>
+      </poem>
+      <poem id="by085" title="軒轅臺">
+        <l>軒轅/nr 未/d 免/v 伐/v 蚩尤/nr</l>
+        <l>百/m 尺/n 荒/a 臺/n 萬/m 古/n 留/v</l>
+        <l>玉/n 葉/n 金/n 枝/n 雲/n 作/v 蓋/n</l>
+        <l>青/n 山/n 白/n 水/n 地/n 名/n 幽/a</l>
+        <l>人/n 間/f 且/d 說/v 騎/v 龍/n 去/v</l>
+        <l>天/n 上/f 須/d 為/v 跨/v 鶴/n 遊/v</l>
+        <l>弓/n 劍/n 久/d 埋/v 陵/n 谷/n 變/v</l>
+        <l>角/n 聲/n 長/a 繞/v 夕/t 陽/ns 樓/n</l>
+      </poem>
+      <poem id="by086" title="易水">
+        <l>把/v 酒/n 高/d 歌/v 易水/ns 寒/a</l>
+        <l>當/a 時/n 已/d 料/v 事/n 成/v 難/v</l>
+        <l>求/v 賢/n 未/d 及/v 周/ns 公/nr 旦/nr</l>
+        <l>好/v 客/n 無/d 如/v 太/nr 子/nr 丹/nr</l>
+        <l>雪/n 盡/v 新/a 春/n 行/v 草/n 木/n</l>
+        <l>天/n 清/a 古/n 戍/n 集/v 峰/n 巒/n</l>
+        <l>圖/n 窮/v 匕/n 見/v 真/d 奇/a 偉/a</l>
+        <l>得/d 作/v 秦王/nr 分/v 死/v 看/v</l>
+      </poem>
+      <poem id="by087" title="秦王城">
+        <l>掘/v 地/n 埋/v 金/n 無/v 不/d 能/v</l>
+        <l>東/f 南/f 王/n 氣/n 日/n 騰/v 騰/v</l>
+        <l>扶蘇/nr 賜/v 死/v 如/v 秦/ns 滅/v</l>
+        <l>胡/nr 亥/nr 從/v 遊/v 識/v 漢/n 興/v</l>
+        <l>在/v 道/n 已/d 遭/v 山/n 鬼/n 哭/v</l>
+        <l>還/v 家/n 方/d 信/v 鮑/n 魚/nr 乘/v</l>
+        <l>杞/ns 梁/ns 白/n 骨/n 沉/v 黃/n 土/n</l>
+        <l>妻/n 淚/n 滴/v 城/n 城/n 自/d 崩/v</l>
+      </poem>
+      <poem id="by088" title="居庸關">
+        <l>天/n 畔/f 浮/a 雲/n 雲/n 表/f 峰/n</l>
+        <l>北/f 遊/v 奇/a 險/a 見/v 居庸/ns</l>
+        <l>力/d 排/v 劍/n 戟/n 三千/m 士/n</l>
+        <l>門/n 掩/v 河/n 山/n 百萬/m 重/n</l>
+        <l>渠答/nr 自/p 今/n 收/v 戰/v 馬/n</l>
+        <l>兜零/n 無/d 復/d 置/v 邊/n 烽/n</l>
+        <l>上都/ns 避/v 暑/n 頻/d 來/v 往/v</l>
+        <l>飛/v 鳥/n 猶/d 能/v 識/v 袞/n 龍/n</l>
+      </poem>
+      <poem id="by089" title="李陵臺">
+        <l>男/n 兒/n 肝/n 膽/n 鑄/v 黃/n 金/n</l>
+        <l>擾/a 擾/a 遊/v 塵/n 不/d 易/d 侵/v</l>
+        <l>忍/v 死/n 難/d 將/v 蘇武/nr 節/n</l>
+        <l>偷/v 生/n 未/d 解/v 李陵/nr 心/n</l>
+        <l>氈/n 裘/nr 影/f 拂/v 天/n 山/n 去/v</l>
+        <l>蘆/ns 管/n 聲/n 催/v 漢/n 月/n 沉/v</l>
+        <l>借/d 問/v 高/a 臺/n 誰/r 與/p 築/v</l>
+        <l>南/f 來/v 客/n 子/n 倦/v 登/v 臨/v</l>
+      </poem>
+      <poem id="by090" title="琴峽">
+        <l>目/n 送/v 歸/v 鴻/n 手/n 五/m 弦/n</l>
+        <l>嵇康/nr 合/d 向/v 此/r 中/n 仙/v</l>
+        <l>水/n 如/v 玉/n 指/n 彈/v 秋/n 月/n</l>
+        <l>星/n 作/v 金/n 徽/n 散/v 曉/n 天/n</l>
+        <l>盡/v 洗/v 伊/ns 涼/ns 方/d 可/v 聼/v</l>
+        <l>不/d 明/v 韶濩/n 若/d 為/v 傳/v</l>
+        <l>君/n 王/n 莫/d 愛/v 霓/n 裳/n 曲/n</l>
+        <l>艷/a 舞/n 嬌/a 歌/n 失/v 自/r 然/v</l>
+      </poem>
+      <poem id="by091" title="龍門">
+        <l>輕/a 車/n 緩/a 轡/n 過/v 龍門/ns</l>
+        <l>小/a 草/n 幽/a 香/n 滿/v 石/n 根/n</l>
+        <l>侍/v 從/v 千/m 官/n 成/v 夜/n 宿/v</l>
+        <l>徘/v 徊/v 萬/m 騎/n 若/v 雲/n 屯/v</l>
+        <l>神/n 魚/nr 不/d 待/v 桃/n 花/n 浪/n</l>
+        <l>野/n 老/n 何/d 知/v 天子/nr 尊/v</l>
+        <l>來/d 聼/v 灘/n 聲/n 坐/v 終/v 日/n</l>
+        <l>好/d 教/v 俗/n 耳/n 洗/v 塵/n 昏/n</l>
+      </poem>
+      <poem id="by092" title="槍竿嶺">
+        <l>桑/ns 乾/nr 不/d 欲/v 舊/a 名/n 呼/v</l>
+        <l>似/d 是/r 彭/nr 郎/nr 娶/v 小/a 姑/n</l>
+        <l>夜/n 近/v 斗/n 杓/n 橫/a 碧/n 落/v</l>
+        <l>曉/n 看/v 雲/n 氣/n 接/v 蒼梧/ns</l>
+        <l>太/a 平/a 天子/nr 九/m 龍/n 帳/n</l>
+        <l>年/n 少/a 將/n 軍/n 雙/m 虎/n 符/n</l>
+        <l>我/r 亦/d 何曾/nr 慣/v 鞍/n 馬/n</l>
+        <l>只/d 宜/v 舟/n 楫/n 向/v 江/n 湖/n</l>
+      </poem>
+      <poem id="by093" title="獨石站西望">
+        <l>塞/v 北/f 逢/v 春/n 不/d 見/v 花/n</l>
+        <l>江南/ns 倦/a 客/n 苦/a 思/v 家/n</l>
+        <l>千/m 尋/v 石/n 戴/v 孤/a 峰/n 驛/n</l>
+        <l>一/m 望/v 雲/n 橫/a 萬/m 里/n 沙/n</l>
+        <l>去/v 路/n 多/d 嫌/v 葱/n 嶺/n 礙/v</l>
+        <l>歸/v 途/n 半/d 受/v 雪/n 山/n 遮/v</l>
+        <l>張/nr 騫/nr 往/d 往/v 遊/v 西/ns 域/n</l>
+        <l>未/d 許/v 胡/n 僧/n 進/v 佛/n 牙/n</l>
+      </poem>
+      <poem id="by094" title="朔漠">
+        <l>白/n 草/ns 黃/n 雲/n 朔漠/ns 間/f</l>
+        <l>家/n 書/n 不/d 過/v 雁門關/ns</l>
+        <l>幽州/ns 南/f 北/f 往/v 來/v 路/n</l>
+        <l>遼水/ns 東/f 西/f 千萬/m 山/n</l>
+        <l>沙/n 上/f 老/n 駝/n 埋/v 鼻/n 立/v</l>
+        <l>海/n 中/f 良/a 馬/n 得/v 駒/n 還/v</l>
+        <l>卻/d 登/v 坡/n 壠/n 最/d 高/a 處/n</l>
+        <l>星/n 斗/n 滿/v 天/n 殊/d 可/v 攀/v</l>
+      </poem>
+      <poem id="by095" title="北征懷古">
+        <l>白/n 草/ns 黃/n 雲/n 朔漠/ns 間/f</l>
+        <l>家/n 書/n 不/d 過/v 雁門關/ns</l>
+        <l>幽州/ns 南/f 北/f 往/v 來/v 路/n</l>
+        <l>遼水/ns 東/f 西/f 千萬/m 山/n</l>
+        <l>沙/n 上/f 老/n 駝/n 埋/v 鼻/n 立/v</l>
+        <l>海/n 中/f 良/a 馬/n 得/v 駒/n 還/v</l>
+        <l>卻/d 登/v 坡/n 壠/n 最/d 高/a 處/n</l>
+        <l>星/n 斗/n 滿/v 天/n 殊/d 可/v 攀/v</l>
+      </poem>
+      <poem id="by096" title="相家夜宴">
+        <l>璧/n 月/n 未/d 出/v 金/n 風/n 涼/a</l>
+        <l>群/m 烏/n 啞/a 啞/v 鳴/v 苑/ns 墻/n</l>
+        <l>西山/ns 高/d 居/v 帝/n 左/n 右/n</l>
+        <l>北/f 斗/n 正/d 挂/v 天/n 中/f 央/n</l>
+        <l>繡/n 衣/n 執/v 樂/n 三千/m 指/n</l>
+        <l>朱/n 火/n 籠/v 紗/n 十二/m 行/n</l>
+        <l>坐/d 待/v 更/n 闌/v 賓/n 客/n 散/v</l>
+        <l>蕭/a 齋/n 自/d 烛/v 辟/v 邪/n 香/n</l>
+      </poem>
+      <poem id="by097" title="新秋">
+        <l>白龍堆/ns 北/f 黃/n 蒿/ns 秋/n</l>
+        <l>金水河/ns 西/f 紅/n 葉/n 流/v</l>
+        <l>月/n 上/f 未/d 上/v 已/d 擊/v 鼓/n</l>
+        <l>人/n 來/v 不/d 來/v 方/d 倚/v 樓/n</l>
+        <l>雁/n 聲/n 嗈/v 嗈/v 入/v 雲/n 去/v</l>
+        <l>世/n 事/n 滾/v 滾/v 何/r 時/n 休/v</l>
+        <l>吾/r 鄉/n 一/m 望/v 四千/m 里/n</l>
+        <l>莫/d 識/v 家/n 書/n 沉/v 與/p 浮/v</l>
+      </poem>
+      <poem id="by098" title="贈西山隱者">
+        <l>花/n 邊/n 亭/n 子/n 水/n 邊/n 樓/n</l>
+        <l>宰/n 相/n 歸/d 來/v 秉/v 燭/n 遊/v</l>
+        <l>茅/n 屋/t 道/n 人/n 深/a 夜/n 坐/v</l>
+        <l>桂/n 枝/n 明/v 月/t 滿/a 山/n 秋/n</l>
+        <l>盡/v 教/v 萬/m 馬/n 千/m 軍/n 遠/a</l>
+        <l>消/v 得/v 三/m 平/v 二/m 滿/v 休/v</l>
+        <l>誰/r 不/d 願/v 持/v 生/v 殺/v 柄/n</l>
+        <l>獨/d 誇/v 疏/a 傳/n 有/v 深/a 謀/n</l>
+      </poem>
+      <poem id="by099" title="塞外">
+        <l>無/v 事/n 穹/n 廬/n 似/v 屋/n 方/n</l>
+        <l>臥/d 吹/v 蘆/n 葉/n 向/v 斜/a 陽/n</l>
+        <l>黃/n 河/n 不/d 解/v 變/v 春/n 酒/n</l>
+        <l>白/n 野/n 徒/d 能/v 飄/v 夏/n 霜/n</l>
+        <l>九十九泉/ns 人/n 北/f 去/v</l>
+        <l>一/m 年/t 一/m 度/v 雁/n 南/f 翔/v</l>
+        <l>臨/v 高/v 引/v 領/n 望/v 城/n 郭/n</l>
+        <l>遊/a 子/n 何/r 時/n 還/v 故/n 鄉/ns</l>
+      </poem>
+      <poem id="by100" title="送酒泉太守">
+        <l>太/a 守/n 新/d 來/v 報/v 酒泉/ns</l>
+        <l>臨/v 泉/ns 酌/v 酒/n 過/v 三/m 年/n</l>
+        <l>每/d 嗔/v 王導/nr 不/d 留/v 客/n</l>
+        <l>莫/d 學/v 何曾/nr 空/d 費/v 錢/n</l>
+        <l>腰/n 下/f 黃/n 金/n 橫/a 帶/n 重/a</l>
+        <l>馬/n 頭/n 明/v 月/n 向/v 人/n 圓/a</l>
+        <l>詔/v 條/n 簡/a 易/a 公/d 須/d 勉/v</l>
+        <l>歸/v 日/n 應/d 居/v 課/n 最/d 先/n</l>
+      </poem>
+      <poem id="by101" title="早行看山">
+        <l>厭/d 向/v 官/n 銜/n 踏/v 曉/n 鐘/n</l>
+        <l>車/n 如/v 流/v 水/n 馬/n 如/v 龍/n</l>
+        <l>日/n 行/v 不/d 止/v 九十/m 里/n</l>
+        <l>山/n 遠/a 只/d 疑/v 千萬/m 重/n</l>
+        <l>翠/n 點/n 金/n 花/n 攢/v 細/a 石/n</l>
+        <l>蒼/a 鱗/n 白/n 甲/n 抱/v 長/a 松/n</l>
+        <l>據/v 鞍/n 獨/d 坐/v 看/v 圖/n 畫/n</l>
+        <l>卻/d 憶/v 錢塘/ns 南/f 北/f 峰/n</l>
+      </poem>
+      <poem id="by102" title="賀友人及第">
+        <l>甲子/t 龍/n 飛/v 榜/n</l>
+        <l>江南/ns 有/v 幾/m 人/n</l>
+        <l>一/m 毛/n 生/v 鸑/n 鷟/n</l>
+        <l>千/m 里/n 見/v 麒/n 麟/n</l>
+        <l>述/nr 作/v 機/n 中/f 錦/n</l>
+        <l>光/n 明/v 席/n 上/f 珍/v</l>
+        <l>曲江/ns 高/d 宴/v 會/v</l>
+        <l>花/n 柳/nr 又/d 添/v 春/n</l>
+      </poem>
+      <poem id="by103" title="端午">
+        <l>到/v 闕/n 三千/m 里/n</l>
+        <l>攀/v 天/n 百萬/m 層/m</l>
+        <l>願/v 儲/v 殹/n 艾/v 虎/nr</l>
+        <l>休/v 配/v 辟/v 兵/n 繒/n</l>
+        <l>角/n 黍/n 燕/ns 人/n 喜/v</l>
+        <l>龍/nr 舟/nr 越/ns 俗/n 能/n</l>
+        <l>今/t 朝/t 端午/t 日/t</l>
+        <l>又/d 飲/v 玉/n 壺/ns 冰/n</l>
+      </poem>
+      <poem id="by104" title="席上作">
+        <l>琵琶/n 賀/nr 懷/v 智/n</l>
+        <l>觱篥/n 薛陽陶/nr</l>
+        <l>日/n 暖/a 百/m 鳥/n 語/v</l>
+        <l>霜/n 清/a 孤/a 鶴/n 高/a</l>
+        <l>將/n 軍/n 誓/v 部/n 曲/n</l>
+        <l>野/n 老/n 訓/v 兒/n 曹/n</l>
+        <l>賓/n 客/n 滿/v 堂/n 上/f</l>
+        <l>為/p 君/n 回/v 首/n 勞/v</l>
+      </poem>
+      <poem id="by105" title="贈江南故人 一">
+        <l>今/n 騎/v 沙/ns 苑/ns 馬/n</l>
+        <l>昔/n 踏/v 洞庭/ns 魚/n</l>
+        <l>結/v 纜/n 荷/n 邊/n 宿/v</l>
+        <l>移/v 家/n 竹/n 裡/f 居/v</l>
+        <l>好/a 風/n 橫/a 笛/n 晚/n</l>
+        <l>新/a 月/n 上/v 簾/n 初/n</l>
+        <l>每/d 憶/v 江南/ns 樂/n</l>
+        <l>功/n 名/n 有/v 不/d 如/v</l>
+      </poem>
+      <poem id="by106" title="贈江南故人 二">
+        <l>煮/v 茗/n 羹/n 羊/n 酪/n</l>
+        <l>看/v 山/n 駐/v 馬/n 撾/v</l>
+        <l>地椒/n 真/a 小/a 草/n</l>
+        <l>芭欖/n 有/v 奇/a 花/n</l>
+        <l>漢/n 月/n 宵/n 沉/v 海/n</l>
+        <l>邊/n 風/n 晝/n 起/v 沙/n</l>
+        <l>登/v 高/v 望/v 吳越/ns</l>
+        <l>極/v 目/n 是/r 烟/n 霞/n</l>
+      </poem>
+      <poem id="by107" title="廣殿">
+        <l>廣/a 殿/n 履/v 聲/n 齊/v</l>
+        <l>華/ns 堂/n 燭/n 影/n 微/v</l>
+        <l>月/n 臨/v 珠/n 閣/n 迥/a</l>
+        <l>星/n 傍/v 玉河/ns 稀/a</l>
+        <l>花/n 雨/n 飄/v 重/a 席/n</l>
+        <l>天/n 香/n 散/v 薄/a 衣/n</l>
+        <l>夢/n 遊/v 雙/m 闕/n 遍/v</l>
+        <l>卻/d 下/v 九門/ns 歸/v</l>
+      </poem>
+      <poem id="by108" title="上都十五首 一">
+        <l>聽/v 歌/v 新/a 樂/n 府/n</l>
+        <l>行/v 在/v 小長安/ns</l>
+        <l>玉/n 殿/n 當/v 頭/n 起/v</l>
+        <l>瓊/n 枝/n 傍/v 眼/n 看/v</l>
+        <l>山/n 從/p 開/v 闢/v 有/v</l>
+        <l>地/n 著/v 畫/v 圖/n 難/a</l>
+        <l>萬/m 室/n 恩/n 光/n 裡/f</l>
+        <l>千/m 鍾/n 酒/n 量/n 寬/v</l>
+      </poem>
+      <poem id="by109" title="上都十五首 二">
+        <l>突厥/n 逢/v 唐/n 盛/a</l>
+        <l>完顔/ns 與/p 宋/n 鄰/v</l>
+        <l>君/n 王/n 饒/v 戰/n 略/n</l>
+        <l>公主/nr 再/d 和/v 親/v</l>
+        <l>異/a 域/n 車/n 書/n 會/v</l>
+        <l>中/f 天/n 雨/n 露/n 均/v</l>
+        <l>皇/n 朝/n 真/a 一/m 統/n</l>
+        <l>御/v 曆/n 正/v 三/m 辰/n</l>
+      </poem>
+      <poem id="by110" title="上都十五首 三">
+        <l>王畿/ns 千/m 里/n 近/v</l>
+        <l>御/v 苑/n 四/m 時/n 春/n</l>
+        <l>苜/n 蓿/n 能/v 肥/v 馬/n</l>
+        <l>葡萄/n 不/d 醉/v 人/n</l>
+        <l>袞/n 衣/n 明/v 日/n 月/n</l>
+        <l>關/n 塞/v 絕/v 風/n 塵/n</l>
+        <l>古/n 有/v 官/n 名/n 諫/v</l>
+        <l>今/n 無/v 事/n 可/v 陳/v</l>
+      </poem>
+      <poem id="by111" title="上都十五首 四">
+        <l>縹/a 緲/a 旌/n 旗/n 下/f</l>
+        <l>玲/a 瓏/a 殿/n 閣/n 開/v</l>
+        <l>雨/n 師/n 驅/v 暑/n 去/v</l>
+        <l>風/n 伯/nr 送/v 涼/n 來/v</l>
+        <l>白/n 苧/n 佳/a 人/n 曲/n</l>
+        <l>黃/n 金/n 俊/n 士/n 臺/n</l>
+        <l>宮/n 中/f 多/a 勝/n 賞/v</l>
+        <l>海/n 内/f 足/a 奇/a 才/n</l>
+      </poem>
+      <poem id="by112" title="上都十五首 五">
+        <l>百/m 尺/n 凌/v 風/n 觀/n</l>
+        <l>三/m 休/v 卻/v 月/n 臺/n</l>
+        <l>銀/n 河/n 天/n 上/f 落/v</l>
+        <l>玉/n 帳/n 夜/n 深/a 開/v</l>
+        <l>内/f 地/n 荷/n 花/n 綻/v</l>
+        <l>南/f 方/n 荔子/n 來/v</l>
+        <l>閒/d 燒/v 冰/n 片/v 腦/n</l>
+        <l>更/d 進/v 水晶/n 杯/n</l>
+      </poem>
+      <poem id="by113" title="上都十五首 六">
+        <l>帝/n 前/f 稱/v 萬/m 歲/n</l>
+        <l>宮/n 裡/f 樂/v 千/m 春/n</l>
+        <l>日/n 色/n 明/v 珠/n 網/n</l>
+        <l>霞/n 光/n 散/v 錦/n 裀/n</l>
+        <l>自/p 天/n 傳/v 笑/a 語/n</l>
+        <l>傾/v 府/n 賜/v 金/n 銀/n</l>
+        <l>不/d 是/r 東方朔/nr</l>
+        <l>難/d 酬/v 郭/nr 舍/v 人/n</l>
+      </poem>
+      <poem id="by114" title="上都十五首 七">
+        <l>今/t 代/n 稱/v 文/n 士/n</l>
+        <l>誰/r 能/v 賦/v 兩/m 都/n</l>
+        <l>内/f 盤/n 行/v 瑪瑙/n</l>
+        <l>中/n 宴/v 飲/v 醍/n 醐/ns</l>
+        <l>夜/n 雪/n 關/n 河/n 斷/v</l>
+        <l>春/n 風/n 草/n 木/n 蘇/v</l>
+        <l>不/d 才/n 慚/v 綵/n 筆/n</l>
+        <l>何/d 得/v 近/v 青/n 蒲/n</l>
+      </poem>
+      <poem id="by115" title="上都十五首 八">
+        <l>雙/m 闕/n 上/v 雲/n 霄/n</l>
+        <l>層/m 城/n 近/v 斗/n 杓/n</l>
+        <l>夜/n 開/v 金殿/ns 鎖/n</l>
+        <l>晨/n 赴/v 紫/n 宸/n 朝/n</l>
+        <l>月/n 屋/n 閒/f 蜉/n 蟻/n</l>
+        <l>霜/n 空/n 好/v 射/v 雕/n</l>
+        <l>有/v 官/n 兼/v 宰/n 相/n</l>
+        <l>誰/r 復/d 似/v 嫖姚/nr</l>
+      </poem>
+      <poem id="by116" title="上都十五首 九">
+        <l>霜/n 威/n 何/d 肅/a 殺/v</l>
+        <l>日/n 色/nr 正/d 蒼/a 涼/v</l>
+        <l>獻/v 果/n 金/n 盤/n 赤/n</l>
+        <l>連/v 珠/n 紫/n 幄/n 黃/a</l>
+        <l>坐/d 依/v 重/a 構/n 晚/a</l>
+        <l>樂/n 引/v 一/m 聲/n 長/a</l>
+        <l>更/d 出/v 魚/n 龍/n 戲/v</l>
+        <l>留/v 歡/n 夜/n 未/d 央/v</l>
+      </poem>
+      <poem id="by117" title="上都十五首 十">
+        <l>塞/v 外/f 疑/v 無/v 地/n</l>
+        <l>人/n 間/n 別/d 有/v 天/n</l>
+        <l>宮/n 墻/n 依/v 樹/n 直/v</l>
+        <l>御/v 榻/n 愛/v 花/n 偏/v</l>
+        <l>正/d 想/v 爐/n 薰/n 滿/v</l>
+        <l>遙/d 知/v 漏/n 點/n 傳/v</l>
+        <l>輪臺/nr 方/d 奉/v 詔/n</l>
+        <l>版/n 築/n 更/d 求/v 賢/n</l>
+      </poem>
+      <poem id="by118" title="上都十五首 十一">
+        <l>避/v 暑/n 宜/v 來/v 此/r</l>
+        <l>逢/v 冬/n 可/v 住/v 不/d</l>
+        <l>地/n 高/v 天/n 一/m 握/n</l>
+        <l>河/n 雜/a 水/n 長/a 流/v</l>
+        <l>赤/n 日/n 不/d 知/v 夏/n</l>
+        <l>清/a 霜/n 長/a 似/v 秋/n</l>
+        <l>向/d 來/v 冰/n 雪/n 窟/n</l>
+        <l>今/n 作/v 帝/n 王/n 州/n</l>
+      </poem>
+      <poem id="by119" title="上都十五首 十二">
+        <l>夜/n 斗/n 低/a 垂/v 地/n</l>
+        <l>秋/n 河/n 近/d 著/v 城/n</l>
+        <l>有/v 灰/n 開/v 月/n 暈/n</l>
+        <l>無/v 扇/n 滅/v 風/n 聲/n</l>
+        <l>角/n 奏/n 梅/n 花/n 早/a</l>
+        <l>杯/n 傳/v 竹/n 葉/n 清/a</l>
+        <l>尚/a 衣/n 錦/n 欲/v 折/v</l>
+        <l>高/a 殿/n 雪/n 初/n 晴/v</l>
+      </poem>
+      <poem id="by120" title="上都十五首 十三">
+        <l>萬/m 囯/f 初/n 無/v 外/f</l>
+        <l>諸/m 羌/n 更/d 在/v 西/f</l>
+        <l>閣/n 門/n 朝/n 見/v 雪/n</l>
+        <l>亭/n 障/n 晚/d 開/v 鞞/n</l>
+        <l>天子/nr 黃/n 龍/n 府/n</l>
+        <l>將/n 軍/n 白馬氐/ns</l>
+        <l>錦/n 袍/n 涼/a 似/v 水/n</l>
+        <l>銀/n 甕/n 醉/v 如/v 泥/n</l>
+      </poem>
+      <poem id="by121" title="上都十五首 十四">
+        <l>玉/n 帛/n 朝/v 諸/n 囯/ns</l>
+        <l>公/n 侯/nr 宴/v 上京/ns</l>
+        <l>潑/v 寒/a 奇/a 技/n 奏/v</l>
+        <l>兜勒/n 古/n 歌/n 呈/v</l>
+        <l>地/n 設/v 山/n 河/n 險/a</l>
+        <l>天/n 開/v 日/n 月/n 明/v</l>
+        <l>願/v 將/v 千萬/m 壽/n</l>
+        <l>時/n 祝/v 兩/m 三/m 聲/n</l>
+      </poem>
+      <poem id="by122" title="上都十五首 十五">
+        <l>積/v 雪/n 經/v 春/n 在/v</l>
+        <l>輕/a 霜/n 入/v 夏/n 飛/v</l>
+        <l>凌/v 晨/n 握/v 鞭/n 出/v</l>
+        <l>薄/a 暮/n 打/v 球/n 歸/v</l>
+        <l>冠/n 帶/n 如/v 今/n 盛/a</l>
+        <l>山/n 川/n 似/v 此/r 稀/a</l>
+        <l>清/a 朝/n 多/a 獵/a 戶/n</l>
+        <l>聖/n 主/n 只/d 戎/n 衣/n</l>
+      </poem>
+      <poem id="by123" title="開平書事十二首 一">
+        <l>絕/a 域/n 秋/n 風/n 早/a</l>
+        <l>殊/a 方/n 使/v 客/n 還/v</l>
+        <l>河/n 衝/v 秦/ns 日/n 塞/v</l>
+        <l>地/n 接/v 漢/ns 時/n 關/n</l>
+        <l>萬/m 古/n 悲/v 青塚/ns</l>
+        <l>兼/v 程/n 過/v 黑山/ns</l>
+        <l>從/d 容/v 陪/v 國/n 論/n</l>
+        <l>咫/n 尺/t 近/v 天/n 顔/n</l>
+      </poem>
+      <poem id="by124" title="開平書事十二首 二">
+        <l>射/v 虎/n 南/ns 山/n 下/f</l>
+        <l>看/v 羊/n 北海/ns 邊/n</l>
+        <l>筑/v 城/n 侵/v 地/n 斷/v</l>
+        <l>居/v 室/n 與/p 天/n 連/v</l>
+        <l>墨/n 黑/a 沾/v 衣/n 雨/n</l>
+        <l>沙/ns 黃/v 種/v 黍/n 田/n</l>
+        <l>自/p 從/p 為/v 帝/n 里/f</l>
+        <l>無/d 復/d 少/a 人/n 烟/n</l>
+      </poem>
+      <poem id="by125" title="開平書事十二首 三">
+        <l>朔漠/ns 天/n 威/n 遠/a</l>
+        <l>沙陀/ns 種/n 族/n 繁/a</l>
+        <l>歇/v 裝/n 臨/v 野/n 店/n</l>
+        <l>呼/v 酒/n 隔/v 山/n 村/n</l>
+        <l>白狄/nr 春秋/n 見/v</l>
+        <l>黃/n 河/n 晝/t 夜/n 奔/v</l>
+        <l>願/v 為/v 桃/n 與/p 李/n</l>
+        <l>長/a 得/v 映/v 金/ns 門/ns</l>
+      </poem>
+      <poem id="by126" title="開平書事十二首 四">
+        <l>地/n 勢/n 斜/d 臨/v 北/f</l>
+        <l>河/n 流/v 穩/d 向/v 東/f</l>
+        <l>龍庭/ns 行/v 萬/m 里/n</l>
+        <l>虎/n 路/n 繞/v 三/m 嵕/ns</l>
+        <l>胡/n 女/n 裁/v 皮/n 服/n</l>
+        <l>奚/n 兒/n 挽/v 角/n 弓/nr</l>
+        <l>長/a 吟/n 對/v 落/v 景/n</l>
+        <l>獨/d 坐/v 感/v 飛/v 蓬/n</l>
+      </poem>
+      <poem id="by127" title="開平書事十二首 五">
+        <l>舊/a 俗/n 便/v 弓/n 馬/n</l>
+        <l>新/d 妝/v 稱/v 綺/n 羅/n</l>
+        <l>平/ns 原/ns 芳/a 草/n 歇/v</l>
+        <l>古/n 戍/n 暮/n 雲/n 多/a</l>
+        <l>翠/n 袖/n 調/v 鸚/n 鵡/n</l>
+        <l>金/ns 鞭/n 控/v 駱駝/n</l>
+        <l>上/v 樓/n 看/v 月/n 色/n</l>
+        <l>無/v 酒/n 奈/v 君/n 何/r</l>
+      </poem>
+      <poem id="by128" title="開平書事十二首 六">
+        <l>馬/n 上/f 還/v 鄉/n 夢/n</l>
+        <l>塵/n 中/f 逆/v 旅/n 亭/n</l>
+        <l>娟/a 娟/a 鷗/n 洗/v 翅/n</l>
+        <l>肅/d 肅/a 雁/n 開/v 翎/n</l>
+        <l>山/n 遠/a 猶/d 含/v 雪/n</l>
+        <l>天/n 低/a 可/v 摘/v 星/n</l>
+        <l>由/p 來/d 滯/v 文/n 字/n</l>
+        <l>未/d 足/d 報/v 朝/n 廷/n</l>
+      </poem>
+      <poem id="by129" title="開平書事十二首 七">
+        <l>北海/ns 何/r 人/n 到/v</l>
+        <l>西/f 天/n 此/r 路/n 通/v</l>
+        <l>尋/v 經/v 舍衛/ns 國/n</l>
+        <l>避/v 暑/n 醴泉/ns 宮/n</l>
+        <l>盛/a 夏/n 不/d 揮/v 扇/n</l>
+        <l>平/v 時/n 常/d 起/v 風/n</l>
+        <l>遙/d 瞻/v 仙/n 仗/n 簇/m</l>
+        <l>復/d 有/v 綵/n 雲/n 籠/v</l>
+      </poem>
+      <poem id="by130" title="開平書事十二首 八">
+        <l>日/n 出/v 紫/n 煙/n 橫/a</l>
+        <l>風/n 吹/v 瑤/n 草/n 生/v</l>
+        <l>長/a 城/n 飲/v 馬/n 窟/n</l>
+        <l>俠/a 客/n 少/a 年/n 行/v</l>
+        <l>花/n 下/f 醉/v 金/n 碗/n</l>
+        <l>月/n 中/f 彈/v 玉/n 箏/n</l>
+        <l>焉/d 知/v 有/v 葵/n 藿/n</l>
+        <l>甚/d 美/a 過/v 羊/n 羹/n</l>
+      </poem>
+      <poem id="by131" title="開平書事十二首 九">
+        <l>夜/n 雪/v 沙陀部/ns</l>
+        <l>春/n 風/t 敕勒川/ns</l>
+        <l>生/a 涯/n 唯/d 釀/v 黍/n</l>
+        <l>樂/n 事/n 在/v 彈/v 弦/n</l>
+        <l>不/d 用/v 臨/v 城/n 將/n</l>
+        <l>何/d 須/v 負/v 郭/n 田/n</l>
+        <l>雙/m 鵰/n 來/v 海/n 外/f</l>
+        <l>一/m 箭/n 落/v 天/n 邊/n</l>
+      </poem>
+      <poem id="by132" title="開平書事十二首 十">
+        <l>野/n 外/f 山/n 橫/a 塞/v</l>
+        <l>天/n 涯/n 水/n 繞/v 羌/n</l>
+        <l>登/v 高/a 一/m 俯/v 仰/v</l>
+        <l>即/v 事/n 幾/d 炎/v 涼/v</l>
+        <l>日/n 晚/v 雕/n 聲/n 急/a</l>
+        <l>冰/n 寒/a 馬/n 足/n 傷/v</l>
+        <l>我/r 懷/v 增/v 感/v 慨/v</l>
+        <l>誰/r 與/p 細/d 平/v 章/n</l>
+      </poem>
+      <poem id="by133" title="開平書事十二首 十一">
+        <l>俗/n 重/v 初/n 生/v 月/n</l>
+        <l>身/n 知/v 最/d 近/v 邊/n</l>
+        <l>將/nr 軍/n 躍/v 馬/n 地/n</l>
+        <l>使/v 者/r 牧/v 羊/ns 川/n</l>
+        <l>覽/v 鏡/n 添/v 華/n 髮/n</l>
+        <l>尋/v 詩/n 改/v 舊/a 聯/n</l>
+        <l>兹/r 遊/n 真/d 遠/a 大/a</l>
+        <l>吾/r 本/d 志/n 騰/v 騫/v</l>
+      </poem>
+      <poem id="by134" title="開平書事十二首 十二">
+        <l>孤/n 城/n 横/v 落/v 日/n</l>
+        <l>一/m 望/v 暗/d 消/v 魂/n</l>
+        <l>天/n 大/a 纖/a 雲/n 卷/v</l>
+        <l>風/n 多/a 積/v 草/n 翻/v</l>
+        <l>有/v 田/n 稀/d 種/v 粟/n</l>
+        <l>無/v 樹/n 强/v 名/v 村/n</l>
+        <l>土/n 屋/n 難/d 安/v 寢/n</l>
+        <l>飛/v 沙/n 夜/n 擊/v 門/n</l>
+      </poem>
+      <poem id="by135" title="漠北懷古十六首 一">
+        <l>世祖/nr 起/v 沙/ns 漠/n</l>
+        <l>臨/v 軒/n 銷/v 甲/n 兵/n</l>
+        <l>羌/ns 中/f 一/m 片/n 地/n</l>
+        <l>秦/ns 後/f 幾/m 長/a 城/n</l>
+        <l>象/n 膽/n 隨/v 時/n 轉/v</l>
+        <l>駝/v 蹄/n 入/v 夜/n 明/v</l>
+        <l>何/d 須/d 待/v 秋/n 獵/v</l>
+        <l>不/d 必/d 問/v 春/n 耕/v</l>
+      </poem>
+      <poem id="by136" title="漠北懷古十六首 二">
+        <l>北門/ns 寒/a 露/v 野/n</l>
+        <l>西域/ns 引/v 弓/n 民/n</l>
+        <l>有/v 地/n 長/a 含/v 凍/a</l>
+        <l>無/v 花/n 可/v 笑/v 春/n</l>
+        <l>紫/n 貂/nr 裁/v 帽/n 穩/a</l>
+        <l>銀/n 鼠/n 製/v 袍/n 新/a</l>
+        <l>萬/m 甕/n 葡萄/n 熟/v</l>
+        <l>聞/v 名/n 已/d 醉/v 人/n</l>
+      </poem>
+      <poem id="by137" title="漠北懷古十六首 三">
+        <l>迢/a 迢/a 黑水/ns 部/n</l>
+        <l>渺/a 渺/a 白山/ns 連/v</l>
+        <l>厚/a 土/n 覆/v 屋/n 上/f</l>
+        <l>薄/a 鹽/n 凝/v 樹/n 顛/f</l>
+        <l>弓/n 刀/n 劇/a 風/n 雨/n</l>
+        <l>粟/n 麥/n 滿/v 沙/n 田/n</l>
+        <l>借/v 問/v 飛/v 鳧/n 使/n</l>
+        <l>營/ns 州/n 阿那/n 邊/n</l>
+      </poem>
+      <poem id="by138" title="漠北懷古十六首 四">
+        <l>曠/a 野/n 多/a 遺/a 骨/n</l>
+        <l>前/t 朝/n 數/d 用/v 兵/n</l>
+        <l>烽/n 連/v 都護/n 府/n</l>
+        <l>柵/n 繞/v 可敦城/ns</l>
+        <l>健/a 鶻/n 雲/n 間/f 落/v</l>
+        <l>妖/a 狐/n 塞/v 下/f 鳴/v</l>
+        <l>卻/d 因/v 班定遠/nr</l>
+        <l>牽/v 動/v 故/n 鄉/n 情/n</l>
+      </poem>
+      <poem id="by139" title="漠北懷古十六首 五">
+        <l>玉/ns 塞/v 休/d 嫌/v 遠/a</l>
+        <l>金/ns 山/n 未/d 盡/v 邊/n</l>
+        <l>野/n 肥/v 多/a 嫩/a 韭/n</l>
+        <l>沙/n 迸/v 足/v 寒/a 泉/n</l>
+        <l>薄/a 酒/n 千/m 鐘/n 醉/v</l>
+        <l>穹/n 廬/n 四/m 面/n 圓/a</l>
+        <l>少/d 留/v 南/f 郡/n 客/n</l>
+        <l>多/d 賦/v 北/f 征/v 篇/n</l>
+      </poem>
+      <poem id="by140" title="漠北懷古十六首 六">
+        <l>北/f 向/v 無/v 城/n 郭/n</l>
+        <l>遙/d 遙/a 接/v 大/d 荒/v</l>
+        <l>舊/a 來/v 聞/v 漢/ns 土/n</l>
+        <l>前/n 去/v 是/r 河隍/ns</l>
+        <l>野/n 蒜/n 根/n 含/v 水/n</l>
+        <l>沙/n 葱/a 葉/n 負/v 霜/n</l>
+        <l>何/r 人/n 鳴/v 觱篥/n</l>
+        <l>使/v 我/r 淚/n 沾/v 裳/n</l>
+      </poem>
+      <poem id="by141" title="漠北懷古十六首 七">
+        <l>無/v 樹/n 可/v 黃/n 落/v</l>
+        <l>有/v 臺/n 如/v 白登/ns</l>
+        <l>三/m 冬/n 掘/v 野/n 鼠/n</l>
+        <l>萬/m 騎/n 上/v 河/n 冰/n</l>
+        <l>土/n 厚/v 不/d 為/v 井/n</l>
+        <l>民/n 淳/v 猶/d 結/v 繩/n</l>
+        <l>令/v 人/n 思/v 太/a 古/n</l>
+        <l>極/v 目/n 眇/v 平/n 陵/n</l>
+      </poem>
+      <poem id="by142" title="漠北懷古十六首 八">
+        <l>吾/r 聞/v 窮/v 髮/n 北/f</l>
+        <l>此/r 地/n 即/d 天/n 涯/n</l>
+        <l>夏/n 有/v 九/m 河/n 凍/v</l>
+        <l>春/n 無/v 三/m 月/t 花/n</l>
+        <l>清/d 涼/a 非/d 枕/n 簟/n</l>
+        <l>富/a 貴/a 是/r 雲/n 沙/n</l>
+        <l>愛/v 爾/r 捐/v 居/v 室/n</l>
+        <l>長/a 年/n 到/v 處/n 家/n</l>
+      </poem>
+      <poem id="by143" title="漠北懷古十六首 九">
+        <l>曠/d 望/v 重/a 關/n 外/f</l>
+        <l>蕭/d 條/a 萬/m 里/n 餘/n</l>
+        <l>未/d 嘗/d 營/v 粒/n 食/n</l>
+        <l>終/d 不/d 好/v 樓/n 居/v</l>
+        <l>謬/v 甚/a 英/n 雄/n 事/n</l>
+        <l>茫/a 然/u 草/n 昧/v 初/n</l>
+        <l>大/a 人/n 饒/v 蓄/v 牧/v</l>
+        <l>隨/d 分/v 有/v 穹/n 廬/n</l>
+      </poem>
+      <poem id="by144" title="漠北懷古十六首 十">
+        <l>卻/d 望/v 星/n 辰/n 近/v</l>
+        <l>前/n 行/v 歲/n 月/n 賒/a</l>
+        <l>奇/a 鷹/n 頭/n 戴/v 角/n</l>
+        <l>快/a 馬/n 口/n 銜/v 霞/n</l>
+        <l>洗/v 盞/n 方/d 朝/n 飲/v</l>
+        <l>登/v 陴/n 復/d 暮/n 笳/n</l>
+        <l>炎/n 涼/a 人/n 易/d 老/v</l>
+        <l>苦/a 樂/a 鬢/n 俱/d 華/v</l>
+      </poem>
+      <poem id="by145" title="漠北懷古十六首 十一">
+        <l>漢/n 使/n 騎/v 高/a 馬/n</l>
+        <l>唐/ns 兵/n 出/v 近/v 關/n</l>
+        <l>前/f 臨/v 蒲類海/ns</l>
+        <l>卻/v 上/n 浚/ns 稽山/ns</l>
+        <l>帝/n 號/n 垂/v 千/m 古/n</l>
+        <l>軍/n 聲/n 蓋/v 百/m 蠻/n</l>
+        <l>初/n 無/v 功/n 可/v 紀/v</l>
+        <l>只/d 有/v 劍/n 須/n 殷/a</l>
+      </poem>
+      <poem id="by146" title="漠北懷古十六首 十二">
+        <l>每/d 厭/v 冰/n 霜/n 苦/v</l>
+        <l>長/a 尋/v 水/n 草/n 居/v</l>
+        <l>控/v 弦/n 隨/v 地/n 獵/v</l>
+        <l>刳/v 木/n 近/v 河/n 漁/v</l>
+        <l>馬/n 酒/n 茶/n 相/d 似/v</l>
+        <l>駝/n 裘/n 錦/n 不/d 如/v</l>
+        <l>胡/n 兒/n 雙/m 眼/n 碧/a</l>
+        <l>慣/d 讀/v 左/f 行/n 書/n</l>
+      </poem>
+      <poem id="by147" title="漠北懷古十六首 十三">
+        <l>北/f 入/v 窮/v 荒/a 野/n</l>
+        <l>人/n 如/v 曠/v 古/n 時/n</l>
+        <l>天/n 山/n 新/d 有/v 作/n</l>
+        <l>耶律/nr 晚/d 能/v 詩/n</l>
+        <l>地/n 坼/v 河/n 流/v 大/a</l>
+        <l>峰/n 高/a 月/n 上/v 遲/a</l>
+        <l>自/r 言/v 羊/n 可/v 種/v</l>
+        <l>不/d 信/v 繭/n 成/v 絲/n</l>
+      </poem>
+      <poem id="by148" title="漠北懷古十六首 十四">
+        <l>遠/a 客/n 停/v 驂/n 處/n</l>
+        <l>平/a 沙/n 落/v 日/n 時/n</l>
+        <l>塞/v 蓬/n 穿/v 土/n 早/a</l>
+        <l>河/n 柳/nr 得/v 春/n 遲/a</l>
+        <l>欲/v 乳/v 羊/n 求/v 母/n</l>
+        <l>頻/d 嘶/v 馬/n 顧/v 兒/n</l>
+        <l>朔方/ns 多/a 雨/n 雪/n</l>
+        <l>南/f 望/v 是/r 京師/ns</l>
+      </poem>
+      <poem id="by149" title="漠北懷古十六首 十五">
+        <l>下/v 馬/n 四/m 茫/v 茫/v</l>
+        <l>風/n 悲/v 古/n 戰/v 場/n</l>
+        <l>朝/v 天/n 無/v 過/v 鳥/n</l>
+        <l>夏/n 月/t 有/v 繁/a 霜/n</l>
+        <l>草/n 接/v 浮/a 雲/n 白/a</l>
+        <l>沙/n 翻/v 大磧/ns 黃/n</l>
+        <l>提/n 封/v 十萬/m 里/n</l>
+        <l>聖/n 化/v 似/v 陶唐/nr</l>
+      </poem>
+      <poem id="by150" title="漠北懷古十六首 十六">
+        <l>生/v 長/a 松漠/ns 北/f</l>
+        <l>入/d 居/v 雲/ns 代/ns 間/n</l>
+        <l>五原/ns 臨/v 渤海/ns</l>
+        <l>萬/m 帳/n 繞/v 陰山/ns</l>
+        <l>馬/n 蹴/v 胡/ns 沙/n 健/v</l>
+        <l>弓/n 隨/v 漢/n 月/n 彎/v</l>
+        <l>太/d 平/a 無/v 斬/v 伐/v</l>
+        <l>身/n 手/n 恨/v 長/a 閒/v</l>
+      </poem>
+      <poem id="by151" title="八月十五翫月">
+        <l>無/v 根/n 車/n 轂/n 是/r 誰/r 推/v</l>
+        <l>不/d 嫁/v 嫦娥/nr 豈/d 用/v 媒/v</l>
+        <l>八/m 月/t 正/d 當/v 三/m 五/m 夜/n</l>
+        <l>幾/m 人/n 曾/d 賞/v 百千/m 回/n</l>
+        <l>旋/d 抽/v 蓂莢/n 初/n 盈/v 數/n</l>
+        <l>新/d 釀/v 葡萄/n 正/d 潑/v 醅/n</l>
+        <l>避/v 暑/n 歸/v 來/v 宮/n 殿/n 冷/v</l>
+        <l>君/n 王/nr 且/d 進/v 紫/n 霞/n 杯/n</l>
+      </poem>
+      <poem id="by152" title="出城">
+        <l>霜/n 著/v 南宮/ns 柳/n 萬/m 株/n</l>
+        <l>隔/v 垣/n 臨/v 水/n 見/v 行/v 車/n</l>
+        <l>出/v 城/n 便/d 與/p 塵/n 沙/n 接/v</l>
+        <l>在/v 野/n 何/d 妨/v 騎/n 從/v 疏/v</l>
+        <l>阮籍/nr 詠/v 懷/nr 真/d 有/v 意/n</l>
+        <l>馮/nr 驩/nr 彈/v 鋏/n 豈/d 無/v 庐/n</l>
+        <l>南/f 山/n 種/v 豆/n 今/t 零/v 落/v</l>
+        <l>不/d 是/r 秋/n 來/v 廢/v 荷/v 鋤/n</l>
+      </poem>
+      <poem id="by153" title="曉">
+        <l>聖/n 主/n 臨/v 軒/n 日/n</l>
+        <l>彈/v 琴/n 解/v 慍/a 風/n</l>
+        <l>甲/n 兵/n 方/d 偃/v 武/n</l>
+        <l>車/n 架/n 早/d 還/v 宮/n</l>
+        <l>塞/v 土/n 凝/v 煙/n 紫/n</l>
+        <l>星/n 芒/n 射/v 地/n 紅/a</l>
+        <l>胡/ns 床/n 坐/v 來/v 久/a</l>
+        <l>曉/n 色/n 已/d 瞳/v 朧/v</l>
+      </poem>
+      <poem id="by154" title="時事">
+        <l>欲/v 取/v 宮/n 中/f 樂/n</l>
+        <l>無/d 過/v 天/n 下/n 安/a</l>
+        <l>吾/r 君/n 不/d 好/v 殺/v</l>
+        <l>爾/r 輩/n 敢/v 相/d 殘/v</l>
+        <l>草/n 木/n 歲/n 月/n 晚/a</l>
+        <l>關/n 河/n 霜/n 霧/n 寒/a</l>
+        <l>陰/a 風/n 吹/v 太白/nr</l>
+        <l>易水/ns 忍/v 流/v 丹/a</l>
+      </poem>
+      <poem id="by155" title="細柳">
+        <l>細/a 柳/ns 軍/n 營/n 掩/v</l>
+        <l>長/a 楊/ns 獵/v 騎/n 歸/v</l>
+        <l>觀/v 書/n 消/v 白/n 晝/n</l>
+        <l>論/v 道/n 坐/v 黃/n 扉/n</l>
+        <l>諫/v 疏/n 來/v 何/d 少/a</l>
+        <l>匡/v 君/n 事/n 不/d 違/v</l>
+        <l>夜/n 闌/v 瞻/v 斧/n 鉞/n</l>
+        <l>秋/n 至/v 減/v 光/n 輝/v</l>
+      </poem>
+      <poem id="by156" title="烏桓">
+        <l>烏桓/ns 第/m 一/m 州/n</l>
+        <l>白/n 雪/n 亂/v 三/m 秋/n</l>
+        <l>不/d 盡/v 邊/n 雲/n 起/v</l>
+        <l>無/v 情/n 塞/v 水/n 流/v</l>
+        <l>兔/n 銛/n 蒙/nr 氏/n 筆/n</l>
+        <l>狐/n 潔/a 檜/n 君/n 裘/n</l>
+        <l>自/r 笑/v 成/v 癡/a 坐/v</l>
+        <l>何/d 期/v 作/v 遠/d 遊/v</l>
+      </poem>
+      <poem id="by157" title="萬里">
+        <l>萬/m 里/n 故/n 鄉/n 隔/v</l>
+        <l>扁/a 舟/n 何/r 日/n 還/v</l>
+        <l>黃/n 雲/n 薊/ns 北/f 路/v</l>
+        <l>白/n 雪/n 遼西/ns 山/n</l>
+        <l>馬/n 倦/v 客/n 投/v 店/n</l>
+        <l>鷄/n 鳴/v 人/n 出/v 關/n</l>
+        <l>吾/r 思/v 石橋/ns 隱/v</l>
+        <l>絕/a 頂/n 尚/d 容/v 攀/v</l>
+      </poem>
+      <poem id="by158" title="黑谷 一">
+        <l>石/n 澗/n 鳴/v 秋/n 水/n</l>
+        <l>柴/n 門/n 暗/a 曉/n 烟/n</l>
+        <l>棠/n 梨/n 紅/a 可/v 食/v</l>
+        <l>苜/n 蓿/n 翠/n 相/d 連/v</l>
+        <l>馬/n 識/v 新/d 耕/v 地/n</l>
+        <l>駝/d 知/v 舊/a 飲/v 泉/n</l>
+        <l>家/n 家/n 厭/v 酥/n 酪/n</l>
+        <l>物/v 物/n 事/v 烹/v 煎/v</l>
+      </poem>
+      <poem id="by159" title="黑谷 二">
+        <l>北/f 去/v 終/d 無/v 極/n</l>
+        <l>南/f 還/v 未/d 有/v 期/n</l>
+        <l>猶/d 嫌/v 江/n 路/n 遠/a</l>
+        <l>不/d 與/p 土/n 風/n 宜/v</l>
+        <l>晚/a 翠/n 看/v 盧/ns 橘/n</l>
+        <l>春/n 香/n 憶/v 楚/ns 葵/n</l>
+        <l>兹/r 山/n 吾/r 可/v 老/v</l>
+        <l>飲/v 水/n 啖/v 棠/n 梨/n</l>
+      </poem>
+      <poem id="by160" title="當山即事 一">
+        <l>土/n 窟/n 金/n 繒/ns 市/v</l>
+        <l>牙/n 門/ns 羽/n 木/n 槍/n</l>
+        <l>地/n 爐/n 除/v 糞/v 火/n</l>
+        <l>瓦/n 碗/n 軟/a 蒸/v 羊/n</l>
+        <l>小/a 婦/n 擔/v 河/n 水/n</l>
+        <l>平/a 沙/n 簇/m 帳/n 房/n</l>
+        <l>一/m 家/n 俱/d 飽/v 暖/a</l>
+        <l>浮/v 薄/a 笑/v 南/f 方/n</l>
+      </poem>
+      <poem id="by161" title="當山即事 二">
+        <l>水/n 草/nr 頻/d 移/v 徒/n</l>
+        <l>烹/v 庖/n 稱/v 有/v 無/v</l>
+        <l>肉/n 多/a 唯/d 飼/v 犬/n</l>
+        <l>人/n 少/a 只/d 防/v 狐/n</l>
+        <l>白/n 毳/n 千/m 縑/n 㲲/v</l>
+        <l>清/a 尊/n 一/m 味/n 酥/n</l>
+        <l>豪/n 家/n 足/v 羊/n 馬/n</l>
+        <l>不/d 羡/v 水/n 田/n 租/n</l>
+      </poem>
+      <poem id="by162" title="城南寄北城光雪窗時方誦寶積經 一">
+        <l>不/d 擬/v 燕山/ns 過/v 一/m 冬/n</l>
+        <l>彌陀/ns 小/a 院/n 略/d 從/v 容/n</l>
+        <l>無/v 才/n 可/v 備/v 君/n 王/n 問/v</l>
+        <l>有/v 酒/n 頻/d 勞/v 御/v 府/n 供/v</l>
+        <l>九/m 陌/ns 春/n 泥/n 留/v 象/n 跡/n</l>
+        <l>雙城/ns 暮/n 雪/n 點/v 駝/ns 峰/n</l>
+        <l>出/v 遊/v 始/d 覺/v 閒/a 人/n 好/a</l>
+        <l>南/f 寺/n 經/n 聲/n 北/f 寺/n 鐘/n</l>
+      </poem>
+      <poem id="by163" title="城南寄北城光雪窗時方誦寶積經 二">
+        <l>驅/v 車/n 策/v 馬/n 事/n 何/d 忙/v</l>
+        <l>不/d 見/v 塵/n 沙/n 蔽/v 日/n 黃/n</l>
+        <l>滿/a 紙/n 題/v 詩/n 聊/d 破/v 悶/n</l>
+        <l>空/a 齋/n 隱/v 几/n 自/r 焚/v 香/n</l>
+        <l>瓊/n 花/ns 島/ns 上/f 春/n 陰/n 薄/a</l>
+        <l>寳/n 積/v 經/n 中/f 午/n 漏/n 長/a</l>
+        <l>卻/d 喜/v 無/v 人/n 供/v 給/v 我/r</l>
+        <l>閒/a 居/n 聚/v 落/v 客/n 僧/n 房/n</l>
+      </poem>
+      <poem id="by164" title="早春">
+        <l>雪/n 晴/v 泥/n 滓/n 尚/d 淹/v 車/n</l>
+        <l>閒/d 坐/v 春/n 宵/n 燭/n 影/n 斜/v</l>
+        <l>睡/d 去/v 幔/n 風/n 頻/d 撼/v 枕/n</l>
+        <l>覺/d 來/v 窗/n 日/n 已/d 穿/v 紗/n</l>
+        <l>好/a 音/n 過/v 耳/n 枝/n 間/f 鵲/n</l>
+        <l>香/n 氣/n 流/v 人/n 葉/n 底/f 花/n</l>
+        <l>一/m 寸/n 丹/n 心/n 御溝/ns 水/n</l>
+        <l>無/v 時/n 不/d 繞/v 帝/n 王/n 家/n</l>
+      </poem>
+      <poem id="by165" title="都下春興">
+        <l>陌/ns 頭/n 楊/n 柳/n 未/d 全/d 遮/v</l>
+        <l>青/n 草/n 萋/v 萋/a 帶/v 玉/n 沙/n</l>
+        <l>才/n 子/n 百/m 篇/n 敷/v 錦/n 繡/n</l>
+        <l>帝京/ns 三/m 月/t 繞/v 烟/n 花/ns</l>
+        <l>曹/nr 瞞/nr 回/v 信/v 劉/nr 玄德/nr</l>
+        <l>管仲/nr 深/a 知/v 鮑叔牙/nr</l>
+        <l>自/p 古/n 君/n 臣/n 不/d 虛/v 應/v</l>
+        <l>分/d 明/v 合/v 曲/n 奏/v 琵琶/n</l>
+      </poem>
+      <poem id="by166" title="寄虞伯生學士">
+        <l>蓬萊坊/ns 中/f 車/n 馬/n 塵/n</l>
+        <l>不/d 意/v 見/v 此/r 神/n 仙/n 人/n</l>
+        <l>燕王/nr 好/v 客/n 重/v 九/m 鼎/n</l>
+        <l>鄒/nr 衍/nr 談/v 天/n 驚/v 四/m 鄰/n</l>
+        <l>咫/n 尺/n 無/v 心/n 陪/v 劍/n 履/n</l>
+        <l>尋/v 常/n 有/v 夢/n 脫/v 冠/n 巾/n</l>
+        <l>知/v 公/n 欲/v 著/v 華嚴/ns 論/n</l>
+        <l>轉/d 覺/v 方/ns 山/n 是/r 後/n 身/n</l>
+      </poem>
+      <poem id="by167" title="寒食同日新遊春園 一">
+        <l>東/f 方/n 欲/v 曙/v 夜/n 漏/n 殘/v</l>
+        <l>磊/a 磊/a 落/v 落/v 星/n 闌/v 干/v</l>
+        <l>朝/t 日/n 出/v 海/n 光/n 萬/m 丈/n</l>
+        <l>春/n 風/n 解/v 人/n 憂/n 百/m 端/n</l>
+        <l>丹/n 青/n 滿/v 天/n 山/n 不/d 動/v</l>
+        <l>紅/n 白/n 照/v 野/n 花/n 如/v 攢/v</l>
+        <l>今/n 來/v 對/v 此/r 不/d 為/v 樂/n</l>
+        <l>汝/r 生/v 何/r 時/n 懷/v 抱/v 寬/v</l>
+      </poem>
+      <poem id="by168" title="寒食同日新遊春園 二">
+        <l>前/t 年/t 扁/a 舟/n 作/v 寒/a 食/n</l>
+        <l>今/t 年/t 匹/n 马/n 遊/v 帝京/ns</l>
+        <l>提/v 壺/n 鳥/n 勸/v 花/n 下/f 飲/v</l>
+        <l>吹/v 簫/n 人/n 賣/v 擔/n 頭/n 餳/n</l>
+        <l>淨/a 雲/n 本/d 自/d 無/v 南/f 北/f</l>
+        <l>孤/n 月/n 何/d 妨/v 有/v 晦/n 明/v</l>
+        <l>短/a 笛/n 誰/r 翻/v 折/v 楊/n 柳/n</l>
+        <l>曲/n 終/v 又/d 作/v 棹/n 歌/n 聲/n</l>
+      </poem>
+      <poem id="by169" title="呈報恩長老芳蘭室">
+        <l>只/d 今/n 遊/v 女/n 歌/v 春/n 陽/n</l>
+        <l>初/n 我/r 北/f 來/v 天/n 已/d 霜/n</l>
+        <l>白/n 雪/n 非/d 同/v 折/v 楊/n 柳/n</l>
+        <l>金/n 盤/n 豈/d 獨/d 盛/v 檳/n 榔/n</l>
+        <l>可/v 憐/v 飛/n 兔/n 但/d 求/v 秣/n</l>
+        <l>何/r 用/v 牽/v 牛/n 不/d 服/v 箱/n</l>
+        <l>東/f 望/v 雲/n 濤/n 渺/a 無/v 際/f</l>
+        <l>正/d 需/v 萬/m 斛/n 試/v 龍/n 驤/v</l>
+      </poem>
+      <poem id="by170" title="送人守南徐">
+        <l>飛/v 花/n 點/a 點/n 麥/n 漸/v 漸/v</l>
+        <l>水/n 滿/v 春/n 江/n 好/d 掛/v 帆/n</l>
+        <l>三/m 日/t 畫/ns 樓/n 烏/n 鵲/n 喜/v</l>
+        <l>九/m 天/n 丹/n 詔/n 鳳/n 凰/n 銜/v</l>
+        <l>西津渡口/ns 觀/v 初/n 月/n</l>
+        <l>北固城/ns 頭/n 試/v 薄/a 衫/n</l>
+        <l>聖/n 代/n 全/d 無/v 戎/n 馬/n 事/n</l>
+        <l>每/d 將/v 妙/a 語/n 刻/v 幽/a 岩/v</l>
+      </poem>
+      <poem id="by171" title="余嘗夢至一山聞杜鵑且約雪窗南還">
+        <l>出/v 郭/n 尋/v 春/n 未/d 見/v 春/n</l>
+        <l>東華/ns 踏/v 遍/v 軟/a 紅/n 塵/n</l>
+        <l>不/d 知/v 蝴/n 蝶/n 化/v 為/v 我/r</l>
+        <l>何/r 處/n 杜鵑/n 來/v 喚/v 人/n</l>
+        <l>筍/n 蕨/n 過/v 時/n 唯/d 恐/v 老/v</l>
+        <l>櫻/n 梅/n 如/v 豆/n 正/d 嘗/v 新/a</l>
+        <l>及/v 今/n 無/v 事/n 早/d 歸/v 去/v</l>
+        <l>莫/d 待/v 秋/n 風/n 江/n 上/f 蓴/n</l>
+      </poem>
+      <poem id="by172" title="示大雲法師 一">
+        <l>野/n 人/n 直/d 欲/v 見/v 天/n 顏/n</l>
+        <l>虎/n 豹/n 森/a 森/a 守/v 九/m 關/n</l>
+        <l>將/n 相/n 功/n 名/n 常/d 恨/v 老/a</l>
+        <l>神仙宮府/ns 不/d 容/v 閒/v</l>
+        <l>夜/n 歸/v 且/d 把/v 金/ns 蓮/ns 燭/n</l>
+        <l>晨/n 起/v 仍/d 參/v 玉/n 筍/ns 班/n</l>
+        <l>邊/n 路/n 往/v 來/v 塵/n 沒/v 馬/n</l>
+        <l>豈/d 知/v 拄/v 笏/n 看/v 西山/ns</l>
+      </poem>
+      <poem id="by173" title="示大雲法師 二">
+        <l>孤/n 舟/n 他/r 日/n 往/v 鄉/n 關/n</l>
+        <l>亦/d 對/v 天/n 威/n 咫/m 尺/n 顏/n</l>
+        <l>不/d 飲/v 從/d 教/v 驅/v 下/v 殿/n</l>
+        <l>無/v 才/n 卻/d 喜/v 放/d 還/v 山/n</l>
+        <l>高/d 燒/v 畫/n 燭/n 風/n 簾/n 動/v</l>
+        <l>細/d 寫/v 烏/n 絲/n 水/n 閣/n 閒/f</l>
+        <l>吻/n 燥/v 更/d 須/d 澆/v 茗/n 碗/n</l>
+        <l>時/n 來/v 花/n 底/f 聽/v 潺/a 潺/v</l>
+      </poem>
+      <poem id="by174" title="月下聞箏">
+        <l>哀/a 箏/n 忽/d 起/v 月/n 明/v 中/f</l>
+        <l>近/v 耳/n 曾/d 聞/v 韻/n 可/d 同/v</l>
+        <l>出/v 谷/ns 黃/n 鶯/n 囀/v 春/n 曉/n</l>
+        <l>垂/v 簾/n 玉/n 珮/n 動/v 秋/n 風/n</l>
+        <l>教/v 坊/n 試/v 盡/v 新/d 翻/v 曲/n</l>
+        <l>國/n 手/n 傳/v 來/v 舊/a 樂/n 工/n</l>
+        <l>慚/d 愧/v 北/f 人/n 能/v 比/v 擬/v</l>
+        <l>雪/n 晴/v 鳴/a 雁/n 度/v 寒/a 空/n</l>
+      </poem>
+      <poem id="by175" title="席上分題得清涼國送王錬師還桐廬">
+        <l>塵/n 入/v 桐江/ns 半/m 點/n 無/v</l>
+        <l>即/d 知/v 平/a 地/n 是/r 仙都/ns</l>
+        <l>新/a 秋/n 城/n 郭/n 月/n 千/m 里/n</l>
+        <l>盛/a 暑/n 樓/n 臺/n 冰/n 一/m 壺/n</l>
+        <l>每/d 夜/n 北/f 方/n 收/v 沆/n 瀣/n</l>
+        <l>何/r 人/n 西域/ns 致/v 醍醐/n</l>
+        <l>世/n 間/f 膏/n 火/n 煎/v 熬/a 甚/a</l>
+        <l>願/d 學/v 王喬/nr 躡/v 兩/m 鳧/n</l>
+      </poem>
+      <poem id="by176" title="天馬">
+        <l>天/n 馬/n 新/d 從/p 月/n 窟/n 來/v</l>
+        <l>一/m 龍/n 不/d 數/v 萬/m 駑/n 駘/n</l>
+        <l>踏/v 翻/v 赤/ns 岸/n 澤/n 何/d 有/v</l>
+        <l>騎/d 過/v 玉/n 門/n 關/n 自/r 開/v</l>
+        <l>絕/v 地/n 至/v 今/n 誇/v 穆滿/nr</l>
+        <l>附/v 輿/n 誰/r 復/d 聘/v 韓哀/nr</l>
+        <l>仰/d 瞻/v 骨/n 相/n 非/d 常/n 馭/n</l>
+        <l>躡/v 電/n 追/v 風/n 試/v 爾/r 才/n</l>
+      </poem>
+      <poem id="by177" title="鸚鵡">
+        <l>鸚鵡/n 為/v 禽/n 性/n 最/d 靈/a</l>
+        <l>舌/n 端/f 滾/v 滾/v 誦/v 心/n 經/n</l>
+        <l>隨/v 人/n 說/v 得/v 千/m 般/n 話/n</l>
+        <l>對/v 座/n 呼/v 來/v 四/m 座/n 聽/v</l>
+        <l>丹/n 嘴/n 綠/n 衣/n 真/d 可/v 愛/v</l>
+        <l>玉/n 籠/n 金/n 鎖/n 不/d 須/d 扃/v</l>
+        <l>故/n 巢/n 掛/v 在/v 幽/a 林/n 杪/f</l>
+        <l>無/v 限/n 鄉/n 山/n 入/v 夢/n 青/v</l>
+      </poem>
+      <poem id="by178" title="孔雀">
+        <l>金/n 翠/n 滿/v 身/n 光/n 陸/v 離/v</l>
+        <l>羅/ns 州/ns 孔雀/n 信/d 為/v 奇/a</l>
+        <l>天/n 生/v 一/m 種/n 好/a 顏/n 色/n</l>
+        <l>歲/n 與/p 百/m 花/n 俱/d 盛/v 衰/v</l>
+        <l>乍/d 聽/v 管/n 弦/n 渾/d 欲/v 舞/v</l>
+        <l>初/n 來/v 宮/n 闕/n 尚/d 驚/v 疑/v</l>
+        <l>刺/ns 桐/ns 花/n 老/v 青/n 山/n 裡/f</l>
+        <l>又/d 是/r 檳榔/n 葉/n 暗/a 時/n</l>
+      </poem>
+      <poem id="by179" title="宋時，和魯有觀畫鷹獵兔之詩曰：「 雖是丹青物，沉吟亦可傷。君誇鷹眼疾，我憫兔心忙。豈動騷人興，惟增獵客狂。鮫綃百餘尺，爭及製衣裳？」 范文正公嘆曰：「真仁人之言！」畫鷹尚且為戒，而況蓄真鷹，日斃禽鳥乎？余於京師見蓄鷹者，作詩二首，以為戒焉。 一">
+        <l>禽/n 獸/n 於/p 人/n 不/d 較/v 多/a</l>
+        <l>亂/n 生/n 真/d 奈/v 有/v 身/n 何/r</l>
+        <l>紛/d 紛/a 口/n 累/v 遭/v 鷹/n 隼/n</l>
+        <l>往/d 往/a 饑/d 驅/v 入/v 網/n 羅/n</l>
+        <l>但/d 縱/v 狂/a 心/n 無/v 惻/n 隱/n</l>
+        <l>終/d 令/v 食/n 祿/n 暗/d 消/v 磨/v</l>
+        <l>一/m 聞/v 妙/a 語/n 發/v 深/a 省/n</l>
+        <l>誰/r 似/v 當/v 年/t 人/n 姓/n 和/nr</l>
+      </poem>
+      <poem id="by180" title="宋時，和魯有觀畫鷹獵兔之詩曰：「 雖是丹青物，沉吟亦可傷。君誇鷹眼疾，我憫兔心忙。豈動騷人興，惟增獵客狂。 鮫綃百餘尺，爭及製衣裳？」 范文正公嘆曰：「真仁人之言！」畫鷹尚且為戒，而況蓄真鷹，日斃禽鳥乎？余於京師見蓄鷹者，作詩二首，以為戒焉。 二">
+        <l>沙/ns 漠/n 人/n 居/v 西/f 北/f 邊/n</l>
+        <l>茹/v 毛/n 飲/v 血/n 最/d 堪/v 憐/v</l>
+        <l>不/d 容/v 狡/a 兔/n 藏/v 三/m 窟/n</l>
+        <l>長/a 望/v 鴐鵝/n 落/v 九/m 天/n</l>
+        <l>爪/n 下/n 但/d 能/v 分/v 碎/a 體/n</l>
+        <l>喉/n 中/f 徒/d 自/r 出/v 饞/a 涎/n</l>
+        <l>諸/m 君/n 免/v 與/p 鷹/n 求/v 食/n</l>
+        <l>粟/n 飯/n 葵/n 羹/n 也/u 過/v 年/n</l>
+      </poem>
+      <poem id="by181" title="京師官寺所設酥燈非江南諸郡有也">
+        <l>供/v 佛/n 油/n 中/f 有/v 淨/a 華/n</l>
+        <l>鸞/n 膏/n 豹/n 髓/n 不/d 須/v 誇/v</l>
+        <l>金/n 盆/n 貯/v 火/n 圍/v 三/m 丈/n</l>
+        <l>翠/n 杓/n 澆/v 酥/n 動/v 數/m 車/n</l>
+        <l>殿/n 上/f 青/n 光/n 懸/v 日/n 月/n</l>
+        <l>空/n 中/f 瑞/a 氣/n 噴/v 雲/n 霞/n</l>
+        <l>須/d 知/v 一/m 點/n 籠/v 古/n 今/n</l>
+        <l>任/d 是/r 修/a 羅/n 手/n 莫/d 遮/v</l>
+      </poem>
+      <poem id="by182" title="京城南北不同人家僧舍多用石炭。 其性惡動而喜靜， 愈掁撥愈不發輝。但緩緩待之則自然熾耳。">
+        <l>石/n 炭/n 初/n 燃/v 勿/d 與/p 爭/v</l>
+        <l>須臾/t 自/r 發/v 焰/v 崢/v 嶸/v</l>
+        <l>玄/n 霜/n 漸/v 漸/v 爐/n 中/f 盡/v</l>
+        <l>白/n 雪/n 霏/v 霏/a 火/n 裡/f 生/v</l>
+        <l>公/n 子/nr 銀/n 壺/n 燒/v 乳/n 酒/n</l>
+        <l>野/n 人/n 石/n 鼎/n 煮/v 芹/n 羹/n</l>
+        <l>都/n 門/n 大/d 有/v 饑/v 寒/a 士/n</l>
+        <l>忍/d 見/v 衝/v 泥/n 跣/v 足/n 行/v</l>
+      </poem>
+      <poem id="by183" title="賭栗">
+        <l>腳/n 弱/a 猶/d 當/d 啖/v 數/m 升/n</l>
+        <l>瓊/n 漿/n 繞/v 齒/n 欲/v 飛/v 騰/v</l>
+        <l>古/n 人/n 競/d 作/v 藏/v 鉤/n 戲/n</l>
+        <l>吾/r 友/n 偏/d 誇/v 賭/v 栗/n 能/n</l>
+        <l>出/d 遇/v 販/v 兒/n 多/d 不/d 信/v</l>
+        <l>歸/d 來/v 吟/n 袖/n 重/a 難/d 勝/v</l>
+        <l>因/d 思/v 覆/v 射/v 丁/nr 文果/nr</l>
+        <l>一/m 橘/n 雖/d 微/v 信/n 有/v 征/v</l>
+      </poem>
+      <poem id="by184" title="獅子">
+        <l>獅子/nr 呼/v 為/v 百/m 獸/n 王/n</l>
+        <l>定/d 知/v 籠/n 檻/n 不/d 能/v 傷/v</l>
+        <l>尾/n 毛/n 颯/v 颯/v 生/v 風/n 陣/n</l>
+        <l>隅/n 目/n 時/n 時/n 走/v 電/n 光/n</l>
+        <l>卻/d 是/r 熊/n 羆/n 何/d 糞/v 土/n</l>
+        <l>從/d 教/v 虎/n 豹/nr 有/v 文/n 章/n</l>
+        <l>驚/v 天/n 駭/v 地/n 聞/v 哮/v 吼/v</l>
+        <l>想/v 在/v 山/n 林/n 爪/n 吻/n 張/v</l>
+      </poem>
+      <poem id="by185" title="象">
+        <l>背/n 袘/f 羅/v 我/r 額/n 編/v 鈴/n</l>
+        <l>遠/d 自/p 南/f 郊/n 進/v 北/f 庭/n</l>
+        <l>初/n 卸/v 錦/n 駝/n 猶/d 擁/v 腫/n</l>
+        <l>卻/d 嫌/v 宛/n 馬/n 太/d 伶/a 仃/a</l>
+        <l>拜/v 常/d 屈/v 膝/n 無/v 違/v 禮/n</l>
+        <l>罪/n 不/d 逃/v 誅/v 肯/v 就/v 刑/n</l>
+        <l>羨/v 爾/r 一/m 身/n 歸/v 鼻/n 力/n</l>
+        <l>渴/a 時/n 端/d 欲/v 卷/v 滄/a 溟/n</l>
+      </poem>
+      <poem id="by186" title="虎">
+        <l>猛/a 虎/n 深/a 藏/v 本/d 自/r 高/a</l>
+        <l>如/v 今/t 敢/v 向/v 柙/n 中/f 逃/v</l>
+        <l>漫/d 誇/v 食/v 肉/n 封/v 侯/n 相/n</l>
+        <l>徒/d 作/v 攀/v 欄/n 震/v 地/n 號/v</l>
+        <l>百/m 步/n 威/v 風/n 人/n 辟/v 易/v</l>
+        <l>千/m 林/ns 落/v 葉/n 夜/n 蕭/v 騷/v</l>
+        <l>南/f 山/n 有/v 豹/n 君/n 知/v 否/v</l>
+        <l>霧/n 雨/n 蒙/v 蒙/v 正/d 澤/v 毛/n</l>
+      </poem>
+      <poem id="by187" title="駱駝">
+        <l>初/n 見/v 駝/n 群/n 笑/v 且/d 驚/v</l>
+        <l>陸/nr 雲/nr 可/v 使/v 絕/v 冠/n 纓/n</l>
+        <l>肉/n 封/v 不/d 減/v 秋/n 山/n 瘦/a</l>
+        <l>蹄/n 漏/n 何/d 慚/v 夜/n 月/n 明/v</l>
+        <l>萬/m 里/n 流/a 沙/n 誰/r 謂/v 遠/a</l>
+        <l>千/m 斤/n 負/v 擔/n 復/d 嫌/v 輕/a</l>
+        <l>往/v 來/v 若/d 憶/v 神都/ns 好/a</l>
+        <l>楊/n 柳/n 參/v 天/n 輦/n 路/n 平/v</l>
+      </poem>
+      <poem id="by188" title="園陵">
+        <l>即/d 從/v 弓/n 劍/n 上/v 天/n 難/a</l>
+        <l>争/d 怪/v 園/n 陵/n 占/v 地/n 寛/a</l>
+        <l>惆/v 悵/v 方/ns 中/f 人/n 擾/v 擾/v</l>
+        <l>寂/a 寥/v 地/n 下/f 夜/n 漫/v 漫/a</l>
+        <l>百/m 王/n 盡/v 笑/v 驪山/ns 侈/v</l>
+        <l>萬/m 古/n 無/d 如/v 禹/nr 穴/n 安/a</l>
+        <l>惟/d 有/v 聖/n 朝/n 遺/a 制/n 密/v</l>
+        <l>不/d 知/v 何/r 處/n 葬/v 衣/n 冠/n</l>
+      </poem>
+      <poem id="by189" title="寄日新">
+        <l>日/n 月/n 往/v 來/v 殊/d 未/d 停/v</l>
+        <l>燕山/ns 忽/d 復/d 見/v 秋/n 螢/n</l>
+        <l>不/d 忘/v 報/v 主/n 寸/m 心/n 赤/n</l>
+        <l>猶/d 記/v 辭/v 家/n 雙/m 鬢/n 青/a</l>
+        <l>突厥/nr 彈/v 弦/n 如/v 急/a 雨/n</l>
+        <l>鮮卑/n 跨/v 馬/n 若/v 流/n 星/n</l>
+        <l>腐/a 儒/n 事/n 業/n 真/d 堪/v 笑/v</l>
+        <l>窮/a 巷/n 區/d 區/v 守/v 一/m 經/n</l>
+      </poem>
+      <poem id="by190" title="望西山寄天師宫華山隱">
+        <l>青/n 山/n 近/d 在/v 紫/ns 宫/n 傍/f</l>
+        <l>不/d 阻/v 瀛/ns 洲/nr 天/n 一/m 方/n</l>
+        <l>人/n 服/v 松/n 脂/n 令/v 腦/n 滿/v</l>
+        <l>麝/n 餐/v 栢/n 葉/n 使/v 臍/n 香/n</l>
+        <l>雨/n 紅/n 飄/v 樹/n 晩/a 春/n 静/a</l>
+        <l>空/n 翠/n 滴/v 衣/n 炎/a 夏/n 涼/a</l>
+        <l>南/f 北/f 由/d 來/v 無/v 定/v 處/n</l>
+        <l>只/d 知/v 戊/t 已/t 是/r 中/f 央/n</l>
+      </poem>
+      <poem id="by191" title="暮春送胡道人遊洛陽">
+        <l>洛陽/nr 春/n 色/n 帶/v 晴/n 霞/n</l>
+        <l>陌/n 上/f 香/n 塵/n 起/v 鈿/n 車/n</l>
+        <l>叫/v 落/v 子/n 規/n 秦嶺/ns 月/n</l>
+        <l>撲/v 殘/v 蝴/n 蝶/n 杜陵/ns 花/n</l>
+        <l>道/n 人/n 有/v 酒/n 時/n 時/n 醉/v</l>
+        <l>岩/a 客/n 無/v 方/n 處/d 處/v 家/n</l>
+        <l>雨/n 過/v 終南/ns 山/n 更/d 好/a</l>
+        <l>應/d 騎/v 白/n 鹿/n 綰/v 青/n 蛇/n</l>
+      </poem>
+      <poem id="by192" title="燕京絕句 一">
+        <l>玉/n 帶/n 金/n 符/n 樓/n 上/f 鐘/n</l>
+        <l>有/v 才/n 長/a 恨/v 不/d 遭/v 逢/v</l>
+        <l>一/m 年/t 一/m 度/v 桃/n 花/n 浪/n</l>
+        <l>身/n 是/r 凡/a 魚/n 未/d 化/v 龍/n</l>
+      </poem>
+      <poem id="by193" title="燕京絕句 二">
+        <l>春/n 滿/v 燕臺/ns 百萬/m 家/n</l>
+        <l>雨/n 餘/n 宮/n 柳/n 間/v 宮/n 花/n</l>
+        <l>無/v 人/n 和/v 我/r 江南/ns 曲/n</l>
+        <l>獨/d 向/v 城/n 門/n 進/v 小/a 車/n</l>
+      </poem>
+      <poem id="by194" title="燕京絕句 三">
+        <l>高昌王子/nr 出/v 京師/ns</l>
+        <l>手/n 把/v 春/n 風/n 軟/a 柳/n 枝/n</l>
+        <l>贈/v 與/v 臨洮/ns 遠/a 行/v 客/n</l>
+        <l>雲/n 沙/n 漠/a 漠/a 見/v 何/r 時/n</l>
+      </poem>
+      <poem id="by195" title="燕京絕句 四">
+        <l>飛/v 鸞/n 不/d 與/p 鳳/n 為/v 儔/n</l>
+        <l>養/v 子/n 黃/n 金/n 屋/n 上/f 頭/n</l>
+        <l>山/n 雀/n 野/n 雞/n 俱/d 入/v 饌/n</l>
+        <l>此/r 禽/n 巢/n 穩/a 獨/d 無/v 憂/n</l>
+      </poem>
+      <poem id="by196" title="燕京絕句 五">
+        <l>白/n 面/n 烏桓/ns 黃/n 口/n 須/n</l>
+        <l>看/v 山/n 笑/v 我/r 倒/d 騎/v 驢/n</l>
+        <l>葡萄/n 一/m 飲/n 杯/n 三百/m</l>
+        <l>尚/d 有/v 鴟夷/n 載/v 後/f 車/n</l>
+      </poem>
+      <poem id="by197" title="燕京絕句 六">
+        <l>波/n 送/v 羅川/ns 鴻/n 雁/n 來/v</l>
+        <l>天/n 高/a 露/n 冷/a 夜/n 聞/v 哀/v</l>
+        <l>不/d 知/v 肯/v 過/v 秦川/ns 否/v</l>
+        <l>手/n 把/v 空/a 書/n 合/n 又/d 開/v</l>
+      </poem>
+      <poem id="by198" title="燕京絕句 七">
+        <l>更/n 闌/v 月/n 落/v 禁/v 城/ns 鐘/n</l>
+        <l>欲/v 往/v 盧師/n 看/v 兩/m 龍/n</l>
+        <l>山/n 雪/n 未/d 消/v 溪/n 水/n 合/v</l>
+        <l>到/v 門/n 無/v 語/n 倚/v 青/n 松/n</l>
+      </poem>
+      <poem id="by199" title="燕京絕句 八">
+        <l>玄/t 冬/n 冰/n 雪/n 正/d 峨/a 峨/a</l>
+        <l>百/m 兩/n 強/a 車/n 上/v 御河/ns</l>
+        <l>密/a 的/r 支/n 前/f 渾/d 脫/v 舞/v</l>
+        <l>無/v 人/n 解/v 唱/v 野/n 王/n 歌/n</l>
+      </poem>
+      <poem id="by200" title="燕京絕句 九">
+        <l>芭欖/n 從/d 來/v 回鶻/n 家/n</l>
+        <l>往/a 時/n 傳/v 畫/n 作/v 圖/n 誇/v</l>
+        <l>漢/n 人/n 始/d 識/v 春/n 風/n 面/n</l>
+        <l>桃/n 樹/n 枝/n 頭/n 看/v 杏/n 花/n</l>
+      </poem>
+      <poem id="by201" title="燕京絕句 十">
+        <l>雖/d 焚/v 老子/nr 化/v 胡/ns 經/n</l>
+        <l>祭/v 酒/n 王浮/nr 未/d 出/v 冥/n</l>
+        <l>聖/n 主/n 當/a 年/t 有/v 深/a 意/n</l>
+        <l>黃金殿/ns 上/f 著/v 丹/n 青/n</l>
+      </poem>
+      <poem id="by202" title="燕京絕句 十一">
+        <l>金水河/ns 邊/n 逢/v 故/n 人/n</l>
+        <l>一/m 杯/n 同/d 賞/v 帝/n 城/n 春/n</l>
+        <l>平/a 生/n 不/d 斫/v 魴/n 魚/n 膾/n</l>
+        <l>祈/v 與/p 煙/n 波/n 養/v 素/n 鱗/n</l>
+      </poem>
+      <poem id="by203" title="燕京絕句 十二">
+        <l>初/n 識/v 天/n 閒/ns 獅子/nr 兒/n</l>
+        <l>尾/n 毛/n 如/v 斗/n 細/a 於/p 絲/n</l>
+        <l>何/r 人/n 為/v 解/v 黃/n 金/n 索/n</l>
+        <l>恨/d 在/v 垂/v 頭/n 舐/v 掌/n 時/n</l>
+      </poem>
+      <poem id="by204" title="燕京絕句 十三">
+        <l>漆園/ns 山/n 下/f 葬/v 車/n 塵/n</l>
+        <l>冷水/ns 潭/n 邊/n 拜/v 掃/v 人/n</l>
+        <l>一/m 種/v 白/n 楊/n 千萬/m 葉/n</l>
+        <l>空/d 令/v 兒/n 女/n 淚/n 沾/v 巾/n</l>
+      </poem>
+      <poem id="by205" title="燕京絕句 十四">
+        <l>買/v 得/v 牛/n 車/n 穩/d 可/v 乘/v</l>
+        <l>西山/ns 雪/n 後/f 轉/d 崚/v 嶒/v</l>
+        <l>寒/a 𧅱/n 脫/v 粟/n 彌陀寺/ns</l>
+        <l>慚/d 愧/v 江南/ns 粥/n 飯/n 僧/n</l>
+      </poem>
+      <poem id="by206" title="燕京絕句 十五">
+        <l>秋/n 深/a 慶壽栗園/ns 開/v</l>
+        <l>本/n 數/n 華/nr 嚴/a 字/n 字/n 裁/v</l>
+        <l>身/n 落/v 東吳/ns 四千/m 里/n</l>
+        <l>淡/a 雲/n 斜/a 日/n 跨/v 驢/n 來/v</l>
+      </poem>
+      <poem id="by207" title="燕京絕句 十六">
+        <l>天/n 下/f 承/v 平/a 無/v 戰/v 塵/n</l>
+        <l>京師/ns 豐/a 樂/n 最/d 宜/v 春/n</l>
+        <l>前/n 朝/n 婦/n 女/n 皆/d 高/a 笠/n</l>
+        <l>大/a 袖/n 寬/v 袍/n 更/d 著/v 巾/n</l>
+      </poem>
+      <poem id="by208" title="燕京絕句 十七">
+        <l>築/v 土/n 為/v 城/n 荻/n 作/v 簾/n</l>
+        <l>有/v 司/n 歲/n 歲/t 換/v 新/a 苫/n</l>
+        <l>數/m 間/n 破/a 屋/n 深/a 村/n 裡/f</l>
+        <l>誰/r 信/v 朝/n 來/v 突/n 未/d 黔/v</l>
+      </poem>
+      <poem id="by209" title="燕京絕句 十八">
+        <l>一/m 鵲/n 飛/v 來/v 柳/n 上/f 鳴/v</l>
+        <l>南/f 郊/n 雨/n 過/v 北/f 郊/n 晴/v</l>
+        <l>試/d 看/v 薺/n 麥/n 深/a 深/a 意/n</l>
+        <l>如/v 與/p 君/n 王/n 說/v 太/d 平/v</l>
+      </poem>
+      <poem id="by210" title="燕京絕句 十九">
+        <l>混同江/ns 水/n 向/v 東/f 流/v</l>
+        <l>綠/n 靜/a 春/n 深/a 似/v 鴨/n 頭/n</l>
+        <l>未/d 送/v 佳/a 人/n 獻/v 天子/nr</l>
+        <l>六/m 宮/n 粉/n 黛/n 已/d 先/n 愁/v</l>
+      </poem>
+      <poem id="by211" title="燕京絕句 二十">
+        <l>石渠/ns 流/a 水/n 暗/a 濺/v 濺/v</l>
+        <l>遙/d 引/v 西山/ns 白玉泉/ns</l>
+        <l>流/v 到/v 御/v 廚/n 供/v 灌/v 洗/v</l>
+        <l>餘/n 波/n 依/v 舊/a 入/v 龍/n 淵/n</l>
+      </poem>
+      <poem id="by212" title="燕京絕句 二十一">
+        <l>曉/n 涼/a 宮/n 殿/n 日/n 銜/v 霞/n</l>
+        <l>金/n 水/n 泠/a 泠/a 浸/v 藕/n 花/ns</l>
+        <l>三十六/m 陂/n 猶/d 想/v 見/v</l>
+        <l>好/a 山/n 重/a 疊/v 暮/n 雲/n 遮/v</l>
+      </poem>
+      <poem id="by213" title="燕京絕句 二十二">
+        <l>繡/n 帽/n 珠/n 裘/n 白/n 玉/n 麐/nr</l>
+        <l>沙/n 堤/n 數/m 里/n 築/v 來/v 新/a</l>
+        <l>聖/n 朝/n 屢/d 拜/v 平/v 章/n 事/n</l>
+        <l>誰/r 是/r 兼/d 修/v 國/n 史/n 人/n</l>
+      </poem>
+      <poem id="by214" title="燕京絕句 二十三">
+        <l>軒轅/nr 臺/n 上/f 雪/n 花/n 飛/v</l>
+        <l>未/d 用/v 吳/ns 船/n 載/v 我/r 歸/v</l>
+        <l>歸/d 亦/d 不/d 能/v 忘/v 輦/n 轂/n</l>
+        <l>紫/n 貂/n 初/n 暖/v 薤/n 初/n 肥/v</l>
+      </poem>
+      <poem id="by215" title="燕京絕句 二十四">
+        <l>平/a 時/n 官/n 吏/n 守/v 居庸/ns</l>
+        <l>樽/n 俎/n 談/v 諧/v 可/v 折/v 衝/n</l>
+        <l>天/n 下/f 精/a 兵/n 三百萬/m</l>
+        <l>於/p 今/n 未/d 免/v 耗/v 司/v 農/n</l>
+      </poem>
+      <poem id="by216" title="燕京絕句 二十五">
+        <l>京師/ns 不/d 止/v 萬/m 驊/n 騮/n</l>
+        <l>北/f 望/v 黃/n 雲/n 白/n 草/n 秋/n</l>
+        <l>糞/ns 土/n 諸/n 王/n 稱/v 長/a 者/u</l>
+        <l>何曾/nr 異/v 代/n 覓/v 伊周/nr</l>
+      </poem>
+      <poem id="by217" title="燕京絕句 二十六">
+        <l>柳/ns 樹/n 榆/ns 林/n 便/d 是/r 家/n</l>
+        <l>沙/n 瓶/n 石/n 炭/n 頗/d 宜/v 茶/n</l>
+        <l>出/v 門/n 自/r 對/v 西山/ns 立/v</l>
+        <l>閒/d 看/v 兒/n 童/n 引/v 小/a 車/n</l>
+      </poem>
+      <poem id="by218" title="燕京絕句 二十七">
+        <l>昔/n 日/t 昭王/nr 未/d 築/v 臺/n</l>
+        <l>應/d 無/v 樂毅/nr 劇辛/nr 來/v</l>
+        <l>英/n 名/n 萬/m 古/n 垂/v 霄/n 壤/n</l>
+        <l>不/d 惜/v 千/m 金/n 養/v 俊/n 才/n</l>
+      </poem>
+      <poem id="by219" title="燕京絕句 二十八">
+        <l>千/m 步/n 廊/n 西/f 一/m 草/n 廬/n</l>
+        <l>故/n 人/n 別/v 後/f 與/p 誰/r 居/v</l>
+        <l>鼎/ns 湖/n 不/d 得/v 隨/v 弓/n 劍/n</l>
+        <l>羞/d 作/v 黃/n 河/n 點/v 額/n 魚/n</l>
+      </poem>
+      <poem id="by220" title="燕京絕句 二十九">
+        <l>壁/n 上/f 猶/d 懸/v 白/n 玉/n 簫/n</l>
+        <l>宮/n 中/f 已/d 散/v 紫/ns 宸/ns 朝/n</l>
+        <l>盈/a 盈/a 淚/n 眼/n 知/v 何/r 似/v</l>
+        <l>雨/n 濕/v 龍池/ns 柳/n 萬/m 條/n</l>
+      </poem>
+      <poem id="by221" title="燕京絕句 三十">
+        <l>始/d 入/v 彤/n 庭/n 又/d 卷/v 班/n</l>
+        <l>何/r 心/n 拄/v 笏/n 看/v 西山/ns</l>
+        <l>鷺/n 鷥/nr 遙/d 對/v 鸕/n 鶿/n 語/v</l>
+        <l>我/r 與/p 漁/v 翁/n 一/m 樣/n 閒/v</l>
+      </poem>
+      <poem id="by222" title="燕京絕句 三十一">
+        <l>晚/d 騎/v 驢子/n 踏/v 斜/a 陽/n</l>
+        <l>卻/d 望/v 邯鄲/ns 四/m 渺/a 茫/v</l>
+        <l>正/d 是/r 推/v 求/v 無/v 定/v 處/n</l>
+        <l>燕/ns 南/f 趙/ns 北/f 是/r 中/n 央/n</l>
+      </poem>
+      <poem id="by223" title="燕京絕句 三十二">
+        <l>光祿寺/ns 前/f 秋/n 日/n 晴/v</l>
+        <l>紫/n 雲/n 樓/n 上/f 夜/n 燈/n 明/v</l>
+        <l>杯/n 空/v 酒/n 盡/v 須/d 歸/v 去/v</l>
+        <l>莫/d 唱/v 陽關/ns 第/m 四/m 聲/n</l>
+      </poem>
+      <poem id="by224" title="燕京絕句 三十三">
+        <l>大/a 甕/n 香/n 醪/n 未/d 入/v 唇/n</l>
+        <l>小/a 池/n 積/v 水/n 漸/d 生/v 鱗/n</l>
+        <l>都/n 門/n 昨/t 夜/n 東/f 風/n 轉/v</l>
+        <l>無/v 一/m 枝/n 頭/n 不/d 是/v 春/n</l>
+      </poem>
+      <poem id="by225" title="燕京絕句 三十四">
+        <l>誰/r 鑿/v 西湖/ns 繞/v 甕山/ns</l>
+        <l>白/n 雲/n 點/v 綴/v 綠/n 蘿/n 間/f</l>
+        <l>坐/d 看/v 秋/n 水/n 浮/v 天/n 影/n</l>
+        <l>幾/d 個/n 漁/v 舟/n 自/r 往/v 還/v</l>
+      </poem>
+      <poem id="by226" title="燕京絕句 三十五">
+        <l>西山/ns 水/n 落/v 甕山/ns 浮/v</l>
+        <l>無/v 數/m 人/n 煙/n 簇/m 上/f 頭/n</l>
+        <l>好/d 種/v 荷/n 花/n 三十/m 傾/n</l>
+        <l>中/f 間/n 更/d 著/v 采/v 蓮/n 舟/n</l>
+      </poem>
+      <poem id="by227" title="燕京絕句 三十六">
+        <l>前/t 日/t 來/v 看/v 普慶/ns 花/n</l>
+        <l>今/t 朝/n 零/v 落/v 委/v 泥/n 沙/n</l>
+        <l>如/v 何/r 富/v 貴/v 為/v 天子/nr</l>
+        <l>不/d 欲/d 重/v 生/v 司馬/nr 家/n</l>
+      </poem>
+      <poem id="by228" title="燕京絕句 三十七">
+        <l>黿/n 鼎/n 羊/n 羹/n 醉/v 不/d 知/v</l>
+        <l>古/n 今/n 成/v 敗/v 是/r 吾/r 師/n</l>
+        <l>幾/d 回/n 曝/v 日/n 茅/n 簷/n 下/f</l>
+        <l>惆/v 悵/nr 雞/n 蟲/n 無/v 了/a 時/n</l>
+      </poem>
+      <poem id="by229" title="燕京絕句 三十八">
+        <l>得/v 寵/n 難/d 持/v 失/v 易/d 拋/v</l>
+        <l>人/n 為/v 鼠/n 子/n 己/r 為/v 貓/n</l>
+        <l>綠/n 綈/n 不/d 盡/v 當/a 年/n 恨/v</l>
+        <l>近/a 日/n 空/d 歌/v 鵲/n 有/v 巢/n</l>
+      </poem>
+      <poem id="by230" title="燕京絕句 三十九">
+        <l>銀/n 箭/nr 銅/n 壺/n 未/d 報/v 更/v</l>
+        <l>不/d 知/v 誰/r 算/v 武元衡/nr</l>
+        <l>十/m 年/t 宰/n 相/n 成/v 何/r 事/n</l>
+        <l>只/d 合/v 山/n 中/f 過/v 此/r 生/n</l>
+      </poem>
+      <poem id="by231" title="燕京絕句 四十">
+        <l>僧/n 自/p 山/n 中/f 駕/v 鹿/n 來/v</l>
+        <l>鹿/n 遊/v 塵/n 世/n 轉/d 驚/v 猜/v</l>
+        <l>何/r 人/n 曲/d 脫/v 黃/n 金/n 轡/n</l>
+        <l>恣/d 飲/v 寒/a 泉/n 臥/v 綠/n 苔/n</l>
+      </poem>
+      <poem id="by232" title="燕京絕句 四十一">
+        <l>我/r 得/v 扁/a 舟/n 不/d 解/v 操/v</l>
+        <l>況/d 能/d 盡/v 日/n 跨/v 拳/n 毛/n</l>
+        <l>野/n 人/n 本/n 意/n 藏/v 岩/a 谷/n</l>
+        <l>歌/n 舞/n 叢/n 中/f 自/r 合/d 逃/v</l>
+      </poem>
+      <poem id="by233" title="燕京絕句 四十二">
+        <l>聖/n 朝/n 殷/n 鑒/n 在/v 亡/v 金/ns</l>
+        <l>明/v 主/n 須/d 知/v 列/v 聖/n 心/n</l>
+        <l>聞/v 道/v 宮/n 中/f 無/v 事/n 日/n</l>
+        <l>細/d 看/v 揚子/nr 九/m 州/n 箴/n</l>
+      </poem>
+      <poem id="by234" title="燕京絕句 四十三">
+        <l>狐/n 裘/n 自/p 古/n 歎/v 蒙/v 茸/n</l>
+        <l>漢/n 有/v 五/m 侯/n 同/a 日/n 封/v</l>
+        <l>唯/d 恐/v 君/n 王/n 愛/v 顏/n 色/n</l>
+        <l>滿/a 朝/n 賢/a 俊/n 不/d 相/d 容/v</l>
+      </poem>
+      <poem id="by235" title="燕京絕句 四十四">
+        <l>六/m 部/n 西/f 頭/n 萬寶坊/ns</l>
+        <l>歌/n 兒/nr 舞/n 女/n 識/v 君/n 王/n</l>
+        <l>四/m 郊/n 屢/d 報/v 豐/a 年/n 瑞/n</l>
+        <l>不/d 種/v 梧/n 桐/n 待/v 鳳/n 凰/n</l>
+      </poem>
+      <poem id="by236" title="燕京絕句 四十五">
+        <l>八/m 題/n 四/m 足/n 賦/v 燕臺/ns</l>
+        <l>瓊島/ns 春/n 陰/n 不/d 易/d 開/v</l>
+        <l>小/a 雨/n 催/v 花/n 三四/m 點/n</l>
+        <l>東/f 風/n 正/d 用/v 此/r 時/n 來/v</l>
+      </poem>
+      <poem id="by237" title="燕京絕句 四十六">
+        <l>薩思迦/ns 聘/v 法/n 中/f 王/n</l>
+        <l>多/d 把/v 真/a 珠/n 壘/v 帳/n 房/n</l>
+        <l>磨/v 衲/n 出/v 從/v 先/n 後/f 手/n</l>
+        <l>至/v 今/n 猶/d 帶/v 玉/n 爐/ns 香/n</l>
+      </poem>
+      <poem id="by238" title="燕京絕句 四十七">
+        <l>輦/v 寺/n 東/f 西/f 講/v 佛/n 經/n</l>
+        <l>千/m 人/n 圍/v 繞/v 萬/m 人/n 聽/v</l>
+        <l>不/d 知/v 瑞/n 應/v 從/p 何/r 起/v</l>
+        <l>夜/t 夜/n 流/a 光/n 貫/v 紫/n 廷/n</l>
+      </poem>
+      <poem id="by239" title="燕京絕句 四十八">
+        <l>龍居/ns 河/n 畔/f 草/n 青/v 青/v</l>
+        <l>雨/n 過/v 還/d 聞/v 劍/n 血/n 腥/a</l>
+        <l>千/m 古/n 董狐/nr 真/d 直/a 筆/n</l>
+        <l>仲尼/nr 何/r 事/n 作/v 麟/n 經/n</l>
+      </poem>
+      <poem id="by240" title="燕京絕句 四十九">
+        <l>高/a 車/n 駟/n 馬/n 漫/d 紛/a 紛/v</l>
+        <l>好/d 向/v 青/n 山/n 臥/v 白/n 雲/n</l>
+        <l>談/d 笑/v 下/v 齊/ns 城/n 七十/m</l>
+        <l>後/n 來/v 猶/d 忌/v 望/v 諸/n 君/n</l>
+      </poem>
+      <poem id="by241" title="燕京絕句 五十">
+        <l>小/a 人/n 藜/n 莧/n 便/d 充/v 腸/n</l>
+        <l>丞/n 相/n 何/d 須/v 一萬/m 羊/n</l>
+        <l>賓/n 客/n 餘/n 餐/n 到/v 僮/n 僕/n</l>
+        <l>不/d 知/v 金/n 紫/n 是/r 愁/a 囊/n</l>
+      </poem>
+      <poem id="by242" title="燕京絕句 五十一">
+        <l>雲/n 旗/n 不/d 動/v 鼓/n 無/v 聲/n</l>
+        <l>四/m 海/ns 人/n 人/n 樂/v 太/d 平/v</l>
+        <l>郡/n 國/n 晏/a 然/r 忘/v 習/v 戰/n</l>
+        <l>君/n 臣/n 多/v 是/r 笑/v 談/v 兵/n</l>
+      </poem>
+      <poem id="by243" title="燕京絕句 五十二">
+        <l>朔方/ns 女/n 子/n 舊/a 儀/v 鸞/n</l>
+        <l>如/v 鼓/n 細/a 腰/n 裁/v 作/v 冠/n</l>
+        <l>前/t 後/f 賜/v 金/n 供/v 給/v 盡/v</l>
+        <l>賣/v 珠/n 沽/v 酒/n 強/d 為/v 歡/n</l>
+      </poem>
+      <poem id="by244" title="燕京絕句 五十三">
+        <l>清/a 涼/a 近/d 在/v 雁門關/ns</l>
+        <l>昨/t 日/n 尚/v 書/n 設/v 供/n 還/v</l>
+        <l>瑪瑙/n 函/n 中/f 水/n 精/v 石/n</l>
+        <l>株/n 株/n 五/m 彩/n 動/v 天/n 顏/n</l>
+      </poem>
+      <poem id="by245" title="燕京絕句 五十四">
+        <l>凌/v 雲/n 古/n 木/n 帶/v 鳴/v 禽/n</l>
+        <l>一/m 入/v 盤山/ns 路/n 轉/d 深/a</l>
+        <l>光/n 景/n 俱/d 亡/v 是/r 何/r 物/n</l>
+        <l>悄/d 然/r 非/d 月/n 亦/d 非/d 心/n</l>
+      </poem>
+      <poem id="by246" title="燕京絕句 五十五">
+        <l>大/a 元/nr 不/d 是/r 殺/v 文公/nr</l>
+        <l>直/d 遣/v 人/n 臣/n 到/v 死/v 忠/n</l>
+        <l>三百/m 年/n 來/v 宋/n 方/d 滅/v</l>
+        <l>指/v 南/f 集/n 裡/f 看/v 英/n 雄/n</l>
+      </poem>
+      <poem id="by247" title="燕京絕句 五十六">
+        <l>河西/ns 墜/v 子/n 御/v 前/f 呈/v</l>
+        <l>舊/a 曲/n 歌/n 還/v 四/m 海/n 清/v</l>
+        <l>舞/n 罷/v 卻/d 將/v 珠/n 翠/n 捲/v</l>
+        <l>近/d 來/v 年/n 少/a 喜/v 新/a 聲/n</l>
+      </poem>
+      <poem id="by248" title="燕京絕句 五十七">
+        <l>吾/r 聞/v 衰/v 晉/ns 有/v 劉/nr 侯/nr</l>
+        <l>幕/n 下/f 廬諶/nr 可/v 唱/v 酬/v</l>
+        <l>文/n 史/n 著/v 名/n 如/v 日/n 月/n</l>
+        <l>更/d 無/v 人/n 說/v 叚幽州/nr</l>
+      </poem>
+      <poem id="by249" title="燕京絕句 五十八">
+        <l>開/v 懷/n 納/v 諫/n 要/v 明/v 君/n</l>
+        <l>似/v 鏡/n 當/v 頭/n 美/n 惡/v 分/v</l>
+        <l>細/d 把/v 春秋/n 答/v 天子/nr</l>
+        <l>古/n 今/n 唯/d 有/v 一/m 劉蕡/nr</l>
+      </poem>
+      <poem id="by250" title="燕京絕句 五十九">
+        <l>當/v 年/t 王濬/nr 取/v 金陵/ns</l>
+        <l>竟/d 與/p 元/nr 戎/n 不/d 兩/m 能/v</l>
+        <l>豈/d 是/r 伯顏/nr 功/n 業/n 小/a</l>
+        <l>無/v 端/n 玉/n 上/f 點/n 青/n 蠅/n</l>
+      </poem>
+      <poem id="by251" title="燕京絕句 六十">
+        <l>致/v 君/n 堯/nr 舜/nr 是/r 良/d 圖/n</l>
+        <l>天/n 地/n 中/f 間/n 大/a 丈/n 夫/n</l>
+        <l>王愷/nr 石崇/nr 何/d 足/d 道/v</l>
+        <l>只/d 誇/v 如/v 意/n 擊/v 珊/n 瑚/n</l>
+      </poem>
+      <poem id="by252" title="燕京絕句 六十一">
+        <l>時/n 為/v 直/a 語/n 訓/v 兒/n 童/n</l>
+        <l>周/ns 誥/n 殷/n 盤/n 盡/v 可/v 通/v</l>
+        <l>渾/d 作/v 履/v 豨/n 肥/a 脊/n 喻/v</l>
+        <l>考/ns 亭/nr 須/d 到/v 魯/ns 齋/n 公/n</l>
+      </poem>
+      <poem id="by253" title="燕京絕句 六十二">
+        <l>閒/d 居/v 彌勒/nr 且/d 同/v 龕/n</l>
+        <l>酒/n 債/n 錢/n 緡/n 兩/m 不/d 諳/v</l>
+        <l>筍/n 蕨/n 正/d 肥/a 何/r 處/n 好/v</l>
+        <l>春/n 風/n 春/n 雨/n 憶/v 江南/ns</l>
+      </poem>
+      <poem id="by254" title="燕京絕句 六十三">
+        <l>九/m 陌/ns 春/n 泥/n 污/v 寶/n 車/n</l>
+        <l>萬/m 株/n 楊/n 柳/n 拂/v 金/ns 沙/n</l>
+        <l>陳摶/nr 自/r 愛/v 山/n 中/f 住/v</l>
+        <l>不/d 識/v 君/n 王/n 正/a 殿/n 衙/v</l>
+      </poem>
+      <poem id="by255" title="燕京絕句 六十四">
+        <l>插/v 天/n 榆/n 柳/n 是/r 誰/r 栽/v</l>
+        <l>丞/n 相/n 園/n 池/n 早/d 晚/a 開/v</l>
+        <l>二/m 月/t 盡/v 頭/n 羊/n 酒/n 賤/v</l>
+        <l>百/m 花/n 深/a 處/f 犢/n 車/n 來/v</l>
+      </poem>
+      <poem id="by256" title="燕京絕句 六十五">
+        <l>半/d 和/v 粉/n 白/n 半/d 和/v 朱/n</l>
+        <l>點/v 盡/v 梅/ns 花/ns 九/m 九/m 圖/n</l>
+        <l>北/f 客/n 未/d 知/v 香/n 與/p 影/n</l>
+        <l>從/d 教/v 開/v 口/n 笑/v 林逋/nr</l>
+      </poem>
+      <poem id="by257" title="燕京絕句 六十六">
+        <l>觸/v 撥/v 春/n 風/n 滿/a 路/n 香/a</l>
+        <l>雕/n 鞍/n 繡/n 幰/n 為/p 花/n 忙/v</l>
+        <l>朱/n 朱/n 白/n 白/n 開/v 無/v 數/m</l>
+        <l>未/d 有/v 姚/nr 家/n 一/m 朵/n 黃/n</l>
+      </poem>
+      <poem id="by258" title="燕京絕句 六十七">
+        <l>今/t 上/f 年/n 年/t 上/v 上都/ns</l>
+        <l>上都/ns 風/n 景/n 古/n 來/d 無/v</l>
+        <l>夜摩宮殿/ns 知/v 多/v 少/v</l>
+        <l>不/d 出/v 明/v 光/n 一/m 顆/n 珠/n</l>
+      </poem>
+      <poem id="by259" title="汴州詠史 一">
+        <l>汴州/ns 節/v 度/n 取/v 京師/ns</l>
+        <l>本/v 是/r 黃巢/nr 帳/n 下/f 兒/n</l>
+        <l>躍/v 馬/n 用/v 兵/n 三十/m 載/n</l>
+        <l>如/v 何/r 獨/d 許/v 敬翔/nr 知/v</l>
+      </poem>
+      <poem id="by260" title="汴州詠史 二">
+        <l>三/m 矢/n 功/n 成/v 遺/a 恨/n 消/v</l>
+        <l>莊宗/nr 無/d 奈/v 此/r 心/n 驕/v</l>
+        <l>嗣源/nr 已/d 作/v 生/v 民/n 主/n</l>
+        <l>猶/d 是/r 焚/v 香/n 對/v 泬/n 寥/v</l>
+      </poem>
+      <poem id="by261" title="汴州詠史 三">
+        <l>父/n 事/v 契丹/n 孫/n 寇/v 仇/v</l>
+        <l>何/r 人/n 始/d 為/v 石/nr 家/n 謀/v</l>
+        <l>橫/a 磨/v 大/a 劍/n 十/m 餘/n 萬/m</l>
+        <l>至/d 亂/n 不/d 知/v 誰/r 扼/v 喉/n</l>
+      </poem>
+      <poem id="by262" title="汴州詠史 四">
+        <l>耶律德光/nr 為/v 帝/n 羓/n</l>
+        <l>契丹/n 無/v 復/d 領/v 中/ns 華/ns</l>
+        <l>劉/nr 公/n 不/d 赴/v 朝/n 廷/n 難/a</l>
+        <l>自/r 取/v 江/n 山/n 作/v 漢/ns 家/n</l>
+      </poem>
+      <poem id="by263" title="汴州詠史 五">
+        <l>巧/d 結/v 諸/m 藩/n 將/n 帥/n 心/n</l>
+        <l>還/v 兵/n 滅/v 逆/n 自/d 相/d 尋/v</l>
+        <l>當/a 時/n 喜/v 變/v 陳橋驛/ns</l>
+        <l>寡/a 婦/n 孤/n 兒/n 泣/v 至/v 今/n</l>
+      </poem>
+      <poem id="by264" title="避暑 一">
+        <l>安/d 得/v 冰/n 山/n 繞/v 我/r 身/n</l>
+        <l>不/d 禁/v 流/v 汗/n 透/v 衣/n 巾/n</l>
+        <l>上京/ns 六/m 月/t 霜/n 鋪/v 瓦/n</l>
+        <l>大/d 有/v 衝/v 寒/a 挾/v 纊/n 人/n</l>
+      </poem>
+      <poem id="by265" title="避暑 二">
+        <l>沉/a 李/n 浮/a 瓜/n 綺/n 席/n 開/v</l>
+        <l>最/d 高/a 百/m 尺/n 是/r 涼/ns 臺/n</l>
+        <l>此/r 身/n 已/d 在/v 雲/n 煙/n 上/f</l>
+        <l>誰/r 謂/v 清/a 風/n 不/d 下/v 來/v</l>
+      </poem>
+      <poem id="by266" title="九日">
+        <l>粉/n 麵/t 蒸/v 糕/n 插/v 彩/n 旗/n</l>
+        <l>栗/ns 黃/n 松子/nr 更/d 相/d 宜/v</l>
+        <l>汴州/ns 風/n 物/n 猶/d 淳/a 厚/a</l>
+        <l>不/d 似/v 南/f 人/n 好/v 百/m 為/v</l>
+      </poem>
+      <poem id="by267" title="君子交行贈呂日新。">
+        <l>君/n 不/d 見/v 車/n 輛/n 碾/v 地/n 不/d 碾/v 塵/n</l>
+        <l>塵/n 暗/v 卻/d 遮/v 車/n 上/f 人/n</l>
+        <l>又/d 不/d 見/v 馬/n 口/n 吸/v 泉/n 不/d 吸/v 月/n</l>
+        <l>月/n 明/v 豈/d 解/v 心/n 中/f 渴/v</l>
+        <l>所/r 以/v 君子/n 交/v</l>
+        <l>毋/d 為/p 小/a 人/n 絕/v</l>
+      </poem>
+      <poem id="by268" title="將軍行">
+        <l>城/n 頭/n 積/v 雪/n 滿/v 一/m 丈/n</l>
+        <l>日/n 出/v 天/n 晴/v 馬/n 蹄/n 響/v</l>
+        <l>將/n 軍/n 面/n 如/v 赤/n 玉/n 盤/n</l>
+        <l>爛/d 醉/v 那/d 知/v 北/f 風/n 猛/a</l>
+        <l>健/a 鶻/n 森/a 森/a 刀/n 劍/n 翎/n</l>
+        <l>似/d 聞/v 雲/n 際/f 鴐/v 鵝/n 聲/n</l>
+        <l>今/t 朝/t 得/v 肉/n 便/d 可/v 飽/a</l>
+        <l>喚/v 婦/n 為/v 公/n 開/v 大/a 瓶/n</l>
+      </poem>
+      <poem id="by269" title="海東青行">
+        <l>海東青/n</l>
+        <l>高麗/ns 獻/v 之/r 天子/nr 庭/n</l>
+        <l>萬/m 人/n 卻/d 立/v 不/d 敢/v 睨/v</l>
+        <l>玉/n 爪/n 金/n 眸/n 鐵/n 作/v 翎/n</l>
+        <l>心/n 在/v 寒/a 空/n 韝/n 在/v 手/n</l>
+        <l>一/m 生/n 自/r 獵/v 知/v 無/v 偶/n</l>
+        <l>孤/d 飛/v 直/d 出/v 大/a 鵬/n 前/f</l>
+        <l>猛/a 志/n 豈/d 落/v 鴐/n 鵝/n 後/f</l>
+        <l>是/r 日/n 霜/n 風/n 何/d 栗/a 冽/a</l>
+        <l>長/a 楊/ns 樹/n 羽/n 看/d 騰/v 瞥/v</l>
+        <l>奔/v 雲/n 突/a 霧/n 入/v 紫/n 霄/n</l>
+        <l>狡/a 兔/n 妖蟆/n 灑/v 丹/n 血/n</l>
+        <l>束/v 身/n 歸/v 來/v 如/v 木/n 雞/n</l>
+        <l>眾/v 鶻/n 欲/v 並/v 功/n 難/d 齊/v</l>
+        <l>爾/r 輩/n 無/v 才/n 誠/d 碌/a 碌/v</l>
+        <l>不/d 應/v 但/d 費/v 官/n 廚/n 肉/n</l>
+      </poem>
+      <poem id="by270" title="河冰行">
+        <l>北/f 方/n 之/c 冰/n 厚/v 六/m 尺/n</l>
+        <l>平/a 如/v 鏡/n 面/t 頑/a 如/v 石/n</l>
+        <l>千/m 車/n 萬/m 馬/n 交/d 往/v 回/v</l>
+        <l>一/m 望/v 瓊/n 瑤/n 亙/v 天/n 白/a</l>
+        <l>鑿/v 去/v 須臾/t 還/d 復/d 燃/v</l>
+        <l>其/r 中/f 何/r 地/n 藏/v 蜿/v 蜒/a</l>
+        <l>日/n 輪/n 東/f 來/v 炙/v 手/n 熱/a</l>
+        <l>此/r 獨/d 未/d 減/v 誰/r 能/v 鐫/v</l>
+        <l>我/r 在/v 京師/ns 凡/v 兩/m 歲/n</l>
+        <l>畏/v 寒/a 懶/d 謁/v 公/n 侯/n 第/n</l>
+        <l>炕/n 床/n 火/n 暖/v 茶/n 銚/n 鳴/v</l>
+        <l>終/v 日/n 垂/v 頭/n 擁/v 氈/n 罽/ns</l>
+        <l>凍/d 破/v 鐵/n 硯/n 非/d 所/r 憂/v</l>
+        <l>只/d 今/n 已/d 斷/v 黃/n 河/n 流/v</l>
+        <l>盡/v 膠/ns 海/ns 水/n 在/v 旦/n 夕/n</l>
+        <l>商/n 賈/nr 直/d 令/v 無/v 一/m 舟/n</l>
+        <l>闕/n 下/f 人/n 人/n 仰/v 官/n 漕/n</l>
+        <l>紅/n 鱗/n 玉/n 粒/n 須/d 時/n 到/v</l>
+        <l>簪/n 纓/n 本/v 是/r 膏/n 粱/n 家/n</l>
+        <l>斗/n 斛/n 雀/n 鼠/n 耗/v</l>
+        <l>春/n 風/n 來/v 河/n 冰/n 開/v</l>
+        <l>船/n 打/v 鼓/n 聲/n 如/v 雷/n</l>
+        <l>白/a 糧/n 進/v 入/v 瓊林/ns 庫/n</l>
+        <l>仍/v 舊/a 為/v 塵/n 埃/n</l>
+      </poem>
+      <poem id="by271" title="徒步行贈晉冰壑並序">
+        <l>海/n 上/f 有/v 山/n 青/n 入/v 雲/n</l>
+        <l>我/r 疑/v 秀/a 氣/n 鐘/v 於/p 君/n</l>
+        <l>君/n 今/n 雖/d 老/a 顏/n 尚/d 少/a</l>
+        <l>一/m 洗/v 百千/m 駑/n 馬/n 群/m</l>
+        <l>西/f 蕃/n 諸/m 師/n 厭/v 粱/n 肉/n</l>
+        <l>御/v 府/n 往/d 往/a 傾/v 金/n 銀/n</l>
+        <l>奏/v 書/n 天子/nr 不/d 得/v 見/v</l>
+        <l>念/v 君/n 往/v 來/v 徒/d 步/v 勤/a</l>
+        <l>人/n 生/nr 結/v 交/v 在/v 意/v 氣/n</l>
+        <l>功/n 名/n 適/d 與/p 雲/n 龍/n 會/v</l>
+        <l>虛/v 堂/n 八十/m 住/v 徑山/ns</l>
+        <l>今/t 日/n 朝/n 廷/n 重/v 耆/n 艾/n</l>
+      </poem>
+      <poem id="by272" title="春日花下聽彈琵琶效醉翁體">
+        <l>僕/n 本/n 南/f 海/ns 人/n</l>
+        <l>暫/d 為/v 北/f 京/n 客/n</l>
+        <l>朝/n 遊/v 金張/nr 園/n</l>
+        <l>暮/n 宿/v 許史/nr 宅/n</l>
+        <l>二/m 月/t 春/n 風/n 吹/v 百/m 花/n</l>
+        <l>朱/n 朱/n 粉/n 粉/n 相/d 鉤/v 加/v</l>
+        <l>銀/n 鞍/n 繡/n 勒/n 少/a 年/t 子/n</l>
+        <l>對/v 花/n 下/v 馬/n 彈/v 琵琶/n</l>
+        <l>大/a 弦/n 掩/v 抑/v 花/n 始/d 開/v</l>
+        <l>花/n 重/v 墜/v 枝/n 枝/n 更/d 斜/v</l>
+        <l>小/a 弦/n 變/v 作/v 花/n 爛/a 漫/v</l>
+        <l>雨/n 點/n 驟/d 打/v 煙/n 濃/d 遮/v</l>
+        <l>鷓鴣/n 從/p 何/r 在/v</l>
+        <l>遠/d 在/v 天/n 之/c 涯/f</l>
+        <l>鉤/n 輈/t 格/v 磔/v 忽/d 驚/d 起/v</l>
+        <l>不/d 知/v 飛/v 在/v 誰/r 人/n 家/n</l>
+        <l>又/d 聞/v 黃/n 鸝/n 聲/n 晛/a 睆/v</l>
+        <l>如/v 斷/v 復/d 續/v 續/d 復/d 斷/v</l>
+        <l>布/v 指/n 似/d 嫌/v 宮/n 調/n 緩/a</l>
+        <l>別/d 寫/v 群/m 雁/n 鳴/v 霜/n 暖/a</l>
+        <l>蒹/n 葭/n 浦/n 深/a 風/n 蕭/a 騷/a</l>
+        <l>一/m 隻/n 兩/m 隻/n 飛/v 漸/d 高/v</l>
+        <l>天/n 長/a 地/n 遠/a 望/v 不/d 見/v</l>
+        <l>使/v 我/r 回/v 首/n 心/n 煩/v 勞/v</l>
+        <l>我/r 謂/v 少/a 年/n 彈/v 且/d 止/v</l>
+        <l>錢塘/ns 去/v 國/n 三千/m 里/n</l>
+        <l>每/d 到/v 春/n 來/v 花/n 最/d 多/a</l>
+        <l>鷓鴣/n 能/v 舞/v 黃/n 鸝/n 歌/n</l>
+        <l>去/v 年/t 隨/v 雁/n 同/v 沙/n 漠/n</l>
+        <l>聽/v 此/r 琵琶/n 殊/d 不/d 樂/v</l>
+        <l>少/a 年/n 笑/v 我/r 君/n 太/d 癡/a</l>
+        <l>人/n 生/nr 行/v 樂/n 須/v 其/r 時/n</l>
+        <l>此/r 中/f 正/d 自/d 有/v 佳/a 處/n</l>
+        <l>但/d 畏/v 閒/a 愁/n 纏/v 繞/v 之/r</l>
+      </poem>
+      <poem id="by273" title="群烏">
+        <l>宮/n 中/nr 多/a 柳/n 樹/n</l>
+        <l>烏/n 鳥/n 以/v 為/v 家/n</l>
+        <l>每/d 出/v 旦/n 未/d 融/v</l>
+        <l>及/v 歸/v 日/n 已/d 斜/v</l>
+        <l>人/n 言/v 此/r 鳥/n 靈/n</l>
+        <l>凡/d 鳥/n 非/d 等/v 差/v</l>
+        <l>小/a 嘴/n 極/v 慈/a 孝/v</l>
+        <l>反/v 哺/n 真/d 可/v 誇/v</l>
+        <l>所/r 止/v 必/d 富/v 貴/v</l>
+        <l>去/v 之/r 由/v 兇/n 邪/n</l>
+        <l>一/m 生/v 八/m 九/m 子/n</l>
+        <l>子/n 乳/v 歲/n 又/d 加/v</l>
+        <l>養/v 育/nr 十/m 餘/n 載/n</l>
+        <l>散/d 漫/v 無/v 邊/n 涯/n</l>
+        <l>況/d 當/v 蓬萊宮/ns</l>
+        <l>誰/r 敢/v 求/v 疵/n 瑕/n</l>
+        <l>彈/v 射/v 不/d 得/v 進/v</l>
+        <l>難/d 將/v 羅/n 網/n 遮/v</l>
+        <l>吾/r 君/n 欲/d 巡/v 幸/v</l>
+        <l>豈/d 憚/v 千/m 里/n 賒/a</l>
+        <l>飛/d 集/v 上京/ns 樹/n</l>
+        <l>輒/d 先/v 華/n 蓋/n 車/n</l>
+        <l>仲/t 秋/n 巡/v 幸/v 回/v</l>
+        <l>已/d 至/v 聲/n 啞/a 啞/v</l>
+        <l>鳳/n 凰/n 在/v 丹/ns 山/n</l>
+        <l>五/m 色/n 如/v 雲/n 霞/n</l>
+        <l>雖/d 值/v 盛/a 明/v 世/n</l>
+        <l>不/d 巢/v 天子/nr 衙/v</l>
+        <l>烏/nr 因/v 孝/a 且/d 慈/a</l>
+        <l>墨/n 翅/n 蒙/v 光/n 華/n</l>
+        <l>孰/r 謂/v 無/v 鹽/n 醜/n</l>
+        <l>德/n 尊/v 名/n 更/d 嘉/v</l>
+      </poem>
+      <poem id="by274" title="詠筍">
+        <l>燕山/ns 一/m 寸/n 筍/n</l>
+        <l>見/v 者/r 惜/v 如/v 玉/n</l>
+        <l>吾/r 鄉/n 富/v 此/r 物/n</l>
+        <l>往/d 往/v 連/v 厓/ns 谷/ns</l>
+        <l>三/m 月/t 四/m 月/t 來/v</l>
+        <l>千/m 根/n 萬/m 根/n 簇/m</l>
+        <l>及/v 其/r 初/n 破/v 土/n</l>
+        <l>晨/n 起/v 課/v 僮/n 僕/n</l>
+        <l>荷/n 插/v 入/v 深/a 林/n</l>
+        <l>斬/v 藤/n 為/v 巨/d 束/v</l>
+        <l>歸/d 來/v 和/v 蘀/n 煮/v</l>
+        <l>火/n 猛/a 煙/n 穿/v 屋/n</l>
+        <l>微/d 著/v 水/n 精/a 鹽/n</l>
+        <l>惡/v 生/n 寧/d 過/v 熟/a</l>
+        <l>同/a 時/n 炊/v 玉/n 粒/n</l>
+        <l>共/d 飽/a 吾/r 儕/n 腹/n</l>
+        <l>野/n 外/f 既/d 屬/v 饜/v</l>
+        <l>方/d 向/v 城/n 中/f 儥/v</l>
+        <l>大/a 者/r 養/v 成/v 竿/n</l>
+        <l>其/r 餘/n 施/v 禽/n 鹿/n</l>
+        <l>吳/ns 人/n 欺/v 漢/ns 人/n</l>
+        <l>乃/d 遣/v 烹/v 簀/n 竹/n</l>
+        <l>簀/n 竹/n 不/d 可/v 烹/v</l>
+        <l>吳/ns 人/n 真/d 轣/v 轆/v</l>
+      </poem>
+      <poem id="by275" title="本無上人隱逸齋">
+        <l>隱/n 者/r 隱/v 其/r 心/n</l>
+        <l>逸/a 者/r 逸/v 其/r 心/n</l>
+        <l>初/n 不/d 厭/v 城/n 市/n</l>
+        <l>亦/d 不/d 著/v 山/n 林/n</l>
+        <l>縛/v 屋/n 但/d 容/v 膝/n</l>
+        <l>何/d 必/d 華/ns 堂/n 深/a</l>
+        <l>粟/n 飯/n 可/v 以/v 炊/v</l>
+        <l>澗/n 水/n 可/v 以/v 酌/v</l>
+        <l>編/v 籬/n 種/v 蔬/n 菜/n</l>
+        <l>緝/v 麻/n 為/v 衣/n 衾/n</l>
+        <l>既/d 歡/v 塵/n 務/n 疏/v</l>
+        <l>更/d 免/v 車/n 馬/n 臨/v</l>
+        <l>賓/n 至/v 且/d 清/a 談/v</l>
+        <l>興/n 來/v 聊/d 一/m 吟/v</l>
+        <l>圖/v 書/n 東/f 壁/n 上/f</l>
+        <l>枕/v 簟/n 北/f 窗/n 陰/f</l>
+        <l>閣/n 閣/n 繞/v 蛙/n 池/n</l>
+        <l>款/v 款/v 投/v 樹/n 禽/n</l>
+        <l>好/a 山/n 當/v 我/r 前/f</l>
+        <l>好/a 風/n 開/v 我/r 襟/n</l>
+        <l>苟/d 能/v 此/r 同/v 樂/n</l>
+        <l>誰/r 獨/d 非/d 知/v 音/n</l>
+      </poem>
+      <poem id="by276" title="牧羊兒">
+        <l>牧/v 羊/n 兒/n</l>
+        <l>南州/ns 之/c 樂/n 君/n 不/d 知/v</l>
+        <l>正/d 當/v 郭/n 外/f 春/n 濃/a 時/n</l>
+        <l>桃/n 花/n 半/d 亞/v 楊/n 柳/n 枝/n</l>
+        <l>明/v 朝/t 寒/a 食/n 踏/v 青/n 去/v</l>
+        <l>綺/n 羅/n 弦/n 管/n 相/d 追/v 隨/v</l>
+        <l>畫/v 樓/n 上/f 插/v 煙/n 樹/n 杪/f</l>
+        <l>下/f 有/v 清/a 泠/a 金/n 鯽/n 池/n</l>
+        <l>薄/a 暮/n 歸/v 來/v 且/d 命/v 席/n</l>
+        <l>玉/n 奴/nr 捲/v 袖/n 吹/v 參/n 差/v</l>
+        <l>芙蓉/n 初/n 開/v 夏/n 夜/n 短/a</l>
+        <l>水/n 榭/n 瑟/v 瑟/a 搖/v 涼/a 颼/v</l>
+        <l>赤/n 日/n 行/v 天/n 展/v 翠/n 簟/n</l>
+        <l>綠/n 蔭/n 滿/v 地/n 鳴/v 黃/n 鸝/n</l>
+        <l>浮/v 瓜/n 沉/v 李/n 召/v 賓/n 客/n</l>
+        <l>四/m 座/n 投/v 壺/n 兼/d 弈/v 棋/n</l>
+        <l>秋/n 來/v 月/n 色/n 更/d 堪/v 賞/v</l>
+        <l>坐/d 看/v 玉/n 粒/n 眠/v 風/n 漪/n</l>
+        <l>香/n 稻/n 新/d 舂/v 雪/n 色/n 米/n</l>
+        <l>大/a 盤/n 高/d 貯/v 紅/n 消/v 梨/n</l>
+        <l>溫/a 柑/n 福/n 荔/n 那/d 忍/v 說/v</l>
+        <l>未/d 及/v 咀/v 嚼/v 饞/a 垂/v 涎/n</l>
+        <l>初/n 冬/n 氣/n 候/n 稍/d 嚴/v 冷/a</l>
+        <l>已/d 具/v 暖/a 閣/n 張/v 羅/n 帷/n</l>
+        <l>萬/m 甕/n 千/m 罈/n 簇/m 美/a 酒/n</l>
+        <l>烹/v 龍/n 炮/v 鳳/n 無/d 不/d 宜/v</l>
+        <l>爾/r 今/n 寂/a 寞/nr 在/v 荒/a 野/n</l>
+        <l>竟/d 與/p 何/r 人/n 同/d 宴/v 嬉/v</l>
+        <l>牧/v 羊/n 兒/n</l>
+        <l>捧/v 手/n 前/v 致/v 詞/n</l>
+        <l>此/r 地/n 豈/d 不/d 樂/v</l>
+        <l>用/v 談/v 南州/ns 為/v</l>
+        <l>三/m 江/n 五湖/ns 魚/n 鱉/n 居/v</l>
+        <l>雖/d 有/v 宮/n 室/n 焉/d 足/v 奇/v</l>
+        <l>富/a 者/r 日/n 益/d 奢/v</l>
+        <l>貧/a 者/r 多/a 流/v 移/v</l>
+        <l>上/n 下/f 不/d 相/d 恤/v</l>
+        <l>豐/n 年/n 有/v 患/v 飢/v</l>
+        <l>秋/n 糧/n 未/d 足/v 夏/n 稅/n 擾/v</l>
+        <l>鞭/v 笞/v 流/v 血/n 盈/v 階/n 墀/n</l>
+        <l>我/r 寧/d 處/v 沙/n 漠/n</l>
+        <l>遠/d 放/v 西/f 北/f 陲/n</l>
+        <l>水/n 草/n 為/v 田/n 疇/n</l>
+        <l>氈/n 屋/n 忘/v 尊/a 卑/v</l>
+        <l>食/v 羊/n 之/c 肉/n 蒙/v 其/r 皮/n</l>
+        <l>古/n 俗/n 淳/a 樸/a 無/v 欺/nr 侵/v</l>
+        <l>牧/v 羊/n 三十/m 餘/n 萬/m 頭/n</l>
+        <l>能/v 出/v 幾/m 許/n 供/v 有/v 司/n</l>
+        <l>差/v 科/n 既/d 不/d 急/a</l>
+        <l>幸/d 與/v 敲/v 撲/v 辭/n</l>
+        <l>人/n 生/n 苟/d 如/v 此/r</l>
+        <l>可/v 養/v 姓/n 登/v 期/n 頤/n</l>
+      </poem>
+      <poem id="by277" title="北邙行">
+        <l>請/v 君/n 停/v 一/m 觴/n</l>
+        <l>聽/v 我/r 歌/v 北邙/ns</l>
+        <l>北邙/ns 在/v 何/r 許/n</l>
+        <l>乃/d 在/v 洛/ns 之/c 陽/n</l>
+        <l>洛陽城/ns 中/f 千萬/m 家/n</l>
+        <l>無/d 有/v 一/m 家/n 免/v 亂/n 亡/v</l>
+        <l>天/n 地/n 開/v 闢/v 來/v</l>
+        <l>死/v 者/r 生/n 之/c 常/n</l>
+        <l>遠/d 如/v 上/n 古/n 諸/m 皇/n 帝/nr</l>
+        <l>卒/d 棄/v 四/m 海/n 歸/v 山/n 岡/n</l>
+        <l>富/a 貴/a 浮/a 雲/n 亦/d 易/d 滅/v</l>
+        <l>筋/n 骸/n 化/v 土/n 誠/d 堪/v 傷/v</l>
+        <l>漢陵/ns 發/v 掘/v 竟/d 何/r 事/v</l>
+        <l>後/n 世/n 更/d 留/v 珠/n 玉/n 裝/v</l>
+        <l>而/c 況/v 將/n 相/n 墳/n</l>
+        <l>不/d 為/v 荊/n 杞/ns 荒/v</l>
+        <l>野/n 火/n 燒/v 林/n 斷/v 碑/n 碣/n</l>
+        <l>牧/v 童/nr 見/v 草/n 呼/v 牛/n 羊/n</l>
+        <l>當/v 其/r 得/v 志/n 時/n</l>
+        <l>直/d 欲/v 凌/v 雲/n 翔/v</l>
+        <l>天子/nr 不/d 敢/v 忤/v</l>
+        <l>羣/m 臣/n 非/d 雁/n 行/n</l>
+        <l>嬌/a 兒/n 聰/a 明/v 尚/d 貴/n 主/n</l>
+        <l>愛/v 女/n 秀/a 麗/a 專/v 椒/n 房/n</l>
+        <l>昨/t 日/n 鑄/v 印/n 大/n 如/v 斗/n</l>
+        <l>今/t 日/n 臨/v 軒/n 封/v 作/v 王/n</l>
+        <l>風/n 雷/n 起/v 掌/n 握/v</l>
+        <l>瓦/n 礫/n 含/v 輝/a 光/n</l>
+        <l>權/a 勢/n 有/v 時/n 盡/v</l>
+        <l>亂/n 哀/v 無/v 處/n 禳/v</l>
+        <l>嬌/a 兒/n 愛/a 女/n 替/v 不/d 得/v</l>
+        <l>點/n 點/n 血/n 淚/n 沾/v 衣/n 裳/n</l>
+        <l>白/n 馬/n 素/n 車/n 出/v 門/n 去/v</l>
+        <l>未/d 知/v 魂/n 魄/n 遊/v 何/r 鄉/n</l>
+        <l>土/n 梟/n 飛/v 來/v 樹/n 裊/a 裊/a</l>
+        <l>石/n 獸/n 對/d 立/v 烟/n 蒼/a 蒼/v</l>
+        <l>萬/m 歲/n 千/m 秋/n 共/v 一/m 盡/v</l>
+        <l>高/a 臺/n 大/a 宅/n 空/d 相/d 望/v</l>
+      </poem>
+      <poem id="by278" title="出京別呂日新">
+        <l>通州/ns 四十五/m 里/n 近/v</l>
+        <l>夜/n 半/v 下/v 車/n 攜/v 手/n 行/v</l>
+        <l>明/v 日/t 開/v 帆/n 向/v 吳越/ns</l>
+        <l>回/v 頭/n 但/d 見/v 斗/n 杓/n 橫/a</l>
+      </poem>
+      <poem id="by279" title="勉日新早還 一">
+        <l>薄/d 有/v 田/n 園/n 胡/d 不/d 歸/v</l>
+        <l>春/n 衣/n 未/d 了/v 又/d 冬/n 衣/n</l>
+        <l>江南/ns 定/d 是/v 書/n 難/d 寄/v</l>
+        <l>萬/m 里/n 雲/n 天/n 一/m 雁/n 飛/v</l>
+      </poem>
+      <poem id="by280" title="勉日新早還 二">
+        <l>黃/n 沙/n 翠/n 竹/n 遠/a 如/v 天/n</l>
+        <l>但/d 望/v 孤/a 雲/n 照/v 落/v 邊/n</l>
+        <l>睡/d 覺/v 不/d 知/v 琴/n 瑟/n 冷/a</l>
+        <l>春/n 風/n 多/d 在/v 琵琶/n 弦/n</l>
+      </poem>
+      <poem id="by281" title="離通州未遠呈華山隱">
+        <l>水/n 天/n 空/a 闊/a 掛/v 帆/n 初/n</l>
+        <l>高/a 枕/n 誰/r 驚/v 午/n 夢/n 餘/n</l>
+        <l>風/n 挾/v 葦/n 聲/n 羣/d 起/v 鷺/n</l>
+        <l>雨/n 翻/v 荷/n 葉/n 亂/d 跳/v 魚/n</l>
+        <l>新豐/ns 客/n 醉/v 杯/n 中/f 酒/n</l>
+        <l>夏口/ns 人/n 尋/v 甕/n 裡/f 書/n</l>
+        <l>三十萬/m 年/n 真/v 一/m 瞬/n</l>
+        <l>是/r 非/d 成/v 敗/v 果/d 何/r 如/v</l>
+      </poem>
+      <poem id="by282" title="河間之東小船有賣蘆筍者">
+        <l>看/v 竹/n 栽/v 蘆/ns 管/n</l>
+        <l>將/v 錢/n 買/v 筍/n 芽/n</l>
+        <l>煮/d 嫌/v 羹/n 味/n 薄/a</l>
+        <l>歸/d 厭/v 水/n 程/n 賒/a</l>
+        <l>鳳/n 闕/n 無/v 千/m 里/n</l>
+        <l>牛衣/n 有/v 幾/m 家/n</l>
+        <l>放/v 魚/n 心/n 未/d 滿/v</l>
+        <l>長/a 要/v 粟/n 盈/v 車/n</l>
+      </poem>
+      <poem id="by283" title="梁山泊">
+        <l>天/n 畔/f 青/a 青/a 蘆/n 葉/n 齊/v</l>
+        <l>晚/d 來/v 戛/v 戛/v 水/n 禽/n 啼/v</l>
+        <l>一/m 鉤/t 慘/a 淡/a 銜/v 山/n 月/n</l>
+        <l>五/m 色/n 彎/a 環/a 跨/v 海/n 霓/n</l>
+        <l>新/d 摘/v 蓮/n 花/n 堪/v 釀/v 酒/n</l>
+        <l>舊/a 聞/v 荇/n 菜/n 可/v 為/v 虀/n</l>
+        <l>北/f 人/n 大/d 抵/v 無/v 高/a 韻/n</l>
+        <l>零/v 落/v 梭/n 船/n 傍/v 柳/n 堤/n</l>
+      </poem>
+      <poem id="by284" title="宋江分贓臺">
+        <l>三十六/m 人/n 同/d 拜/v 官/n</l>
+        <l>豈/d 無/v 正/a 士/n 立/v 朝/n 端/n</l>
+        <l>空/d 教/v 兀術/nr 膽/n 如/v 斗/n</l>
+        <l>赤/n 手/n 扶/v 持/v 大/a 可/v 汗/n</l>
+      </poem>
+      <poem id="by285" title="過東昌">
+        <l>魏野/nr 塘/ns 家/n 陶博山/nr</l>
+        <l>幽/a 窗/n 可/v 對/v 白/n 雲/n 閒/v</l>
+        <l>取/v 齊/ns 七十/m 余/n 城/n 土/n</l>
+        <l>明/v 日/t 扁/a 舟/n 掛/v 席/n 還/v</l>
+      </poem>
+      <poem id="by286" title="泊新州 一">
+        <l>南/f 來/v 七十/m 閘/n</l>
+        <l>今/t 夜/n 泊/v 新州/ns</l>
+        <l>野/n 曠/a 風/n 雨/n 過/v</l>
+        <l>天/n 高/a 河/n 漢/n 流/v</l>
+        <l>使/v 星/n 飛/v 入/v 浙/ns</l>
+        <l>城/n 角/f 起/v 高/a 樓/n</l>
+        <l>李白/nr 真/a 才/n 子/n</l>
+        <l>曾/d 經/v 此/r 地/n 遊/v</l>
+      </poem>
+      <poem id="by287" title="泊新州 二">
+        <l>太白/nr 酒/n 樓/n 前/f</l>
+        <l>多/a 人/n 亦/d 醉/v 眠/v</l>
+        <l>黃/n 河/n 去/v 幾/m 許/n</l>
+        <l>碧/n 落/v 本/d 相/d 連/v</l>
+        <l>秋/n 近/v 草/n 多/a 露/n</l>
+        <l>夜/n 涼/a 星/n 滿/v 天/n</l>
+        <l>如/v 何/r 戀/v 宮/n 闕/n</l>
+        <l>更/d 擬/v 學/v 神/n 仙/n</l>
+      </poem>
+      <poem id="by288" title="曉過呂梁洪，新水灌河，兩涯之間，艤舟無數。呈華山隱，光雪窗。">
+        <l>戲馬臺/ns 前/f 山/n 麓/n 蔥/a</l>
+        <l>行/v 人/n 愁/v 水/n 又/d 愁/v 風/n</l>
+        <l>初/n 升/v 海甸/ns 三/m 竿/n 日/n</l>
+        <l>穩/d 過/v 徐/ns 州/n 百/m 步/n 洪/n</l>
+        <l>富/d 貴/v 猶/d 來/v 論/v 力/n 命/n</l>
+        <l>神/n 仙/n 不/d 必/d 較/v 窮/n 通/v</l>
+        <l>靈/a 槎/n 去/v 與/p 銀/n 河/n 接/v</l>
+        <l>莫/d 犯/v 牽牛/n 織女/n 宮/n</l>
+      </poem>
+      <poem id="by289" title="再過圯下懷子房">
+        <l>袞/n 衣/n 有/v 闕/n 爾/r 能/v 縫/v</l>
+        <l>天/n 遣/v 勛/n 勞/n 刻/v 鼎/n 鐘/n</l>
+        <l>太/a 子/n 身/n 今/t 為/v 國/n 本/n</l>
+        <l>君/n 王/n 手/n 自/p 擇/v 留/a 封/n</l>
+        <l>橋/n 邊/n 老/a 父/n 存/v 黃/n 石/n</l>
+        <l>物/n 外/f 仙/n 人/n 號/v 赤松/nr</l>
+        <l>今/t 夜/n 孤/a 舟/n 載/v 明/v 月/n</l>
+        <l>不/d 妨/v 高/d 臥/v 想/v 儀/n 容/n</l>
+      </poem>
+      <poem id="by290" title="大熱泊揚州">
+        <l>南/f 船/n 不/d 奈/v 火/n 雲/n 蒸/v</l>
+        <l>小/d 住/v 須/d 涼/v 看/v 廣陵/ns</l>
+        <l>珠/n 簟/n 有/v 紋/n 搖/v 細/a 浪/n</l>
+        <l>翠/n 瓜/n 無/v 滓/n 嚼/v 寒/a 冰/n</l>
+        <l>平山堂/ns 下/f 風/n 初/n 到/v</l>
+        <l>后/n 土/n 祠/n 前/f 月/n 欲/v 升/v</l>
+        <l>聽/v 徹/v 梅/n 花/n 三/m 弄/v 角/n</l>
+        <l>只/d 今/n 身/n 是/r 太原/ns 僧/n</l>
+      </poem>
+      <poem id="by291" title="渡江呈雪窗 一">
+        <l>不/d 用/v 龍/n 犀/n 照/v 水/n 紅/a</l>
+        <l>天/n 涯/f 有/v 幸/n 一/m 樽/n 同/v</l>
+        <l>掛/v 帆/n 澤/ns 國/n 雲/n 霞/n 外/f</l>
+        <l>橫/a 笛/n 江都/ns 錦/n 繡/n 中/f</l>
+        <l>虹/n 見/v 青/n 霄/n 常/d 有/v 雨/n</l>
+        <l>鯆/n 明/v 白/n 浪/n 舊/a 多/a 風/n</l>
+        <l>臨/v 流/n 且/d 洗/v 看/v 山/n 眼/n</l>
+        <l>任/v 是/r 瓊/n 英/n 莫/d 惱/v 公/n</l>
+      </poem>
+      <poem id="by292" title="渡江呈雪窗 二">
+        <l>生/v 髮/n 未/d 乾/v 心/n 已/d 空/v</l>
+        <l>不/d 知/v 誰/r 是/r 住/v 山/n 翁/n</l>
+        <l>江南/ns 江/ns 北/f 萬/m 餘/n 里/n</l>
+        <l>帆/n 去/v 帆/n 來/v 多/a 少/a 風/n</l>
+        <l>兩/m 岸/n 自/d 飛/v 沙/n 鳥/n 白/a</l>
+        <l>半/v 江/n 純/d 浸/v 夕/n 陽/n 紅/a</l>
+        <l>高/a 歌/n 但/d 覺/v 鬼/n 神/n 助/v</l>
+        <l>即/v 事/n 須/d 由/v 篇/n 翰/n 工/n</l>
+      </poem>
+      <poem id="by293" title="出京，附山中隱舟，無他書，但是一部華嚴經而已。以詩美之。 一">
+        <l>樺/ns 皮/n 冠/n 上/f 少/a 紗/n 巾/n</l>
+        <l>揚子/ns 江/n 心/f 月/n 滿/v 輪/n</l>
+        <l>一/m 部/v 華嚴/n 十萬/m 偈/n</l>
+        <l>三/m 山/n 桃/n 實/nr 幾/d 千/m 春/n</l>
+        <l>硃/n 砂/n 煉/v 得/v 終/d 難/d 老/a</l>
+        <l>青/n 鳥/n 傳/v 來/v 卻/d 未/d 真/v</l>
+        <l>高/a 座/n 閒/d 揮/v 鐵/n 如意/v</l>
+        <l>自/r 疑/v 弘景/nr 是/r 前/n 身/n</l>
+      </poem>
+      <poem id="by294" title="出京，附山中隱舟，無他書，但是一部華嚴經而已。以詩美之。 二">
+        <l>上元/t 甲子/t 何/d 見/v 曾/d</l>
+        <l>今/t 夜/n 人/n 人/n 苦/a 鬱/a 蒸/v</l>
+        <l>銀/n 甕/n 酒/n 乾/v 無/v 宿/v 蟻/n</l>
+        <l>玉/n 盤/n 瓜/n 爛/v 有/v 棲/v 蠅/n</l>
+        <l>攜/d 來/v 梵/n 策/n 愁/d 如/v 掃/v</l>
+        <l>買/v 得/v 吳/ns 船/n 穩/d 可/v 乘/v</l>
+        <l>烏/n 鵲/n 繞/v 枝/n 河/n 漢/n 轉/v</l>
+        <l>夜/n 涼/a 天/n 地/n 一/m 壺/ns 冰/n</l>
+      </poem>
+      <poem id="by295" title="山隱授業，無錫州洞觀虛。因北歸觴客，遂留數日。">
+        <l>相/d 與/p 乘/v 舟/n 來/v 日/n 邊/n</l>
+        <l>碧/n 雞/n 使/n 者/r 白/n 螺/n 仙/n</l>
+        <l>重/d 尋/v 錫谷/ns 真/a 山/n 水/n</l>
+        <l>更/d 宴/v 茅/n 家/n 小/a 洞/n 天/n</l>
+        <l>冰/n 滿/v 玉/n 壺/n 無/v 六/m 月/n</l>
+        <l>鶴/n 歸/v 華/ns 表/ns 又/d 千/m 年/n</l>
+        <l>請/v 君/n 早/d 起/v 西湖/ns 舵/n</l>
+        <l>人/n 物/n 方/d 今/n 正/d 渺/v 然/r</l>
+      </poem>
+      <poem id="by296" title="惠山泉">
+        <l>玉/n 音/n 正/v 是/r 佩/n 舂/v 撞/v</l>
+        <l>何/r 許/n 流/v 來/v 滿/v 石/n 矼/n</l>
+        <l>天/n 下/f 名/a 泉/n 雖/d 有/v 數/n</l>
+        <l>江南/ns 斗/n 水/n 本/d 無/v 雙/m</l>
+        <l>因/v 僧/n 浴/v 像/n 心/n 俱/d 淨/v</l>
+        <l>共/v 客/n 分/v 茶/n 睡/v 已/d 降/v</l>
+        <l>俗/n 駕/n 往/v 還/v 那/d 識/v 此/r</l>
+        <l>自/p 今/n 幽/a 夢/n 繞/v 山/n 窗/n</l>
+      </poem>
+      <poem id="by297" title="虎丘  一">
+        <l>忽/d 從/p 地/n 平/v 著/v 青/n 螺/n</l>
+        <l>三/m 面/n 開/v 窗/n 好/a 景/n 多/a</l>
+        <l>風/n 落/v 野/n 花/n 猶/d 嫵/v 媚/v</l>
+        <l>月/n 明/v 山/n 鬼/n 自/r 吟/v 哦/v</l>
+        <l>真/nr 娘/n 墓/n 在/v 連/ns 岡/n 樹/n</l>
+        <l>短/d 薄/a 祠/n 空/v 疊/v 砌/n 莎/n</l>
+        <l>踏/v 碎/v 蒼/n 苔/n 嗔/v 不/d 得/v</l>
+        <l>小/a 吳/ns 軒/n 下/f 正/v 笙/n 歌/n</l>
+      </poem>
+      <poem id="by298" title="虎丘 二">
+        <l>妝/v 點/v 姑蘇/ns 是/r 虎丘/ns</l>
+        <l>綺/n 羅/n 弦/n 管/n 閱/v 春/n 秋/n</l>
+        <l>百/m 盤/n 小/a 徑/n 藏/v 山/n 塢/n</l>
+        <l>三/m 疊/n 疏/a 鐘/n 起/v 寺/n 樓/n</l>
+        <l>俊/a 鶻/n 夜/n 棲/v 磚/n 塔/n 頂/n</l>
+        <l>慈/n 烏/nr 晨/n 繞/v 劍/n 池/ns 頭/n</l>
+        <l>何/d 須/d 更/d 覓/v 吳王/nr 冢/n</l>
+        <l>草/n 綠/v 花/n 紅/a 段/d 段/v 愁/v</l>
+      </poem>
+      <poem id="by299" title="虎丘 三">
+        <l>樓/n 臺/nr 無/v 數/n 小/a 山/n 擎/v</l>
+        <l>曲/a 曲/n 朱/n 欄/n 畫/v 不/d 成/v</l>
+        <l>高/a 枕/n 一/m 軒/n 風/n 雨/n 過/v</l>
+        <l>古/n 池/n 千/m 丈/n 轆/n 轤/n 聲/n</l>
+        <l>彩/n 雲/n 易/d 滅/v 興/n 亡/v 恨/v</l>
+        <l>流/a 水/n 長/a 牽/v 去/nr 住/v 情/n</l>
+        <l>今/t 夜/n 生/v 公/n 講/v 堂/n 月/n</l>
+        <l>飛/v 來/v 只/d 是/r 舊/a 時/n 明/v</l>
+      </poem>
+      <poem id="by300" title="天平山">
+        <l>山/n 頭/n 石/n 筍/n 何/d 亭/v 亭/a</l>
+        <l>日/n 炙/v 風/n 吹/v 苔/n 藓/n 青/v</l>
+        <l>古/n 络/n 東/f 西/f 下/v 濬/ns 谷/n</l>
+        <l>浮/a 雲/n 日/n 夜/n 行/v 高/a 冥/v</l>
+        <l>臨/v 風/n 落/v 葉/n 似/v 飛/v 鳥/n</l>
+        <l>隔/v 屋/n 寒/a 泉/n 如/v 建/v 瓴/n</l>
+        <l>千/m 載/n 猶/d 思/v 大/a 小/a 范/ns</l>
+        <l>惜/d 無/v 人/n 續/v 遠/n 公/n 銘/n</l>
+      </poem>
+      <poem id="by301" title="靈岩 一">
+        <l>當/a 年/t 大/a 士/n 荷/v 鋤/n 来/v</l>
+        <l>滿/a 地/n 荆/n 榛/n 手/n 所/r 開/v</l>
+        <l>娃/n 舘/n 不/d 妨/v 為/v 梵/n 宇/n</l>
+        <l>屧/n 廊/n 猶/d 自/d 近/v 琴/n 臺/n</l>
+        <l>山/n 從/p 太/a 古/n 分/v 時/n 見/v</l>
+        <l>鳥/n 到/v 平/a 蕪/n 盡/v 處/n 回/v</l>
+        <l>豈/d 是/r 少/a 年/n 誇/v 足/n 力/n</l>
+        <l>諸/n 天/n 招/v 我/r 上/v 崔/n 嵬/v</l>
+      </poem>
+      <poem id="by302" title="靈岩 二">
+        <l>斜/a 日/n 射/v 湖/n 飛/v 鳥/n 還/v</l>
+        <l>倚/v 楼/n 人/n 在/v 锦/n 屏/n 間/f</l>
+        <l>草/n 迷/v 西/f 子/n 釆/v 香/n 徑/n</l>
+        <l>花/n 落/v 吳王/nr 消/v 夏/n 湾/n</l>
+        <l>佛/n 界/n 清/a 涼/a 須/v 水/n 月/n</l>
+        <l>僧/n 家/n 富/a 貴/a 在/v 雲/n 山/n</l>
+        <l>一/m 丘/n 一/m 壑/n 可/v 投/v 老/v</l>
+        <l>城/n 郭/n 無/v 時/n 車/n 馬/n 閒/v</l>
+      </poem>
+      <poem id="by303" title="過開元訪㫁江禅師">
+        <l>田/n 地/n 無/v 塵/n 松/n 檜/n 香/a</l>
+        <l>白/n 頭/n 禅/n 叟/n 坐/v 高/a 堂/n</l>
+        <l>山/n 童/n 為/v 客/n 擎/v 茶/n 碗/n</l>
+        <l>世/n 事/n 令/v 人/n 看/v 屋/n 粱/n</l>
+        <l>霞/n 彩/n 未/d 消/v 先/n 變/v 綠/n</l>
+        <l>月/n 輪/n 欲/v 上/v 半/d 塗/v 黄/n</l>
+        <l>閣/n 中/f 有/v 二/m 如來/n 像/n</l>
+        <l>近/d 亦/d 曾/d 聞/v 夜/n 放/v 光/n</l>
+      </poem>
+      <poem id="by304" title="遊洞庭 一 眠雲本題簽作「遊洞庭二首」，而實收三首。">
+        <l>身/n 拼/v 一/m 月/n 駐/v 蘇州/ns</l>
+        <l>鳴/v 櫓/n 洞庭湖/ns 上/f 遊/v</l>
+        <l>玉/n 塔/n 高/a 低/a 搖/v 兔/n 影/n</l>
+        <l>珠/n 囊/n 大/a 小/a 拆/v 鶏/ns 頭/n</l>
+        <l>菱/n 歌/n 自/r 逐/v 涼/a 風/n 起/v</l>
+        <l>蓴/n 莱/ns 初/n 如/v 嫩/a 荇/n 抽/v</l>
+        <l>長/a 嘆/v 此/r 身/n 同/v 野/n 鶴/n</l>
+        <l>蓼/ns 灘/n 荷/n 浦/n 亦/d 堪/v 留/v</l>
+      </poem>
+      <poem id="by305" title="遊洞庭 二">
+        <l>不/d 見/v 茫/a 茫/a 水/n 接/v 天/n</l>
+        <l>誰/r 将/v 碧/n 玉/n 碾/v 為/v 田/n</l>
+        <l>高/a 秋/n 永/a 夜/n 出/v 明/v 月/n</l>
+        <l>细/a 浪/n 微/d 凨/v 開/v 画/v 船/n</l>
+        <l>築/v 室/n 但/d 當/d 居/v 缥/n 缈/v</l>
+        <l>休/v 官/n 何/d 必/d 載/v 嬋/n 娟/a</l>
+        <l>如/v 今/n 眼/n 底/f 無/v 皮/n 陸/n</l>
+        <l>一/m 字/n 吟/n 成/v 直/v 幾/m 錢/n</l>
+      </poem>
+      <poem id="by306" title="遊洞庭 三">
+        <l>曾/d 訪/v 漁/ns 村/n 橘/n 裡/f 不/d</l>
+        <l>此/r 行/n 可/v 以/v 畫/v 圖/n 收/v</l>
+        <l>林/n 梢/n 欲/v 下/v 無/v 窮/a 葉/n</l>
+        <l>水/n 面/t 平/d 吞/v 不/d 盡/v 秋/n</l>
+        <l>落/v 日/n 铺/v 金/n 三萬/m 頃/n</l>
+        <l>清/a 風/n 挂/v 席/n 一/m 扁/a 舟/n</l>
+        <l>晚/d 来/v 更/d 覓/v 詩/n 懷/v 好/a</l>
+        <l>天/n 似/v 玻/n 璃/n 月/n 似/v 钩/n</l>
+      </poem>
+      <poem id="by307" title="湖上追憶香山居士">
+        <l>蘇州/ns 刺/v 史/n 盡/v 橫/a 金/n</l>
+        <l>磊/d 落/v 無/v 人/n 似/v 醉/n 吟/v</l>
+        <l>為/v 郡/n 三/m 年/n 滄/ns 海/ns 上/f</l>
+        <l>画/v 船/n 十/m 隻/n 太/ns 湖/n 心/f</l>
+        <l>春/n 歸/v 紫/n 翠/n 鶯/n 花/n 塢/f</l>
+        <l>秋/n 著/v 丹/n 青/n 橘/n 柚/ns 林/n</l>
+        <l>山/n 水/n 不/d 隨/v 潮/n 水/n 變/v</l>
+        <l>直/d 從/p 開/v 闢/nr 到/v 如/v 今/t</l>
+      </poem>
+      <poem id="by308" title="吳江所出鷄頭絶佳">
+        <l>鷄/ns 頭/n 近/d 出/v 洞庭湖/ns</l>
+        <l>刺/ns 葉/n 重/a 重/v 著/v 翠/n 铺/n</l>
+        <l>借/d 問/v 道/n 人/n 能/v 飲/v 否/d</l>
+        <l>不/d 知/v 童/n 子/n 解/v 炊/v 無/v</l>
+        <l>天街/ns 剩/d 費/v 三/m 年/n 客/n</l>
+        <l>水/n 府/n 新/d 供/v 萬/m 斛/n 珠/n</l>
+        <l>我/r 有/v 方/ns 塘/n 才/d 及/v 畝/n</l>
+        <l>直/d 堪/v 種/v 此/r 不/d 時/n 須/v</l>
+      </poem>
+      <poem id="by309" title="垂虹待月">
+        <l>秋/n 光/n 湛/a 湛/a 玉/n 無/v 瑕/n</l>
+        <l>不/d 許/v 雲/n 痕/n 一/m 線/n 遮/v</l>
+        <l>天/n 宇/n 倒/d 垂/v 青/n 盖/n 影/f</l>
+        <l>龍/n 宮/n 初/n 噴/v 白遵/ns 花/n</l>
+        <l>且/d 停/v 内/f 府/n 新/d 澆/v 燭/n</l>
+        <l>須/d 點/v 頭/n 綱/n 舊/a 賜/v 茶/n</l>
+        <l>帆/n 過/v 東/f 南/f 更/d 清/a 美/a</l>
+        <l>盡/v 将/v 烟/n 浪/n 滌/v 塵/n 沙/n</l>
+      </poem>
+      <poem id="by310" title="隋河">
+        <l>隋/ns 河/n 八百/m 里/n</l>
+        <l>京口/ns 到/v 钱塘/ns</l>
+        <l>地/n 轉/v 冠/n 帯/n 國/n</l>
+        <l>江/n 通/v 魚/n 稻/n 鄉/n</l>
+        <l>寒/a 泉/n 無/v 愧/v 茗/n</l>
+        <l>沃/a 野/n 更/d 宜/v 桑/n</l>
+        <l>頗/d 爱/v 吴/ns 音/n 軟/a</l>
+        <l>臨/v 流/n 貯/v 客/n 航/n</l>
+      </poem>
+      <poem id="by311" title="越来溪">
+        <l>不/d 因/v 兵/n 革/n 破/v 强/a 齊/ns</l>
+        <l>那/d 得/v 山/n 川/n 属/v 㑹/ns 稽/v</l>
+        <l>往/a 事/n 已/d 隨/v 東/f 去/v 水/n</l>
+        <l>行/v 人/n 猶/d 遇/v 越/ns 来/v 溪/n</l>
+        <l>秋/n 高/a 岸/n 柳/n 不/d 堪/v 折/v</l>
+        <l>日/n 晚/v 沙/n 禽/n 相/d 對/v 啼/v</l>
+        <l>自/p 古/n 興/v 亡/v 非/d 一/m 姓/n</l>
+        <l>如/v 今/n 品/d 有/v 草/n 萋/v 萋/v</l>
+      </poem>
+      <poem id="by312" title="㫁江禅師餉余以古铜瓶因以贈光雪窗為別">
+        <l>延/ns 州/ns 白/n 𦆭/n 尚/d 難/d 忘/v</l>
+        <l>叔夜/nr 遺/v 杯/n 亦/d 可/v 将/v</l>
+        <l>雙/m 口/n 比/v 如/v 金/n 澡/n 罐/n</l>
+        <l>一/m 瓶/n 来/v 自/p 绿/ns 隂/ns 堂/n</l>
+        <l>簮/v 花/n 看/d 结/v 經/v 春/n 子/n</l>
+        <l>貯/v 水/n 貪/d 留/v 入/v 夏/n 凉/a</l>
+        <l>拂/v 拭/v 塵/n 埃/n 持/d 贈/v 汝/r</l>
+        <l>齊/nr 餘/n 盥/v 手/n 下/v 禅/v 床/n</l>
+      </poem>
+      <poem id="by313" title="歸東吴却寄呂日新">
+        <l>風/n 送/v 吳/ns 帆/n 日/n 夜/n 飛/v</l>
+        <l>不/d 堪/v 回/v 首/n 望/v 京畿/ns</l>
+        <l>相/d 傳/v 佛/n 寺/n 千/m 燈/n 繞/v</l>
+        <l>自/r 帯/v 天/n 香/n 两/m 袖/n 归/v</l>
+        <l>搔/v 背/n 正/v 須/d 煩/v 鳥/n 爪/n</l>
+        <l>點/v 頭/n 何/d 必/d 問/v 朱/n 衣/n</l>
+        <l>宛平/nr 使/v 者/r 年/n 年/t 出/v</l>
+        <l>莫/d 恨/v 東/f 西/f 音/n 信/n 稀/a</l>
+      </poem>
+      <poem id="by314" title="送華真人歸宗陽宮">
+        <l>日/n 晒/v 荔枝/n 红/n 蜜/n 薑/n</l>
+        <l>水/n 亭/n 燒/v 燭/n 候/v 歸/v 航/n</l>
+        <l>天/n 開/v 图/n 画/n 江/n 山/n 好/a</l>
+        <l>月/n 滿/v 神仙宮殿/ns 凉/a</l>
+        <l>方/d 趁/v 两/m 鳬/n 来/v 葉縣/ns</l>
+        <l>忽/d 驚/v 群/m 雁/n 遇/v 錢塘/ns</l>
+        <l>豐/a 年/t 物/n 物/n 如/v 泥/n 土/n</l>
+        <l>轉/d 覺/v 民/n 間/n 有/v 蓋/nr 藏/n</l>
+      </poem>
+      <poem id="by315" title="又寄京師諸友">
+        <l>欲/d 上/v 高/a 臺/n 望/v 两/m 京/n</l>
+        <l>鳥/n 飛/v 不/d 盡/v 暮/n 雲/n 平/v</l>
+        <l>赤/ns 墀/n 正/d 想/v 千/m 官/n 拜/v</l>
+        <l>瓊島/ns 遙/d 聞/v 萬/m 歲/n 聲/n</l>
+        <l>交趾/ns 酒/n 香/v 馴/v 象/n 醉/v</l>
+        <l>流/a 沙/n 風/n 熱/a 老/a 駝/n 鳴/v</l>
+        <l>夢/n 回/v 夜/n 夜/n 隨/v 天/n 仗/n</l>
+        <l>直/d 入/v 蓬莱/ns 殿/n 裡/f 行/v</l>
+      </poem>
+      <poem id="by316" title="登華山頂">
+        <l>華/ns 頂/n 高/a 哉/u 不/d 易/d 登/v</l>
+        <l>溪/n 流/v 曲/a 曲/v 樹/n 層/m 層/m</l>
+        <l>嵯/n 峨/n 陡/d 起/v 地/n 如/v 缩/n</l>
+        <l>廓/a 落/v 難/d 攀/v 天/n 欲/v 崩/v</l>
+        <l>嵐/n 氣/n 濕/v 衣/n 晴/n 亦/d 雨/v</l>
+        <l>井/n 花/n 激/v 齒/n 夏/n 還/d 冰/v</l>
+        <l>老/a 僧/n 住/v 久/a 生/n 涯/n 在/v</l>
+        <l>一/m 個/n 蒲/n 團/n 八/m 尺/n 藤/n</l>
+      </poem>
+      <poem id="by317" title="題盤車图">
+        <l>昔/n 年/t 曾/d 上/v 黄/n 金/ns 臺/n</l>
+        <l>臺/n 前/f 九/m 扇/n 天門/ns 開/v</l>
+        <l>俯/d 看/v 人/n 馬/n 浩/a 如/v 海/n</l>
+        <l>楼/n 觀/v 白/n 日/n 何/d 崔/a 嵬/a</l>
+        <l>東/f 西/f 正/d 見/v 遇/v 街/n 塔/n</l>
+        <l>其/r 下/v 十/m 丈/n 揚/v 麈/n 埃/n</l>
+        <l>西/f 方/n 之/c 國/n 三十六/m</l>
+        <l>獻/v 琛/n 使/n 者/r 從/p 此/r 回/v</l>
+        <l>我/r 眠/v 客/n 館/n 枕/v 馳/v 道/n</l>
+        <l>夜/n 半/a 車/n 鐸/n 聲/n 如/v 雷/n</l>
+        <l>得/v 非/d 功/n 名/n 換/v 袍/n 笏/n</l>
+        <l>無/v 乃/d 財/n 賄/n 收/v 瓊/n 瑰/n</l>
+        <l>借/v 問/v 驅/v 車/n 者/r</l>
+        <l>艱/a 難/n 可/v 图/v 寫/v</l>
+        <l>千/m 盤/n 萬/m 摺/v 雲/n 上/f 頭/n</l>
+        <l>暮/n 雨/n 朝/n 泥/v 城/n 脚/n 下/f</l>
+        <l>束/v 薪/n 如/v 桂/n 米/n 如/v 珠/n</l>
+        <l>用/v 盡/v 黄/n 金/n 何/d 䖏/n 買/v</l>
+        <l>居/v 前/f 烏犍/n 後/f 謇/v 驢/nr</l>
+        <l>去/d 意/v 甚/d 速/v 行/n 何/d 徐/v</l>
+        <l>路/n 長/a 鞭/n 短/a 空/d 費/v 力/n</l>
+        <l>十/m 步/n 回/v 頭/n 九/m 崎/a 嶇/v</l>
+        <l>牛/n 之/c 力/n 人/n 之/c 心/n</l>
+        <l>此/r 生/n 衣/n 食/n 在/v 耕/n 牧/v</l>
+        <l>何/d 必/d 商/n 賈/nr 行/v 嵜/v 嵚/v</l>
+        <l>清/a 閒/n 直/d 抵/v 雙/m 白/n 璧/n</l>
+        <l>奔/d 走/v 安/d 用/v 千/m 黄/n 金/n</l>
+        <l>古/n 稱/v 百/m 計/n 不/d 如/v 閒/n</l>
+        <l>爱/v 君/n 此/r 圖/n 張/v 壁/n 間/f</l>
+        <l>尋/v 常/n 無/v 事/n 一/m 隱/v 几/ns</l>
+        <l>塵/n 中/f 心/n 向/v 天/n 邊/n 還/v</l>
+      </poem>
+      <poem id="by318" title="和淵明九日閒居詩">
+        <l>閒/d 居/v 爱/v 重/a 九/m</l>
+        <l>使/v 我/r 念/v 陶生/nr</l>
+        <l>但/d 取/v 杯/n 中/f 物/n</l>
+        <l>不/d 貪/v 身/n 後/f 名/n</l>
+        <l>季/t 秋/n 霜/n 始/d 降/v</l>
+        <l>向/v 晚/a 月/n 初/n 明/v</l>
+        <l>草/n 際/f 亂/v 蟲/n 語/v</l>
+        <l>林/n 梢/n 残/a 葉/n 聲/n</l>
+        <l>疏/v 籬/n 采/v 叢/n 菊/n</l>
+        <l>小/d 嚼/v 扶/v 衰/n 齡/n</l>
+        <l>美/a 酒/n 既/d 滿/v 樽/n</l>
+        <l>一/m 吟/n 還/d 一/m 傾/v</l>
+        <l>田/n 園/n 自/r 可/v 樂/v</l>
+        <l>圭/n 衮/n 何/d 足/d 榮/v</l>
+        <l>貴/a 賤/a 各/d 有/v 志/n</l>
+        <l>好/v 惡/v 吾/r 無/v 情/n</l>
+        <l>所/r 以/v 君子/n 懐/v</l>
+        <l>悠/a 哉/u 歲/n 功/n 成/v</l>
+      </poem>
+      <poem id="by319" title="和淵明仲秋有感">
+        <l>皇/v 天/n 分/v 四/m 時/n</l>
+        <l>白/n 露/n 表/v 佳/a 節/n</l>
+        <l>最/d 爱/v 潭/n 水/n 清/a</l>
+        <l>猶/d 如/v 镜/n 容/n 徹/v</l>
+        <l>蟾蜍/nr 出/v 復/d 没/v</l>
+        <l>络/v 緯/n 聲/n 欲/v 絕/v</l>
+        <l>静/d 卧/v 深/a 夜/n 起/v</l>
+        <l>仰/d 觀/v 衆/v 星/n 列/v</l>
+        <l>流/a 水/n 可/v 嗟/e 吁/e</l>
+        <l>附/v 勢/n 非/d 俊/n 傑/n</l>
+        <l>身/n 即/v 大/a 患/n 本/n</l>
+        <l>愧/d 無/v 長/a 生/n 訣/n</l>
+        <l>且/d 餐/v 籬/n 下/f 菊/n</l>
+        <l>兼/d 吸/v 杯/n 中/f 月/n</l>
+      </poem>
+      <poem id="by320" title="和淵明新蝉詩">
+        <l>新/a 蝉/n 何/r 處/n 来/v</l>
+        <l>鳴/v 我/r 高/a 槐/ns 隂/f</l>
+        <l>流/a 水/n 欲/v 入/v 屋/n</l>
+        <l>好/a 風/n 自/r 開/v 襟/n</l>
+        <l>床/n 頭/n 一/m 束/n 書/n</l>
+        <l>壁/n 上/f 三/m 尺/n 琴/n</l>
+        <l>琴/n 以/d 散/v 哀/n 樂/v</l>
+        <l>書/n 以/d 通/v 古/n 今/n</l>
+        <l>所/r 幸/v 車/n 馬/n 稀/a</l>
+        <l>非/d 邀/v 里/f 人/n 钦/n</l>
+        <l>虛/v 名/n 如/v 北/f 斗/n</l>
+        <l>有/v 酒/n 不/d 能/v 斟/v</l>
+        <l>縱/d 洗/v 爰/r 居/v 耳/n</l>
+        <l>寕/d 知/v 鐘/n 鼓/n 音/n</l>
+        <l>陶潛/nr 初/n 解/v 組/ns</l>
+        <l>蘇軾/nr 未/d 授/v 簮/n</l>
+        <l>莫/d 改/v 麋/n 鹿/n 性/n</l>
+        <l>常/d 懷/v 烟/n 嶂/n 深/a</l>
+      </poem>
+      <poem id="by321" title="送哲禅人杖锡訪師兼簡仲黙和尚">
+        <l>杖/v 錫/v 老/a 師/n 七十八/m</l>
+        <l>眼/n 如/v 點/n 漆/n 眉/n 如/v 雪/n</l>
+        <l>分/d 明/v 畫/v 出/v 須/d 善/d 提/v</l>
+        <l>坐/d 聽/v 孤/n 猿/n 吟/v 落/v 月/n</l>
+        <l>深/a 山/n 古/n 寺/n 天/n 正/d 寒/a</l>
+        <l>葉/n 深/a 一/m 尺/n 堆/v 床/n 前/f</l>
+        <l>地/n 爐/n 燒/v 火/n 簾/n 不/d 捲/v</l>
+        <l>袈/n 裟/n 黑/a 似/v 爐/n 中/f 煙/n</l>
+        <l>客/n 來/v 只/d 恐/v 放/v 煙/n 出/v</l>
+        <l>爭/d 奈/v 山/n 林/n 藏/v 未/d 密/v</l>
+        <l>喧/a 喧/a 道/n 價/n 滿/v 江/n 湖/n</l>
+        <l>負/v 笈/n 挑/v 嚢/n 固/d 非/d 一/m</l>
+        <l>千/m 里/n 東/f 歸/v 頻/d 寄/v 聲/n</l>
+        <l>乃/r 翁/n 終/d 似/v 有/v 鄉/n 情/n</l>
+        <l>目連/nr 鶖子/nr 神/n 通/v 妙/a</l>
+        <l>何/d 必/d 區/a 區/a 圓/a 相/d 成/v</l>
+      </poem>
+      <poem id="by322" title="金山">
+        <l>半/a 江/n 湧/v 出/v 金山寺/ns</l>
+        <l>一/m 簇/m 楼/n 臺/n 两/m 岸/n 舡/n</l>
+        <l>月/n 轉/v 中/f 宵/n 為/v 白/n 晝/n</l>
+        <l>水/n 吞/v 平/a 地/n 作/v 青/n 天/n</l>
+        <l>塔/n 鈴/n 自/r 觸/v 微/a 風/n 語/v</l>
+        <l>灘/n 石/n 長/a 磨/v 細/a 浪/n 圓/a</l>
+        <l>龍/n 化/v 老/n 人/n 来/v 聴/v 法/n</l>
+        <l>手/n 持/v 珠/n 獻/n 不/d 論/v 钱/n</l>
+      </poem>
+    </section>
+  </body>
+</research_data>
