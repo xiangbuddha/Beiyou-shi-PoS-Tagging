@@ -47,4 +47,4 @@ Robustness of observed differences is verified using Cohen’s $d$ effect sizes,
 The dataset and documentation in this repository are licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/). You are free to share and adapt the material for any purpose, provided that appropriate credit is given to the original research.
 
 ## Contact
-**Xiang** Researcher in Quantitative Linguistics and Classical Chinese Literature
+**Xiang Wei**, PhD Candidate at Temple University.e-mail:x130319@gmail.com 
